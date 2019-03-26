@@ -38,8 +38,11 @@
       <file name="$USER_HOME$/语言工具/python/fengru/train_model/dl/data_env.py" timestamp="1553511390784">
         <mark key="[" line="56" column="36" />
       </file>
-      <file name="$USER_HOME$/语言工具/python/mysite/goods/models.py" timestamp="1553601721741">
+      <file name="$USER_HOME$/语言工具/python/mysite/goods/models.py" timestamp="1553618341084">
         <mark key="[" line="26" column="75" />
+      </file>
+      <file name="$USER_HOME$/语言工具/python/软工/app_user/user/models.py" timestamp="1553617584647">
+        <mark key="[" line="11" column="0" />
       </file>
       <file name="$USER_HOME$/Downloads/bookstore-master 2/bookstore/manage.py" timestamp="1544542336490">
         <mark key="[" line="3" column="0" />
@@ -252,7 +255,6 @@
       <file name="$USER_HOME$/语言工具/python/fengru/train_model/dl/model_seq2seq.py" timestamp="1551514465682">
         <mark key="[" line="4" column="5" />
       </file>
-      <file name="$USER_HOME$/语言工具/python/软工/user/views.py" timestamp="1553591647007" />
       <file name="$USER_HOME$/语言工具/python/fengru/GameSDKInVue-master/src/router/index.js" timestamp="1548923662223">
         <mark key="[" line="6" column="36" />
       </file>
@@ -304,7 +306,7 @@
       <file name="$USER_HOME$/Downloads/e-commerce-site-master/产品分类.html" timestamp="1544237092436">
         <mark key="[" line="12" column="0" />
       </file>
-      <file name="/Django Console" timestamp="1548000625434">
+      <file name="/Django Console" timestamp="1553617276449">
         <mark key="[" line="0" column="0" />
       </file>
       <file name="$USER_HOME$/语言工具/python/fengru/train_model/dl/tools_gridsearch.py" timestamp="1551514515814">
@@ -322,14 +324,13 @@
       <file name="$USER_HOME$/语言工具/python/mysite/goods/migrations/0002_auto_20181126_0116.py" timestamp="1543195707024">
         <mark key="[" line="15" column="64" />
       </file>
-      <file name="$USER_HOME$/语言工具/python/软工/软工/urls.py" timestamp="1553591620528" />
       <file name="$USER_HOME$/语言工具/python/mysite/cmdb/db_con.py" timestamp="1545132199419">
         <mark key="[" line="10" column="59" />
       </file>
       <file name="$USER_HOME$/Desktop/simulations/2018 - 7 社会力 参考资料/Dataset/采集数据1 - 副本/#10003对流3/5.txt" timestamp="1545799982719">
         <mark key="[" line="16" column="10" />
       </file>
-      <file name="/Dummy.txt" timestamp="1553615829008">
+      <file name="/Dummy.txt" timestamp="1553617258457">
         <mark key="[" line="0" column="0" />
         <mark key="]" line="7" column="0" />
         <mark key="." line="7" column="0" />
