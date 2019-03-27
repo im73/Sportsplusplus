@@ -298,6 +298,11 @@
       <file name="$USER_HOME$/语言工具/python/mysite/cmdb/migrations/0001_initial.py" timestamp="1538557879513">
         <mark key="[" line="0" column="0" />
       </file>
+      <file name="$USER_HOME$/语言工具/python/软工/app_user/user/views.py" timestamp="1553698925350">
+        <mark key="[" line="15" column="0" />
+        <mark key="]" line="15" column="0" />
+        <mark key="." line="15" column="0" />
+      </file>
       <file name="$USER_HOME$/语言工具/python/PycharmProjects/untitled/venv/srccode/Serpent.py" timestamp="1526837570315">
         <mark key="[" line="0" column="0" />
       </file>
@@ -424,32 +429,7 @@
     </jumps>
     <registers>
       <register name="&quot;" type="4">
-        <text>from django.test import TestCase
-
-# Create your tests here.
-from app_user.user.models import User
-from app_user.user.serializers import UserSerializer
-from rest_framework.renderers import JSONRenderer
-from rest_framework.parsers import JSONParser
-import io
-
-user=User(ph_number=18090531196,nick_name=&quot;im73&quot;)
-user.save()
-
-serializer = UserSerializer(user)
-print(serializer.data)
-content = JSONRenderer().render(serializer.data)
-print(content)
-
-stream = io.BytesIO(content)
-data = JSONParser().parse(stream)
-
-serializer = UserSerializer(data=data)
-serializer.is_valid()
-# True
-serializer.validated_data
-# OrderedDict([('title', ''), ('code', 'print(&quot;hello, world&quot;)\n'), ('linenos', False), ('language', 'python'), ('style', 'friendly')])
-serializer.save()</text>
+        <text encoding="base64">ICAgIGlmIHJlcXVlc3QubWV0aG9kID09ICdHRVQnOgogICAgICAgIHNuaXBwZXRzID0gU25pcHBldC5vYmplY3RzLmFsbCgpCiAgICAgICAgc2VyaWFsaXplciA9IFNuaXBwZXRTZXJpYWxpemVyKHNuaXBwZXRzLCBtYW55PVRydWUpCiAgICAgICAgcmV0dXJuIEpzb25SZXNwb25zZShzZXJpYWxpemVyLmRhdGEsIHNhZmU9RmFsc2Up</text>
       </register>
       <register name="-" type="4">
         <text encoding="base64">ICAgIGNsYXNzIE1ldGE6</text>
@@ -461,6 +441,9 @@ serializer.save()</text>
         <text />
       </register>
       <register name="1" type="4">
+        <text encoding="base64">ICAgIGlmIHJlcXVlc3QubWV0aG9kID09ICdHRVQnOgogICAgICAgIHNuaXBwZXRzID0gU25pcHBldC5vYmplY3RzLmFsbCgpCiAgICAgICAgc2VyaWFsaXplciA9IFNuaXBwZXRTZXJpYWxpemVyKHNuaXBwZXRzLCBtYW55PVRydWUpCiAgICAgICAgcmV0dXJuIEpzb25SZXNwb25zZShzZXJpYWxpemVyLmRhdGEsIHNhZmU9RmFsc2Up</text>
+      </register>
+      <register name="2" type="4">
         <text>from django.test import TestCase
 
 # Create your tests here.
@@ -488,23 +471,23 @@ serializer.validated_data
 # OrderedDict([('title', ''), ('code', 'print(&quot;hello, world&quot;)\n'), ('linenos', False), ('language', 'python'), ('style', 'friendly')])
 serializer.save()</text>
       </register>
-      <register name="2" type="4">
+      <register name="3" type="4">
         <text encoding="base64">IGluc3RhbmNlLmxhbmd1YWdlID0gdmFsaWRhdGVkX2RhdGEuZ2V0KCdsYW5ndWFnZScsIGluc3RhbmNlLmxhbmd1YWdlKQogICAgICAgIGluc3RhbmNlLnN0eWxlID0gdmFsaWRhdGVkX2RhdGEuZ2V0KCdzdHlsZScsIGluc3RhbmNlLnN0eWxlKQ==</text>
       </register>
-      <register name="3" type="4">
+      <register name="4" type="4">
         <text encoding="base64">bnVtPTAKc3VtPTAKZm9yIGkgaW4gcmFuZ2UoMTkwMSwyMDAxKToKICAgIGlmIChpJTQ9PTApJihpJTEwMCE9MCl8KGklNDAwPT0wKToKICAgICAgICBudW09bnVtKzEKcHJpbnQoKDEwMCozNjUrbnVtKS83KQpwcmludCgoMTAwKjM2NStudW0pJTcpCgo=</text>
       </register>
-      <register name="4" type="4">
+      <register name="5" type="4">
         <text>from pygments.lexers import get_all_lexers
 from pygments.styles import get_all_styles</text>
       </register>
-      <register name="5" type="4">
+      <register name="6" type="4">
         <text encoding="base64">CuiuouWNleafpeeci+aciWJ1Zwrop6blj5HlmajlrozmiJDkuoYK5a2Y5YKo6L+H56iL5a6M5oiQCuWujOaIkOS6huWHuuS6huaOkuW6j+ayoeacieWBmuS7peWklg==</text>
       </register>
-      <register name="6" type="4">
+      <register name="7" type="4">
         <text encoding="base64">CiAgICBwcmludChjYXRlZ29yeSk=</text>
       </register>
-      <register name="7" type="4">
+      <register name="8" type="4">
         <text>num=59084709587505
 a,b,c=0,0,0
 while num%5==0 :
@@ -515,7 +498,7 @@ while num%3==0 :
     num=num/3
     b=b+1</text>
       </register>
-      <register name="8" type="4">
+      <register name="9" type="4">
         <text>num=59084709587505
 a,b,c=0,0,0
 while num%5==0 :
@@ -529,9 +512,6 @@ while num%7==0 :
     num=num/7
     c=c+1
 print(a,b,c)</text>
-      </register>
-      <register name="9" type="4">
-        <text encoding="base64">c3VtPTAKZm9yIGkgaW4gcmFuZ2UoMTkwMSwyMDAxKToKICAgIGlmICgoaSU0PT0wKSYoaSUxMDAhPTApKXwgaSU0MDA9PTAgOgogICAgICAgIHN1bT1zdW0rMQpwcmludCgoMTAwKjM2NStzdW0pLzcp</text>
       </register>
       <register name=":" type="4">
         <text>q</text>
