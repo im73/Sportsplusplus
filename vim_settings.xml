@@ -99,8 +99,8 @@
         <mark key="]" line="0" column="0" />
         <mark key="." line="0" column="0" />
       </file>
-      <file name="$USER_HOME$/语言工具/python/软工/软工/settings.py" timestamp="1553587637328">
-        <mark key="[" line="40" column="4" />
+      <file name="$USER_HOME$/语言工具/python/软工/软工/settings.py" timestamp="1553661992838">
+        <mark key="[" line="124" column="0" />
         <mark key="]" line="40" column="4" />
         <mark key="." line="40" column="4" />
       </file>
@@ -229,6 +229,9 @@
       </file>
       <file name="$USER_HOME$/语言工具/python/mysite/templates/insert.html" timestamp="1538822942694">
         <mark key="[" line="3" column="19" />
+      </file>
+      <file name="$USER_HOME$/语言工具/python/软工/app_user/user/serializers.py" timestamp="1553661859970">
+        <mark key="[" line="1" column="0" />
       </file>
       <file name="$USER_HOME$/语言工具/python/svdd/scripts/__init__.py" timestamp="1538285320186">
         <mark key="[" line="0" column="0" />
