@@ -41,6 +41,9 @@
       <file name="$USER_HOME$/语言工具/python/mysite/goods/models.py" timestamp="1553601721741">
         <mark key="[" line="26" column="75" />
       </file>
+      <file name="$USER_HOME$/语言工具/python/软工/app_user/user/models.py" timestamp="1553763601134">
+        <mark key="[" line="6" column="0" />
+      </file>
       <file name="$USER_HOME$/Downloads/bookstore-master 2/bookstore/manage.py" timestamp="1544542336490">
         <mark key="[" line="3" column="0" />
       </file>
@@ -227,6 +230,9 @@
       <file name="$USER_HOME$/语言工具/python/mysite/templates/insert.html" timestamp="1538822942694">
         <mark key="[" line="3" column="19" />
       </file>
+      <file name="$USER_HOME$/语言工具/python/软工/app_user/user/serializers.py" timestamp="1553763112231">
+        <mark key="[" line="13" column="0" />
+      </file>
       <file name="$USER_HOME$/语言工具/python/svdd/scripts/__init__.py" timestamp="1538285320186">
         <mark key="[" line="0" column="0" />
       </file>
@@ -285,8 +291,8 @@
       <file name="$USER_HOME$/语言工具/python/mysite/cmdb/migrations/0001_initial.py" timestamp="1538557879513">
         <mark key="[" line="0" column="0" />
       </file>
-      <file name="$USER_HOME$/语言工具/python/软工/app_user/user/views.py" timestamp="1553762170002">
-        <mark key="[" line="22" column="25" />
+      <file name="$USER_HOME$/语言工具/python/软工/app_user/user/views.py" timestamp="1553763058458">
+        <mark key="[" line="20" column="25" />
       </file>
       <file name="$USER_HOME$/语言工具/python/PycharmProjects/untitled/venv/srccode/Serpent.py" timestamp="1526837570315">
         <mark key="[" line="0" column="0" />
