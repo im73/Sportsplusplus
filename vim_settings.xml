@@ -157,8 +157,10 @@
       <file name="$USER_HOME$/语言工具/python/fengru/GameSDKInVue-master/index.html" timestamp="1548077940176">
         <mark key="[" line="5" column="2" />
       </file>
-      <file name="$USER_HOME$/语言工具/python/大数据与人工智能实训/cnn.py" timestamp="1553609686737">
-        <mark key="[" line="0" column="0" />
+      <file name="$USER_HOME$/语言工具/python/大数据与人工智能实训/cnn.py" timestamp="1554091832106">
+        <mark key="[" line="7" column="8" />
+        <mark key="]" line="7" column="8" />
+        <mark key="." line="7" column="8" />
       </file>
       <file name="$USER_HOME$/语言工具/python/svdd/__init__.py" timestamp="1538293335692">
         <mark key="[" line="0" column="0" />
@@ -337,7 +339,7 @@
       <file name="$USER_HOME$/Desktop/simulations/2018 - 7 社会力 参考资料/Dataset/采集数据1 - 副本/#10003对流3/5.txt" timestamp="1545799982719">
         <mark key="[" line="16" column="10" />
       </file>
-      <file name="/Dummy.txt" timestamp="1553788258669">
+      <file name="/Dummy.txt" timestamp="1554091594547">
         <mark key="[" line="0" column="0" />
         <mark key="]" line="7" column="0" />
         <mark key="." line="7" column="0" />
@@ -421,10 +423,10 @@
     </jumps>
     <registers>
       <register name="&quot;" type="4">
-        <text encoding="base64">ICBwcmludCgic3VjZXNzIik=</text>
+        <text>print(file_dir+'/'+train_class)</text>
       </register>
       <register name="-" type="4">
-        <text encoding="base64">ICBwcmludCgic3VjZXNzIik=</text>
+        <text>print(file_dir+'/'+train_class)</text>
       </register>
       <register name="/" type="4">
         <text encoding="base64">XDxwcmludFw+</text>
