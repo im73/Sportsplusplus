@@ -157,10 +157,10 @@
       <file name="$USER_HOME$/语言工具/python/fengru/GameSDKInVue-master/index.html" timestamp="1548077940176">
         <mark key="[" line="5" column="2" />
       </file>
-      <file name="$USER_HOME$/语言工具/python/大数据与人工智能实训/cnn.py" timestamp="1554091832106">
-        <mark key="[" line="7" column="8" />
-        <mark key="]" line="7" column="8" />
-        <mark key="." line="7" column="8" />
+      <file name="$USER_HOME$/语言工具/python/大数据与人工智能实训/cnn.py" timestamp="1554108294790">
+        <mark key="[" line="161" column="12" />
+        <mark key="]" line="161" column="12" />
+        <mark key="." line="161" column="12" />
       </file>
       <file name="$USER_HOME$/语言工具/python/svdd/__init__.py" timestamp="1538293335692">
         <mark key="[" line="0" column="0" />
@@ -423,10 +423,11 @@
     </jumps>
     <registers>
       <register name="&quot;" type="4">
-        <text>print(file_dir+'/'+train_class)</text>
+        <text>if coord.should_stop():
+                break</text>
       </register>
       <register name="-" type="4">
-        <text>print(file_dir+'/'+train_class)</text>
+        <text encoding="base64">IHByaW50KCdlcnJvcicp</text>
       </register>
       <register name="/" type="4">
         <text encoding="base64">XDxwcmludFw+</text>
@@ -435,27 +436,31 @@
         <text />
       </register>
       <register name="1" type="4">
+        <text>if coord.should_stop():
+                break</text>
+      </register>
+      <register name="2" type="4">
         <text>print(999)
         print(ph_number)</text>
       </register>
-      <register name="2" type="4">
+      <register name="3" type="4">
         <text>router.register(r'login', user_view.login)
 router.register(r'register', user_view.register)</text>
       </register>
-      <register name="3" type="4">
+      <register name="4" type="4">
         <text encoding="base64">bnVtPTAKc3VtPTAKZm9yIGkgaW4gcmFuZ2UoMTkwMSwyMDAxKToKICAgIGlmIChpJTQ9PTApJihpJTEwMCE9MCl8KGklNDAwPT0wKToKICAgICAgICBudW09bnVtKzEKcHJpbnQoKDEwMCozNjUrbnVtKS83KQpwcmludCgoMTAwKjM2NStudW0pJTcpCgo=</text>
       </register>
-      <register name="4" type="4">
+      <register name="5" type="4">
         <text>from pygments.lexers import get_all_lexers
 from pygments.styles import get_all_styles</text>
       </register>
-      <register name="5" type="4">
+      <register name="6" type="4">
         <text encoding="base64">CuiuouWNleafpeeci+aciWJ1Zwrop6blj5HlmajlrozmiJDkuoYK5a2Y5YKo6L+H56iL5a6M5oiQCuWujOaIkOS6huWHuuS6huaOkuW6j+ayoeacieWBmuS7peWklg==</text>
       </register>
-      <register name="6" type="4">
+      <register name="7" type="4">
         <text encoding="base64">CiAgICBwcmludChjYXRlZ29yeSk=</text>
       </register>
-      <register name="7" type="4">
+      <register name="8" type="4">
         <text>num=59084709587505
 a,b,c=0,0,0
 while num%5==0 :
@@ -466,7 +471,7 @@ while num%3==0 :
     num=num/3
     b=b+1</text>
       </register>
-      <register name="8" type="4">
+      <register name="9" type="4">
         <text>num=59084709587505
 a,b,c=0,0,0
 while num%5==0 :
@@ -480,9 +485,6 @@ while num%7==0 :
     num=num/7
     c=c+1
 print(a,b,c)</text>
-      </register>
-      <register name="9" type="4">
-        <text encoding="base64">c3VtPTAKZm9yIGkgaW4gcmFuZ2UoMTkwMSwyMDAxKToKICAgIGlmICgoaSU0PT0wKSYoaSUxMDAhPTApKXwgaSU0MDA9PTAgOgogICAgICAgIHN1bT1zdW0rMQpwcmludCgoMTAwKjM2NStzdW0pLzcp</text>
       </register>
       <register name=":" type="4">
         <text>q</text>
