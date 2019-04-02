@@ -44,7 +44,7 @@ def login(request):
             if user:
                 return JsonResponse({'message':'success'}, status=201)
             else :
-                return JsonResponse({'message':'fail'}, status=201)
+                return JsonResponse({'message':'fail'}, status=401)
         except Exception:
             print(Exception)
             return JsonResponse({'err_code':''}, status=401)

@@ -14,3 +14,4 @@ class User(models.Model):
         verbose_name = u"用户"
         verbose_name_plural = verbose_name
 
+
