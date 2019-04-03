@@ -14,24 +14,29 @@ import hashlib
 import base64
 import datetime
 import urllib
+import urllib.parse
+import urllib.request
 import json
 
-from SDK.xmltojson import xmltojson
 
+from SDK.xmltojson import xmltojson
+import ssl
+
+ssl.match_hostname = lambda cert, hostname: True
 
 class REST:
     
-    AccountSid=''
-    AccountToken=''
-    AppId=''
+    AccountSid='8a216da869dca6190169dd10cead00ae'
+    AccountToken='e9dbe824b1144aa8aa4009b54a752146'
+    AppId='8a216da869dca6190169dd10cf0800b4'
     SubAccountSid=''
     SubAccountToken=''
-    ServerIP=''
-    ServerPort=''
-    SoftVersion=''
+    ServerIP='app.cloopen.com'
+    ServerPort=8883
+    SoftVersion='2013-12-26'
     Iflog=True #是否打印日志
     Batch=''  #时间戳
-    BodyType = 'xml'#包体格式，可填值：json 、xml
+    BodyType = 'json'#包体格式，可填值：json 、xml
     
      # 初始化
      # @param serverIP       必选参数    服务器地址
@@ -244,11 +249,12 @@ class REST:
         #拼接URL
         url = "https://"+self.ServerIP + ":" + self.ServerPort + "/" + self.SoftVersion + "/Accounts/" + self.AccountSid + "/SMS/TemplateSMS?sig=" + sig
         #生成auth
+        print()
         src = self.AccountSid + ":" + self.Batch;
         auth = base64.encodestring(src).strip()
         req = urllib.Request(url)
-        self.setHttpHeader(req)
         req.add_header("Authorization", auth)
+        self.setHttpHeader(req)
         #创建包体
         b=''
         for a in datas:
@@ -267,7 +273,7 @@ class REST:
         req.add_data(body)
         data=''
         try:
-            res = urllib.urlopen(req);
+            res = urllib.request.urlopen(req);
             data = res.read()
             res.close()
         
@@ -364,16 +370,20 @@ class REST:
         self.Batch = nowdate.strftime("%Y%m%d%H%M%S")
         #生成sig
         signature = self.AccountSid + self.AccountToken + self.Batch;
-        sig = hashlib.md5.new(signature).hexdigest().upper()
+        sig = hashlib.md5()
+        sig.update(signature.encode("utf8"))
+        sig=sig.hexdigest().upper()
         #拼接URL
-        url = "https://"+self.ServerIP + ":" + self.ServerPort + "/" + self.SoftVersion + "/Accounts/" + self.AccountSid + "/Calls/VoiceVerify?sig=" + sig
+        url = "https://"+str(self.ServerIP) + ":" + str(self.ServerPort) + "/" + str(self.SoftVersion) + "/Accounts/" + str(self.AccountSid) + "/Calls/VoiceVerify?sig=" + str(sig)
         #生成auth
         src = self.AccountSid + ":" + self.Batch;
-        auth = base64.encodestring(src).strip()
-        req = urllib.Request(url)
+
+        auth = base64.b64encode(src.encode(encoding="utf8")).strip()
+        req = urllib.request.Request(url=url)
+        req.add_header("Authorization", auth)
         self.setHttpHeader(req)
         
-        req.add_header("Authorization", auth)
+
         
         #创建包体
         body ='''<?xml version="1.0" encoding="utf-8"?><VoiceVerify>\
@@ -383,10 +393,16 @@ class REST:
         if self.BodyType == 'json':   
             # if this model is Json ..then do next code 
             body = '''{"appId": "%s", "verifyCode": "%s","playTimes": "%s","to": "%s","respUrl": "%s","displayNum": "%s","lang": "%s","userData": "%s"}'''%(self.AppId,verifyCode,playTimes,to,respUrl,displayNum,lang,userData)
-        req.add_data(body)
-        data=''
+
+        req.data=body
+        res = urllib.request.(req);
+        print(res)
+
         try:
-            res = urllib.urlopen(req);
+
+            res = urllib.request.urlopen(req);
+            print(req)
+
             data = res.read()
             res.close()
         

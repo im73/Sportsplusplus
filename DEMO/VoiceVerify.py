@@ -5,22 +5,21 @@
 #-*- coding: UTF-8 -*-  
 
 from SDK.CCPRestSDK import REST
-import ConfigParser
 
 #主帐号
-accountSid= '您的主帐号';
+accountSid= '8a216da869dca6190169dd10cead00ae';
 
 #主帐号Token
-accountToken= '您的主帐号Token';
+accountToken= 'e9dbe824b1144aa8aa4009b54a752146';
 
 #应用Id
-appId='您的应用ID';
+appId='8aaf070869dc0b880169e22fb0510359';
 
 #请求地址，格式如下，不需要写http://
 serverIP='app.cloopen.com';
 
 #请求端口 
-serverPort='8883';
+serverPort=8883;
 
 #REST版本号
 softVersion='2013-12-26';
@@ -41,6 +40,7 @@ def voiceVerify(verifyCode,playTimes,to,displayNum,respUrl,lang,userData):
     rest.setAppId(appId)
     
     result = rest.voiceVerify(verifyCode,playTimes,to,displayNum,respUrl,lang,userData)
+    print(result)
     for k,v in result.iteritems(): 
         
         if k=='VoiceVerify' :
@@ -50,4 +50,4 @@ def voiceVerify(verifyCode,playTimes,to,displayNum,respUrl,lang,userData):
             print ('%s:%s' % (k, v))
    
    
-#voiceVerify('验证码内容','播放次数','接收号码','显示的主叫号码','语音验证码状态通知回调地址','语言类型','第三方私有数据')
+voiceVerify(445566,2,18090531196,"","",'zh-en',"")
