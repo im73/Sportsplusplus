@@ -25,10 +25,11 @@ class Player(models.Model):
     weightKilograms = models.FloatField(6, 5)
     weightPounds = models.FloatField(6, 5)
     playerLogo = models.ImageField(upload_to='media/image')
+    #ss
 
     teamId = models.ForeignKey("Team", on_delete=models.CASCADE)
 
-    #def __unicode__(self):
+    #def __unicode__(self):  ss
     #    return u'%s %s' % (self.firstName, self.lastName)
 
 
