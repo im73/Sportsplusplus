@@ -5,6 +5,9 @@
 #-*- coding: UTF-8 -*-  
 
 from SDK.CCPRestSDK import REST
+import ssl
+
+ssl.match_hostname = lambda cert, hostname: True
 
 #Ö÷ÕÊºÅ
 accountSid= '8a216da869dca6190169dd10cead00ae';
