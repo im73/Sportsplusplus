@@ -15,3 +15,13 @@ class User(models.Model):
         verbose_name_plural = verbose_name
 
 
+class back_user(models.Model):
+
+    username=models.CharField(max_length=15,null=False,default="")
+    password=models.CharField(max_length=15,null=False,default="")
+
+    class Meta:
+        verbose_name = u"管理人员"
+        verbose_name_plural = verbose_name
+
+
