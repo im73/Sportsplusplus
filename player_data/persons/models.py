@@ -22,7 +22,7 @@ class Player(models.Model):
 
     personId = models.CharField(max_length=20,primary_key=True)
     collegeName = models.CharField(max_length=50)
-    country = models.CharField(max_length=20)
+    country = models.CharField(max_length=50)
     dateOfBirthUTC = models.DateField(auto_now_add=True)
     firstName = models.CharField(max_length=20)
     lastName = models.CharField(max_length=20)

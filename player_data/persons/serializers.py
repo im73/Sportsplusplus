@@ -26,9 +26,10 @@ class PlayerSerializer(serializers.ModelSerializer):
             'teamId',
             'temporaryDisplayName',
             'weightKilograms',
-            'playerLogo',
             'weightPounds',
         )
+        extra_kwargs = {'collegeName': {'allow_blank': True},
+                        'lastName':{'allow_blank':True}}
 
 class Career(serializers.ModelSerializer):
     class Meta:

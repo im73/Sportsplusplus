@@ -20,43 +20,53 @@ from player_data.persons.serializers import PlayerSerializer,TeamSerializer
 from django.core.files import File
 #接下来就可以使用model了
 
-
+#添加球员信息
 # with open('./active_players(1).json') as f:
 #     active_players = json.load(f)
 # active_players = active_players['active_players']
 #
 # for player in active_players:
 #     try:
-#         content = JSONRenderer().render(player)
-#         stream = BytesIO(content)
-#         data = JSONParser().parse(stream)
-#         serializer = PlayerSerializer(data=data)
-#         if serializer.is_valid():
-#             serializer.save()
-#         else:
-#             print(serializer.errors)
+#         if (player.get('personId')!=None)&(Player.objects.filter(personId=player.get('personId')).count()==0):
+#             image_path="player/"+player.get('personId')+".png"
+#             try:
+#                 image=open(image_path,'rb')
+#             except:
+#                 image=open("player/0000.png",'rb')
+#             image=File(image)
+#             content = JSONRenderer().render(player)
+#             stream = BytesIO(content)
+#             data = JSONParser().parse(stream)
+#             serializer = PlayerSerializer(data=data)
+#             if serializer.is_valid():
+#                 serializer.save()
+#                 playerob=Player.objects.get(personId=player.get('personId'))
+#                 playerob.playerLogo=image
+#                 playerob.save()
+#             else:
+#                 print(serializer.errors)
 #     except Exception:
 #         print(Exception.with_traceback())
-
-with open('./team_config.json') as f:
-    team_list= json.load(f)
-team_list=team_list['teams']['config']
-
-for team in team_list:
-    if team.get('ttsName')!=None:
-        image_path="team/"+team.get('tricode')+"_logo.svg"
-        image=open(image_path)
-        image=File(image)
-        team['teamLogo']=image
-
-        content = JSONRenderer().render(team)
-        stream = BytesIO(content)
-        data = JSONParser().parse(stream)
-        #serializer = TeamSerializer(data=data)
-        if 1:
-            #serializer.save()
-            Teamob=Team.objects.get(teamId=team['teamId'])
-            Teamob.teamLogo=image
-            Teamob.save()
-        else:
-            print(serializer.errors)
+# #添加球队
+# with open('./team_config.json') as f:
+#     team_list= json.load(f)
+# team_list=team_list['teams']['config']
+#
+# for team in team_list:
+#     if team.get('ttsName')!=None:
+#         image_path="team/"+team.get('tricode')+"_logo.svg"
+#         image=open(image_path)
+#         image=File(image)
+#         team['teamLogo']=image
+#
+#         content = JSONRenderer().render(team)
+#         stream = BytesIO(content)
+#         data = JSONParser().parse(stream)
+#         #serializer = TeamSerializer(data=data)
+#         if 1:
+#             #serializer.save()
+#             Teamob=Team.objects.get(teamId=team['teamId'])
+#             Teamob.teamLogo=image
+#             Teamob.save()
+#         else:
+#             print(serializer.errors)
