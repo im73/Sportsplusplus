@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b047bb0b-4241-4ad3-a197-7125741d666d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/player/0000.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DEMO/VoiceVerify.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DEMO/xmltojson.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/player/0000.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/player_data/persons/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/player_data/persons/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/player_data/persons/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/player_data/persons/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storedata.py" beforeDir="false" afterPath="$PROJECT_DIR$/storedata.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -70,7 +70,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="serializers.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/软工/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1095">
+              <caret line="73" selection-start-line="73" selection-end-line="73" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="serializers.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/player_data/persons/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="465">
@@ -85,17 +94,26 @@
       <file leaf-file-name="active_players(1).json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/active_players(1).json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20319">
-              <caret line="1578" column="40" selection-start-line="1578" selection-start-column="40" selection-end-line="1578" selection-end-column="40" />
+            <state relative-caret-position="3472">
+              <caret line="249" column="33" selection-start-line="249" selection-start-column="33" selection-end-line="249" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/player_data/persons/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="26" column="44" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
+            <state relative-caret-position="342">
+              <caret line="71" column="60" lean-forward="true" selection-start-line="71" selection-start-column="60" selection-end-line="71" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -103,8 +121,8 @@
       <file leaf-file-name="storedata.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/storedata.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="579">
-              <caret line="49" selection-start-line="49" selection-end-line="49" />
+            <state relative-caret-position="255">
+              <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -112,13 +130,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CHA_logo_PiBEz8i.svg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/media/team/CHA_logo_PiBEz8i.svg">
+      <file leaf-file-name="0000_03kM85S.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/media/player/0000_03kM85S.png">
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
-      <file leaf-file-name="2037.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/player/2037.png">
+      <file leaf-file-name="0000.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/media/player/0000.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file leaf-file-name="CHA_logo_PiBEz8i.svg" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/media/team/CHA_logo_PiBEz8i.svg">
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
@@ -127,18 +150,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="10110">
               <caret line="674" column="17" selection-start-line="674" selection-start-column="17" selection-end-line="674" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="data_spider.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data_spider.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="90" column="25" selection-start-line="90" selection-start-column="25" selection-end-line="90" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -185,9 +196,9 @@
         <option value="$PROJECT_DIR$/team_config.json" />
         <option value="$PROJECT_DIR$/active_players(1).json" />
         <option value="$PROJECT_DIR$/media/team/CHA_logo.svg" />
+        <option value="$PROJECT_DIR$/player_data/persons/serializers.py" />
         <option value="$PROJECT_DIR$/storedata.py" />
         <option value="$PROJECT_DIR$/player_data/persons/models.py" />
-        <option value="$PROJECT_DIR$/player_data/persons/serializers.py" />
       </list>
     </option>
   </component>
@@ -201,8 +212,9 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="height" value="806" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -216,6 +228,16 @@
             <path>
               <item name="软工" type="b2602c69:ProjectViewProjectNode" />
               <item name="软工" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="软工" type="b2602c69:ProjectViewProjectNode" />
+              <item name="软工" type="462c0819:PsiDirectoryNode" />
+              <item name="app_user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="软工" type="b2602c69:ProjectViewProjectNode" />
+              <item name="软工" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="软工" type="b2602c69:ProjectViewProjectNode" />
@@ -418,7 +440,14 @@
       <option name="project" value="LOCAL" />
       <updated>1554456088387</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="球员信息添加完毕">
+      <created>1554468240464</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1554468240464</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView">
@@ -500,7 +529,8 @@
     <MESSAGE value="xixixixiixixix" />
     <MESSAGE value="验证码" />
     <MESSAGE value="球队信息添加完毕" />
-    <option name="LAST_COMMIT_MESSAGE" value="球队信息添加完毕" />
+    <MESSAGE value="球员信息添加完毕" />
+    <option name="LAST_COMMIT_MESSAGE" value="球员信息添加完毕" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -508,10 +538,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/venv/软工/lib/python3.6/site-packages/pymysql/cursors.py" />
-    <entry file="file://$PROJECT_DIR$/app_user/user/migrations/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$USER_HOME$/Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/9d3b8d300c9741a495ba3fa5b54265a0/Message/MessageTemp/9c9380d3e5a00db7c4e4b4467a3c9f4f/File/面向对象电梯系列第一次指导书.md" />
     <entry file="file://$PROJECT_DIR$/软工/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -527,6 +553,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -593,13 +622,6 @@
     <entry file="file://$PROJECT_DIR$/player_data/persons/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/venv/软工/lib/python3.6/site-packages/django/db/models/base.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="287">
@@ -611,6 +633,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#626#658#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -690,13 +715,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/软工/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="85" column="12" selection-start-line="85" selection-start-column="12" selection-end-line="85" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -742,13 +760,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/active_players(1).json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20319">
-          <caret line="1578" column="40" selection-start-line="1578" selection-start-column="40" selection-end-line="1578" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/media/player/203500.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -758,23 +769,6 @@
     <entry file="file://$PROJECT_DIR$/media/team/CHA_logo_PiBEz8i.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/player_data/persons/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="26" column="44" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storedata.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/player_data/persons/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -782,6 +776,50 @@
           <folding>
             <element signature="e#0#38#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storedata.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/player/0000_03kM85S.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/media/player/0000.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/active_players(1).json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3472">
+          <caret line="249" column="33" selection-start-line="249" selection-start-column="33" selection-end-line="249" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/软工/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1095">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/player_data/persons/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="71" column="60" lean-forward="true" selection-start-line="71" selection-start-column="60" selection-end-line="71" selection-end-column="60" />
         </state>
       </provider>
     </entry>
