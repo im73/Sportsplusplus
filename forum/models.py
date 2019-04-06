@@ -43,6 +43,7 @@ class SubPost(models.Model):
         verbose_name_plural = verbose_name
 
 
+
 class Reply(models.Model):
     rplContent = models.CharField(max_length=254, primary_key=True, null=False, verbose_name=u"回复内容")
     rpltime = models.DateTimeField(auto_now_add=True, verbose_name=u"回复时间")
