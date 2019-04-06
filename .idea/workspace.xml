@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b047bb0b-4241-4ad3-a197-7125741d666d" name="Default" comment="论坛数据库">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/forum/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/forum/models.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -116,13 +115,13 @@
         <entry file="file://$PROJECT_DIR$/forum/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="43">
-              <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
+              <caret line="38" selection-start-line="38" selection-end-line="38" />
               <folding>
-                <marker date="1554544240488" expanded="true" signature="84:85" ph="..." />
-                <marker date="1554544240488" expanded="true" signature="84:90" ph="..." />
-                <marker date="1554544240488" expanded="true" signature="477:482" ph="..." />
-                <marker date="1554544240488" expanded="true" signature="1117:1122" ph="..." />
-                <marker date="1554544240488" expanded="true" signature="1764:1769" ph="..." />
+                <marker date="1554544314410" expanded="true" signature="84:85" ph="..." />
+                <marker date="1554544314410" expanded="true" signature="84:90" ph="..." />
+                <marker date="1554544314410" expanded="true" signature="477:482" ph="..." />
+                <marker date="1554544314410" expanded="true" signature="1117:1122" ph="..." />
+                <marker date="1554544314410" expanded="true" signature="1760:1765" ph="..." />
               </folding>
             </state>
           </provider>
@@ -456,7 +455,14 @@
       <option name="project" value="LOCAL" />
       <updated>1554544108346</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="论坛数据库">
+      <created>1554544268665</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1554544268665</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView">
@@ -470,7 +476,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16689008" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -540,7 +545,8 @@
     <MESSAGE value="球队信息添加完毕" />
     <MESSAGE value="球员信息添加完毕" />
     <MESSAGE value="论坛数据" />
-    <option name="LAST_COMMIT_MESSAGE" value="论坛数据" />
+    <MESSAGE value="论坛数据库" />
+    <option name="LAST_COMMIT_MESSAGE" value="论坛数据库" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/_mac/codestyles/Default.xml">
@@ -729,13 +735,13 @@
     <entry file="file://$PROJECT_DIR$/forum/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="43">
-          <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
           <folding>
-            <marker date="1554544240488" expanded="true" signature="84:85" ph="..." />
-            <marker date="1554544240488" expanded="true" signature="84:90" ph="..." />
-            <marker date="1554544240488" expanded="true" signature="477:482" ph="..." />
-            <marker date="1554544240488" expanded="true" signature="1117:1122" ph="..." />
-            <marker date="1554544240488" expanded="true" signature="1764:1769" ph="..." />
+            <marker date="1554544314410" expanded="true" signature="84:85" ph="..." />
+            <marker date="1554544314410" expanded="true" signature="84:90" ph="..." />
+            <marker date="1554544314410" expanded="true" signature="477:482" ph="..." />
+            <marker date="1554544314410" expanded="true" signature="1117:1122" ph="..." />
+            <marker date="1554544314410" expanded="true" signature="1760:1765" ph="..." />
           </folding>
         </state>
       </provider>
