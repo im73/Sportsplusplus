@@ -37,7 +37,6 @@ class SubPost(models.Model):
     username = models.ForeignKey(to="User", to_field="username", on_delete=models.CASCADE, verbose_name=u"副贴作者")
     userlogo = models.ForeignKey(to="User", to_field="userlogo", on_delete=models.CASCADE, verbose_name=u"副贴作者头像")
 
-
     class Meta:
 
         verbose_name = u"副帖子"
