@@ -6,8 +6,9 @@ from django.db import models
 class User(models.Model):
 
     register_time=models.DateTimeField(auto_now_add=True,verbose_name=u"注册时间")
-    ph_number=models.CharField(max_length=11,null=False,default='',verbose_name=u"电话号码",unique=True,error_messages={'code':123})
+    email=models.EmailField(verbose_name=u"邮箱",unique=True)
     nick_name=models.CharField(max_length=12,null=False,default='',verbose_name=u"昵称",unique=True)
+    password=models.CharField(max_length=16,verbose_name=u"密码")
     image=models.ImageField(upload_to="image/%Y/%M",default="image/default.jpg",verbose_name=u"头像")
 
     class Meta:
@@ -24,4 +25,14 @@ class back_user(models.Model):
         verbose_name = u"管理人员"
         verbose_name_plural = verbose_name
 
+class email_very(models.Model):
 
+    email = models.EmailField(verbose_name=u"邮箱",unique=True)
+    very_code = models.CharField(max_length=10,verbose_name=u"验证码")
+    op_type = models.IntegerField(verbose_name=u"操作类型")
+    date = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name = u"验证码"
+        verbose_name_plural = verbose_name
+        ordering = ('date',)

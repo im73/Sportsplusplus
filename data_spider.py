@@ -74,7 +74,7 @@ class GetLiveGames(object):
         pass
 
     def get_player_profile(self):
-        with open('./active_players.json') as f:
+        with open('./active_players(1).json') as f:
             active_players = json.load(f)
         active_players = active_players['active_players']
         # profile = {}

@@ -29,13 +29,13 @@ class PlayerSerializer(serializers.ModelSerializer):
             'weightPounds',
         )
         extra_kwargs = {'collegeName': {'allow_blank': True},
-                        'lastName':{'allow_blank':True}}
+                        'lastName':{'allow_blank':True},}
 
 class Career(serializers.ModelSerializer):
     class Meta:
         model = Career
         fields = (
-            'personid',
+            'personId',
             'season',
             'ppg',
             'rpg',
@@ -62,4 +62,7 @@ class Career(serializers.ModelSerializer):
             'gamesStarted',
             'plusMinus',
             'min',
+            'assists',
+            'blocks',
+
         )

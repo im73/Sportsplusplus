@@ -73,6 +73,9 @@ class Career(models.Model):
     plusMinus = models.IntegerField(verbose_name=u"总正负值")
     mins = models.IntegerField(verbose_name=u"总上场时长（单位分钟）")
     personId = models.ForeignKey(to="Player",to_field="personId", on_delete=models.CASCADE,verbose_name=u"所属球员")
+    teamId = models.CharField(max_length=12,verbose_name=u"球队编号")
+    assists = models.IntegerField(verbose_name=u"助攻数")
+    blocks = models.IntegerField(verbose_name=u"盖帽数")
 
     class Meta:
         verbose_name = u"职业生涯"
