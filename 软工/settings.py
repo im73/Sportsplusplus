@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'app_user.user',
     'player_data.persons',
+    'forum',
 
 ]
 

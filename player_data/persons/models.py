@@ -6,13 +6,12 @@ from django.db import models
 
 class Team(models.Model):
 
-    teamId =models.CharField(max_length=20,primary_key=True,null=False,verbose_name=u"队伍编号")
-    ttsName = models.CharField(max_length=50,verbose_name=u"队伍名",default="")
-    teamLogo = models.ImageField(upload_to='',verbose_name=u"队伍图标")
-    primaryColor = models.CharField(max_length=10,verbose_name=u"主色")
-    secondaryColor = models.CharField(max_length=10,verbose_name=u"辅色")
-    #def __unicode__(self):
-    #    return self.teamname
+    teamId = models.CharField(max_length=20, primary_key=True,null=False, verbose_name=u"队伍编号")
+    ttsName = models.CharField(max_length=50, verbose_name=u"队伍名", default="")
+    teamLogo = models.ImageField(upload_to='', verbose_name=u"队伍图标")
+    primaryColor = models.CharField(max_length=10, verbose_name=u"主色")
+    secondaryColor = models.CharField(max_length=10, verbose_name=u"辅色")
+
     class Meta:
         verbose_name = u"球队"
         verbose_name_plural = verbose_name
@@ -20,28 +19,26 @@ class Team(models.Model):
 
 class Player(models.Model):
 
-    personId = models.CharField(max_length=20,primary_key=True,verbose_name=u"个人id")
-    collegeName = models.CharField(max_length=50,verbose_name=u"大学名字")
-    country = models.CharField(max_length=50,verbose_name=u"国家")
-    dateOfBirthUTC = models.DateField(auto_now_add=True,verbose_name=u"出生日期")
-    firstName = models.CharField(max_length=20,verbose_name=u"名")
-    lastName = models.CharField(max_length=20,verbose_name=u"姓")
+    personId = models.CharField(max_length=20, primary_key=True,verbose_name=u"个人id")
+    collegeName = models.CharField(max_length=50, verbose_name=u"大学名字")
+    country = models.CharField(max_length=50, verbose_name=u"国家")
+    dateOfBirthUTC = models.DateField(auto_now_add=True, verbose_name=u"出生日期")
+    firstName = models.CharField(max_length=20, verbose_name=u"名")
+    lastName = models.CharField(max_length=20, verbose_name=u"姓")
     heightFeet = models.FloatField()
     heightInches = models.FloatField(verbose_name=u"身高-英尺")
     heightMeters = models.FloatField(verbose_name=u"身高-米")
     nbaDebutYear = models.DateField(auto_now_add=True)
-    temporaryDisplayName = models.CharField(max_length=50,verbose_name=u"别名")
+    temporaryDisplayName = models.CharField(max_length=50, verbose_name=u"别名")
     weightKilograms = models.FloatField(verbose_name=u"体重-千克")
     weightPounds = models.FloatField(verbose_name=u"体重-磅")
-    playerLogo = models.ImageField(upload_to='',verbose_name=u"球员头像",null=True)
-    teamId = models.ForeignKey(to="Team",to_field="teamId", on_delete=models.CASCADE,verbose_name=u"所属球队")
+    playerLogo = models.ImageField(upload_to='', verbose_name=u"球员头像", null=True)
+    teamId = models.ForeignKey(to="Team", to_field="teamId", on_delete=models.CASCADE, verbose_name=u"所属球队")
 
     class Meta:
 
         verbose_name = u"球员"
         verbose_name_plural = verbose_name
-
-
 
 
 class Career(models.Model):
@@ -77,9 +74,6 @@ class Career(models.Model):
     class Meta:
         verbose_name = u"职业生涯"
         verbose_name_plural = verbose_name
-
-    #def __init__(self):
-    #   return self.personid
 
 
 
