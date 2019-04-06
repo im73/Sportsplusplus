@@ -6,7 +6,7 @@ from django.template import loader
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
-from app_user.user.models import User,email_very
+from app_user.user.models import User,email_very,back_user
 from app_user.user.serializers import UserSerializer
 import random
 from api.send_email import get_random_str
@@ -57,7 +57,7 @@ def register(request):
             return JsonResponse({'message':'success'}, status=201)
         except Exception:
             print(Exception)
-            return JsonResponse({'err_code':'用户已存在'}, status=400)
+            return JsonResponse({'message':'用户已存在'}, status=400)
 
 @csrf_exempt
 def login(request):
@@ -65,7 +65,25 @@ def login(request):
     user login by ph_number.
     """
     if request.method == 'GET':
-        ph_number=request.GET.get('ph_number')
-        verification_code=random.randrange(100000,999999)
-        return JsonResponse({'veri_code':verification_code}, status=200)
+        nick_name=request.GET.get('nick_name')
+        password=request.GET.get('password')
+        user=User.objects.filter(nick_name=nick_name,password=password)
+        if user.count()==0:
+            return JsonResponse({'message':'用户名或密码错误'}, status=400)
+        else:
+            return JsonResponse({'message':'登录成功'}, status=200)
 
+
+@csrf_exempt
+def back_login(request):
+    """
+    user login by ph_number.
+    """
+    if request.method == 'GET':
+        nick_name=request.GET.get('nick_name')
+        password=request.GET.get('password')
+        user=back_user.objects.filter(nick_name=nick_name,password=password)
+        if user.count()==0:
+            return JsonResponse({'message':'用户名或密码错误'}, status=400)
+        else:
+            return JsonResponse({'message':'登录成功'}, status=200)
