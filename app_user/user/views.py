@@ -68,6 +68,9 @@ def login(request):
         nick_name=request.GET.get('nick_name')
         password=request.GET.get('password')
         user=User.objects.filter(nick_name=nick_name,password=password)
+        userob=User.objects.get(nick_name=nick_name,password=password)
+
+        userob.save()
         if user.count()==0:
             return JsonResponse({'message':'用户名或密码错误'}, status=400)
         else:

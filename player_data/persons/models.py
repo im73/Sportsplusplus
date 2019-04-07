@@ -25,7 +25,7 @@ class Player(models.Model):
     dateOfBirthUTC = models.DateField(auto_now_add=True, verbose_name=u"出生日期")
     firstName = models.CharField(max_length=20, verbose_name=u"名")
     lastName = models.CharField(max_length=20, verbose_name=u"姓")
-    heightFeet = models.FloatField()
+    heightFeet = models.FloatField(verbose_name=u"身高-英寸")
     heightInches = models.FloatField(verbose_name=u"身高-英尺")
     heightMeters = models.FloatField(verbose_name=u"身高-米")
     nbaDebutYear = models.DateField(auto_now_add=True)
