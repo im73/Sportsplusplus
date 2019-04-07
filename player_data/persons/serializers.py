@@ -1,14 +1,13 @@
 from rest_framework import serializers
 
 from player_data import persons
-from player_data.persons.models import Team,Player,Career
+from player_data.persons.models import Team,Player,Career,Record
 
 
 class TeamSerializer(serializers.ModelSerializer):
     class Meta:
         model = Team
         fields = (
-            '队标',
             '球队名',
             '主教练',
             '介绍',
@@ -62,4 +61,11 @@ class CareerSerializer(serializers.ModelSerializer):
             '篮板',
             '罚球',
         )
-
+class RecordSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Record
+        fields = (
+            '序号',
+            '排名',
+            '数值',
+        )

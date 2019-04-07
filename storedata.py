@@ -17,8 +17,8 @@ from rest_framework.renderers import JSONRenderer
 import django
 django.setup()
 import data_spider
-from player_data.persons.models import Player,Team
-from player_data.persons.serializers import PlayerSerializer,TeamSerializer
+from player_data.persons.models import Player,Team,Record
+from player_data.persons.serializers import PlayerSerializer,TeamSerializer,RecordSerializer
 from django.core.files import File
 #接下来就可以使用model了
 
@@ -59,7 +59,6 @@ from django.core.files import File
 #         image_path="team/"+team.get('tricode')+"_logo.svg"
 #         image=open(image_path)
 #         image=File(image)
-#         team['teamLogo']=image
 #
 #         content = JSONRenderer().render(team)
 #         stream = BytesIO(content)
@@ -88,3 +87,50 @@ from django.core.files import File
 #     # profile[player['personId']] = player_profile
 #         player_profile = json.dumps(player_profile, sort_keys=True, indent=8, separators=(',', ':'))
 #         career_total=player_profile['league']['standard']['stats']['careerSummary']
+
+
+import os
+
+file_dir="./team_info"
+team_index=0
+index=0
+for root, dirs, files in os.walk(file_dir):
+    print(files) #当前路径下所有非目录子文件
+    for file in files:
+        with open(root+"/"+file) as f:
+            team_info = json.load(f)
+        print(team_info)
+        team_info=team_info[file.split('.')[0]]
+        team_info['球队名']=file
+        info=team_info['技术统计']
+        for item in info:
+            item_info=info[str(item)]
+            item_info['序号']=index
+            index=index+1
+            if Record.objects.filter(序号=index).count()!=0:
+                continue
+            content = JSONRenderer().render(item_info)
+            stream = BytesIO(content)
+            data = JSONParser().parse(stream)
+            serializer = RecordSerializer(data=data)
+            if serializer.is_valid():
+                serializer.save()
+            else:
+                print(serializer.errors)
+
+        team_info['场均助攻']=str(team_index*5+0)
+        team_info['场均失分']=str(team_index*5+1)
+        team_info['场均失误']=str(team_index*5+2)
+        team_info['场均得分']=str(team_index*5+3)
+        team_info['场均篮板']=str(team_index*5+4)
+
+        content = JSONRenderer().render(team_info)
+        stream = BytesIO(content)
+        data = JSONParser().parse(stream)
+        serializer = TeamSerializer(data=data)
+
+        if serializer.is_valid():
+            serializer.save()
+        else:
+            print(serializer.errors)
+        team_index=team_index+1
