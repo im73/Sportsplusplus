@@ -73,20 +73,18 @@ from django.core.files import File
 #         else:
 #             print(serializer.errors)
 
-glg = data_spider.GetLiveGames()
-# glg.get_scores()
-# glg.get_active_players()
-# glg.get_schedule()
-# glg.get_player_profile()
-with open('./active_players(1).json') as f:
-    active_players = json.load(f)
-active_players = active_players['active_players']
-# profile = {}
-for player in active_players:
-    if (player.get('personId')!=None):
-        player_profile = requests.get(glg.player_profile.format(player['personId'])).json()
-    # profile[player['personId']] = player_profile
-    #     player_profile = json.dumps(player_profile, sort_keys=True, indent=8, separators=(',', ':'))
-        career_total=player_profile['league']['standard']['stats']['careerSummary']
-        career_total['ni']='nihao'
-        print(career_total)
+# glg = data_spider.GetLiveGames()
+# # glg.get_scores()
+# # glg.get_active_players()
+# # glg.get_schedule()
+# # glg.get_player_profile()
+# with open('./active_players(1).json') as f:
+#     active_players = json.load(f)
+# active_players = active_players['active_players']
+# # profile = {}
+# for player in active_players:
+#     if (player.get('personId')!=None):
+#         player_profile = requests.get(glg.player_profile.format(player['personId'])).json()
+#     # profile[player['personId']] = player_profile
+#         player_profile = json.dumps(player_profile, sort_keys=True, indent=8, separators=(',', ':'))
+#         career_total=player_profile['league']['standard']['stats']['careerSummary']

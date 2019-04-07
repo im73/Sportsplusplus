@@ -7,62 +7,59 @@ from player_data.persons.models import Team,Player,Career
 class TeamSerializer(serializers.ModelSerializer):
     class Meta:
         model = Team
-        fields = ('teamId', 'ttsName','primaryColor','secondaryColor')
+        fields = (
+            '队标',
+            '球队名',
+            '主教练',
+            '介绍',
+            '进入NBA',
+            '场均助攻',
+            '场均失分',
+            '场均失误',
+            '场均得分',
+            '场均篮板',
+        )
+
 
 class PlayerSerializer(serializers.ModelSerializer):
-    class Meta:
+    class Mata:
         model = Player
         fields = (
-            'personId',
-            'country',
-            'dateOfBirthUTC',
-            'firstName',
-            'lastName',
-            'heightFeet',
-            'heightInches',
-            'heightMeters',
-            'collegeName',
-            'nbaDebutYear',
-            'teamId',
-            'temporaryDisplayName',
-            'weightKilograms',
-            'weightPounds',
+            '头像',
+            '中文名',
+            '位置',
+            '体重',
+            '合同',
+            '国籍',
+            '学校',
+            '序号',
+            '本赛季薪金',
+            '球队',
+            '生日',
+            '英文名',
+            '身高',
         )
-        extra_kwargs = {'collegeName': {'allow_blank': True},
-                        'lastName':{'allow_blank':True},}
 
-class Career(serializers.ModelSerializer):
+        extra_kwargs = {'学校': {'allow_blank': True},
+                        }
+
+
+class CareerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Career
         fields = (
-            'personId',
-            'season',
-            'ppg',
-            'rpg',
-            'apg',
-            'mpg',
-            'topg',
-            'spg',
-            'bpg',
-            'tpp',
-            'ftp',
-            'fgp',
-            'steals',
-            'turnovers',
-            'offReb',
-            'defReb',
-            'totReb',
-            'fgm',
-            'fga',
-            'ftm',
-            'fta',
-            'pFouls',
-            'points',
-            'gamesPlayed',
-            'gamesStarted',
-            'plusMinus',
-            'min',
-            'assists',
-            'blocks',
-
+            '三分',
+            '助攻',
+            '命中率',
+            '场次',
+            '失误',
+            '得分',
+            '投篮',
+            '抢断',
+            '时间',
+            '犯规',
+            '盖帽',
+            '篮板',
+            '罚球',
         )
+
