@@ -86,5 +86,7 @@ for player in active_players:
     if (player.get('personId')!=None):
         player_profile = requests.get(glg.player_profile.format(player['personId'])).json()
     # profile[player['personId']] = player_profile
-        player_profile = json.dumps(player_profile, sort_keys=True, indent=8, separators=(',', ':'))
+    #     player_profile = json.dumps(player_profile, sort_keys=True, indent=8, separators=(',', ':'))
         career_total=player_profile['league']['standard']['stats']['careerSummary']
+        career_total['ni']='nihao'
+        print(career_total)
