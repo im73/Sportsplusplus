@@ -18,7 +18,7 @@ class User(models.Model):
 
 class back_user(models.Model):
 
-    username=models.CharField(max_length=15,null=False,default="")
+    username=models.CharField(max_length=15,null=False,default="",unique=True)
     password=models.CharField(max_length=15,null=False,default="")
 
     class Meta:
@@ -37,6 +37,3 @@ class email_very(models.Model):
         verbose_name_plural = verbose_name
         ordering = ('date',)
 
-class test_model(models.Model):
-
-    名字=models.IntegerField()

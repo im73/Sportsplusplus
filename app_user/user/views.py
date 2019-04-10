@@ -4,11 +4,13 @@ from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from django.template import loader
 from django.views.decorators.csrf import csrf_exempt
+from requests import Response
 from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
 from app_user.user.models import User,email_very,back_user
 from app_user.user.serializers import UserSerializer
 import random
+import os
 from api.send_email import get_random_str
 from django.core.mail import send_mail, send_mass_mail
 
@@ -90,3 +92,52 @@ def back_login(request):
             return JsonResponse({'message':'用户名或密码错误'}, status=400)
         else:
             return JsonResponse({'message':'登录成功'}, status=200)
+
+@csrf_exempt
+def users(request):
+
+    if request.method == 'GET':
+        queryset=User.objects.all()
+        serializer = UserSerializer(queryset, many=True)
+
+
+        return JsonResponse(serializer.data,safe=False)
+
+    if request.method == 'POST':
+
+        username=request.GET.get('username')
+        password=request.GET.get('password')
+        backuser=back_user(username=username,password=password)
+        try:
+            backuser.save()
+            JsonResponse({'message':'用户创建成功'}, status=200)
+        except:
+            return JsonResponse({'message':'用户名重复'}, status=400)
+
+    if request.method == 'DELETE':
+
+        id=request.DELETE.get('id')
+        try:
+            bkob=back_user.objects.get(id=id)
+            bkob.delete()
+            return JsonResponse({'message':'用户删除'}, status=204)
+        except:
+            return JsonResponse({'message':'用户不存在'}, status=400)
+
+@csrf_exempt
+def GetImage(request):
+    if request.method == 'GET':
+        file_path = request.GET.get('image_path')
+        curr_dir = os.path.dirname(__file__)
+        parent_path = os.path.dirname(curr_dir)
+        parent_path = os.path.dirname(parent_path)
+        image_path = os.path.join(parent_path,file_path)
+
+        image_data = open(image_path,"rb").read()
+        return HttpResponse(image_data,content_type='image/jpg')
+
+
+
+
+
+

@@ -101,7 +101,7 @@ for root, dirs, files in os.walk(file_dir):
             team_info = json.load(f)
         print(team_info)
         team_info=team_info[file.split('.')[0]]
-        team_info['球队名']=file
+        team_info['球队名']=file.split('.')[0]
         info=team_info['技术统计']
         for item in info:
             item_info=info[str(item)]

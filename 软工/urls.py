@@ -27,4 +27,6 @@ urlpatterns = [
     path('register/',user_view.register),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('back_login/',user_view.back_user),
+    path('users',user_view.users),
+    path(r'GetImage/',user_view.GetImage),
 ]
