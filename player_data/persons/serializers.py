@@ -21,10 +21,10 @@ class TeamSerializer(serializers.ModelSerializer):
 
 
 class PlayerSerializer(serializers.ModelSerializer):
-    class Mata:
+    class Meta:
         model = Player
         fields = (
-            '头像',
+            # '头像',
             '中文名',
             '位置',
             '体重',
@@ -37,16 +37,33 @@ class PlayerSerializer(serializers.ModelSerializer):
             '生日',
             '英文名',
             '身高',
+            '选秀',
+            '球队名',
         )
 
-        extra_kwargs = {'学校': {'allow_blank': True},
-                        }
+        extra_kwargs = {'学校': {'allow_blank': True,
+                               'required': False},
+                        '选秀': {'allow_blank': True,
+                               'required': False},
+                        '国籍': {'allow_blank': True,
+                               'required': False},
+                        '合同': {'allow_blank': True,
+                               'required': False},
+                        '英文名': {'allow_blank': True,
+                               'required': False},
+                        '本赛季薪金': {'allow_blank': True,
+                               'required': False},
+                        '中文名': {'allow_blank': True,
+                               'required': False},
+
+                    }
 
 
 class CareerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Career
         fields = (
+            '类型',
             '三分',
             '助攻',
             '命中率',
@@ -60,6 +77,7 @@ class CareerSerializer(serializers.ModelSerializer):
             '盖帽',
             '篮板',
             '罚球',
+            '序号',
         )
 class RecordSerializer(serializers.ModelSerializer):
     class Meta:
