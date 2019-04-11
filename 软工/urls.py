@@ -15,10 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from rest_framework import routers
 from app_user.user import views as user_view
-
-
 
 urlpatterns = [
 
@@ -26,7 +23,8 @@ urlpatterns = [
     path('login/',user_view.login),
     path('register/',user_view.register),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    path('back_login/',user_view.back_user),
-    path('users',user_view.users),
+    path('api/back_login/',user_view.back_login),
+    path('api/user',user_view.users),
+    path('api/BackUser',user_view.BackUser),
     path(r'GetImage/',user_view.GetImage),
 ]

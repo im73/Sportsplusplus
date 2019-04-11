@@ -1,18 +1,14 @@
-from django.shortcuts import render
+# Create your views here.
 
 # Create your views here.
 from django.http import HttpResponse, JsonResponse
 from django.template import loader
 from django.views.decorators.csrf import csrf_exempt
-from requests import Response
-from rest_framework.renderers import JSONRenderer
-from rest_framework.parsers import JSONParser
 from app_user.user.models import User,email_very,back_user
-from app_user.user.serializers import UserSerializer
+from app_user.user import UserSerializer,back_userSerializer
 import random
 import os
-from api.send_email import get_random_str
-from django.core.mail import send_mail, send_mass_mail
+from django.core.mail import send_mail
 
 from 软工 import settings
 
@@ -87,7 +83,7 @@ def back_login(request):
     if request.method == 'GET':
         nick_name=request.GET.get('nick_name')
         password=request.GET.get('password')
-        user=back_user.objects.filter(nick_name=nick_name,password=password)
+        user=back_user.objects.filter(username=nick_name,password=password)
         if user.count()==0:
             return JsonResponse({'message':'用户名或密码错误'}, status=400)
         else:
@@ -103,26 +99,50 @@ def users(request):
 
         return JsonResponse(serializer.data,safe=False)
 
+
+
+    if request.method == 'DELETE':
+
+        id=request.GET.get('id')
+
+        bkob=User.objects.get(id=id)
+        print(bkob)
+        bkob.delete()
+        return JsonResponse({'message':'用户删除'}, status=204)
+        # except :
+        #     return JsonResponse({'message':'用户不存在'}, status=400)
+
+@csrf_exempt
+def BackUser(request):
+
+    if request.method == 'GET':
+
+        queryset=back_user.objects.all()
+        serializer = back_userSerializer(queryset, many=True)
+        return JsonResponse(serializer.data,safe=False)
+
     if request.method == 'POST':
 
         username=request.GET.get('username')
         password=request.GET.get('password')
         backuser=back_user(username=username,password=password)
+
         try:
             backuser.save()
-            JsonResponse({'message':'用户创建成功'}, status=200)
+            return JsonResponse({'message':'用户创建成功'}, status=200)
         except:
             return JsonResponse({'message':'用户名重复'}, status=400)
 
     if request.method == 'DELETE':
 
-        id=request.DELETE.get('id')
+        id=request.GET.get('id')
         try:
             bkob=back_user.objects.get(id=id)
             bkob.delete()
             return JsonResponse({'message':'用户删除'}, status=204)
-        except:
+        except :
             return JsonResponse({'message':'用户不存在'}, status=400)
+
 
 @csrf_exempt
 def GetImage(request):
@@ -135,6 +155,7 @@ def GetImage(request):
 
         image_data = open(image_path,"rb").read()
         return HttpResponse(image_data,content_type='image/jpg')
+
 
 
 

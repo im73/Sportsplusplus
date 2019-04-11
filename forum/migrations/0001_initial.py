@@ -20,7 +20,7 @@ class Migration(migrations.Migration):
                 ('postId', models.CharField(max_length=50, verbose_name='帖子标题')),
                 ('content', models.CharField(max_length=254, verbose_name='帖子内容')),
                 ('sendtime', models.DateTimeField(auto_now_add=True, verbose_name='发帖时间')),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='user.User', verbose_name='帖子作者')),
+                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='app_user.user.User', verbose_name='帖子作者')),
             ],
             options={
                 'verbose_name': '帖子',
@@ -34,7 +34,7 @@ class Migration(migrations.Migration):
                 ('rplContent', models.CharField(max_length=254, verbose_name='回复内容')),
                 ('rpltime', models.DateTimeField(auto_now_add=True, verbose_name='回复时间')),
                 ('subPostId', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='forum.Post', verbose_name='所属副帖子')),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='user.User', verbose_name='回复作者')),
+                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='app_user.user.User', verbose_name='回复作者')),
             ],
             options={
                 'verbose_name': '回复',
@@ -49,7 +49,7 @@ class Migration(migrations.Migration):
                 ('subContent', models.CharField(max_length=254, verbose_name='副帖子内容')),
                 ('subSendtime', models.DateTimeField(auto_now_add=True, verbose_name='副帖子发帖时间')),
                 ('postId', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='forum.Post', verbose_name='所属帖子')),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='user.User', verbose_name='副贴作者')),
+                ('user', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='app_user.user.User', verbose_name='副贴作者')),
             ],
             options={
                 'verbose_name': '副帖子',

@@ -5,12 +5,12 @@ from app_user.user.models import User,back_user
 
 
 class UserSerializer(serializers.ModelSerializer):
+    register_time = serializers.DateTimeField(format="%Y-%m-%d %H:%M:%S", required=False)
+    class Meta:
+        model=User
+        fields=('id','email','nick_name','password','register_time')
 
-   class Meta:
-       model=User
-       fields=('id','email','nick_name','password','image')
-
-class back_userSerialiser(serializers.ModelSerializer):
+class back_userSerializer(serializers.ModelSerializer):
 
     class Meta:
         model=back_user
