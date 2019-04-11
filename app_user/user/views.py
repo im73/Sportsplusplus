@@ -5,7 +5,7 @@ from django.http import HttpResponse, JsonResponse
 from django.template import loader
 from django.views.decorators.csrf import csrf_exempt
 from app_user.user.models import User,email_very,back_user
-from app_user.user import UserSerializer,back_userSerializer
+from app_user.user.serializers import UserSerializer,back_userSerializer
 import random
 import os
 from django.core.mail import send_mail
@@ -46,6 +46,8 @@ def register(request):
 
         try:
             emailob=email_very.objects.get(email=email)
+            print(verification_code)
+            print(emailob.very_code)
             if emailob.very_code!=verification_code:
                 return JsonResponse({'err_code':'验证码错误'}, status=400)
             user=User(nick_name=nick_name,password=password,email=email)
