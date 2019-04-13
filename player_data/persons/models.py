@@ -23,6 +23,7 @@ class Team(models.Model):
     场均得分 = models.ForeignKey(Record, on_delete=models.CASCADE,related_name="得分信息")
     场均篮板 = models.ForeignKey(Record, on_delete=models.CASCADE,related_name="篮板信息")
     进入NBA = models.CharField(max_length=20)
+    球队中文名 = models.CharField(max_length=20)
 
 
 class Career(models.Model):
@@ -63,5 +64,34 @@ class Player(models.Model):
     球队名 = models.ForeignKey(to="Team", to_field="球队名", on_delete=models.CASCADE,default="")
 
 
+class MatchPlayer(models.Model):
 
+    球员名 = models.CharField(max_length=30)
+    位置 = models.CharField(max_length=10)
+    时间 = models.CharField(max_length=10)
+    投篮 = models.CharField(max_length=10)
+    三分 = models.CharField(max_length=10)
+    罚球 = models.CharField(max_length=10)
+    前场 = models.CharField(max_length=10)
+    后场 = models.CharField(max_length=10)
+    篮板 = models.CharField(max_length=10)
+    助攻 = models.CharField(max_length=10)
+    犯规 = models.CharField(max_length=10)
+    抢断 = models.CharField(max_length=10)
+    失误 = models.CharField(max_length=10)
+    封盖 = models.CharField(max_length=10)
+    得分 = models.CharField(max_length=10)
+    正负 = models.CharField(max_length=10)
+
+
+class Match(models.Model):
+
+    统计 = models.ForeignKey(MatchPlayer, on_delete=models.CASCADE, related_name="统计信息")
+    命中率 = models.ForeignKey(MatchPlayer, on_delete=models.CASCADE, related_name="命中率信息")
+
+
+for i in range(1, 21):
+    setattr(Match, '替补%d' % i, models.ForeignKey(MatchPlayer, on_delete=models.CASCADE, related_name="替补%d信息" % i))
+for j in range(1, 5):
+    setattr(Match, '首发%d' % i, models.ForeignKey(MatchPlayer, on_delete=models.CASCADE, related_name="首发%d信息" % i))
 
