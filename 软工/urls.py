@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from app_user.user import views as user_view
+from player_data.persons import views as info_view
 
 urlpatterns = [
 
@@ -27,4 +28,5 @@ urlpatterns = [
     path('api/user',user_view.users),
     path('api/BackUser',user_view.BackUser),
     path(r'GetImage/',user_view.GetImage),
+    path(r'api/teaminfo',info_view.get_teaminfo)
 ]

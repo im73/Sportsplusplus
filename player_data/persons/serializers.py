@@ -18,6 +18,7 @@ class TeamSerializer(serializers.ModelSerializer):
             '场均得分',
             '场均篮板',
         )
+        depth=1
 
 
 class PlayerSerializer(serializers.ModelSerializer):
