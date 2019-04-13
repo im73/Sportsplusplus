@@ -11,8 +11,8 @@ from rest_framework.parsers import JSONParser
 from rest_framework.utils import json
 
 
-from player_data.persons.models import Team,Player,Career
-from player_data.persons.serializers import TeamSerializer,PlayerSerializer,CareerSerializer
+from player_data.persons.models import Team,Player,Career,Match,Match_teamsummary,Match_player
+from player_data.persons.serializers import TeamSerializer,PlayerSerializer,CareerSerializer,MatchSerializer,Match_teamsummarySerializer,Match_playerSerializer
 import random
 
 
@@ -46,6 +46,32 @@ def get_playercareer(request):
         serializer=CareerSerializer(careerlist,many=True)
 
         return HttpResponse(json.dumps(serializer.data,ensure_ascii=False),content_type="application/json,charset=utf-8",status=200)
+
+@csrf_exempt
+def GetMatchInfo(request):
+
+    if request.method == 'GET':
+        querylist = Match.objects.all()
+        serializer=MatchSerializer(querylist,many=True)
+        return HttpResponse(json.dumps(serializer.data,ensure_ascii=False),content_type="application/json,charset=utf-8",status=200)
+@csrf_exempt
+def GetMatchSummary(request):
+
+    if request.method == 'GET':
+        match_id=request.GET.get('match_id')
+        querylist = Match_teamsummary.objects.filter(比赛id=match_id)
+        serializer=Match_teamsummarySerializer(querylist,many=True)
+        return HttpResponse(json.dumps(serializer.data,ensure_ascii=False),content_type="application/json,charset=utf-8",status=200)
+
+@csrf_exempt
+def GetPlayerSummary(request):
+
+    if request.method == 'GET':
+        match_id=request.GET.get('match_id')
+        querylist = Match_player.objects.filter(比赛id=match_id)
+        serializer=Match_playerSerializer(querylist,many=True)
+        return HttpResponse(json.dumps(serializer.data,ensure_ascii=False),content_type="application/json,charset=utf-8",status=200)
+
 
 @csrf_exempt
 def GetPlayerImage(request,path):

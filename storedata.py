@@ -3,7 +3,6 @@ import json
 import sys
 import os
 
-import matplotlib.image as mpimg
 import pymysql
 from django.utils.six import BytesIO
 pwd = os.path.dirname(os.path.realpath(__file__))
@@ -146,6 +145,7 @@ import xlrd, xlwt
 file_dir2="./history_games(date)"
 dir_list = os.listdir(file_dir2) # 列出文件夹下所有的目录和文件
 i=0
+print(dir_list)
 for i in range(len(dir_list)):
     new_path = os.path.join(file_dir2, dir_list[i])
     file_list = os.listdir(new_path)

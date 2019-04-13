@@ -122,7 +122,7 @@ class Match_teamsummarySerializer(serializers.ModelSerializer):
     class Meta:
         model = Match_teamsummary
         fields = (
-            '类型',
+            '主客场',
             '比赛id',
             '投篮',
             '三分',
@@ -155,11 +155,4 @@ class ScoreSerializer(serializers.ModelSerializer):
 class MatchSerializer(serializers.ModelSerializer):
     class Meta:
         model = Match
-        fields = (
-            'id',
-            '日期',
-            '主场球队中文名',
-            '客场球队中文名',
-            '主场分数统计',
-            '客场分数统计',
-        )
+        fields = '__all__'
