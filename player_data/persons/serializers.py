@@ -17,15 +17,19 @@ class TeamSerializer(serializers.ModelSerializer):
             '场均失误',
             '场均得分',
             '场均篮板',
+            '队标',
         )
         depth=1
+        extra_kwargs={
+            '队标':{'required':False}
+        }
 
 
 class PlayerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Player
         fields = (
-            # '头像',
+            '头像',
             '中文名',
             '位置',
             '体重',

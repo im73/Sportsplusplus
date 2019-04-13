@@ -3,7 +3,7 @@ import json
 import sys
 import os
 
-import matplotlib.image as mpimg
+
 import pymysql
 from django.utils.six import BytesIO
 pwd = os.path.dirname(os.path.realpath(__file__))
@@ -23,6 +23,7 @@ import data_spider
 from player_data.persons.models import Player,Team,Record
 from player_data.persons.serializers import PlayerSerializer, TeamSerializer, RecordSerializer, CareerSerializer
 from django.core.files import File
+
 #接下来就可以使用model了
 
 #添加球员信息
@@ -142,20 +143,17 @@ import os
 
 # db = pymysql.connect("114.116.156.240", "root", "Buaa2019!", "app", charset='utf8')
 # cursor = db.cursor()
-file_dir2="./player_profile_json"
-dir_list = os.listdir(file_dir2) # 列出文件夹下所有的目录和文件
-i=0
-for i in range(len(dir_list)):
-    new_path = os.path.join(file_dir2,dir_list[i])
-    file_list = os.listdir(new_path)
-
-    real_path = os.path.join(new_path,file_list[0])
-    # print(real_path)
-    image = open(real_path,'rb')
-    image = File(image)
-    player = Player.objects.get(序号=dir_list[i].split('-')[1])
-    player.头像 = image
-    player.save()
+# file_dir2="./teams_img"
+# dir_list = os.listdir(file_dir2) # 列出文件夹下所有的目录和文件
+# i=0
+# for i in range(len(dir_list)):
+#     new_path = os.path.join(file_dir2,dir_list[i])
+# #     # print(real_path)
+#     image = open(new_path,'rb')
+#     image = File(image)
+#     player = Player.objects.get(序号=dir_list[i].split('-')[1])
+#     player.头像 = image
+#     player.save()
     # with open(real_path,'rb') as f:
     #     file_text = json.load(f)
     # if j==0 :
@@ -175,8 +173,8 @@ for i in range(len(dir_list)):
     # else:
     #     print(serializer.errors)
 
-    i = i+1
-print(i)
+#     i = i+1
+# print(i)
 
 # file_dir2="./player_profile_json"
 # dir_list = os.listdir(file_dir2) # 列出文件夹下所有的目录和文件
@@ -198,6 +196,23 @@ print(i)
 # print(i)
 
 
+# queryset=Player.objects.all()
+# for obj in queryset:
+#     team=obj.球队名
+#     team.球队中文名=obj.球队
+#     team.save()
 
+# file_dir2="./teams_img"
+# dir_list = os.listdir(file_dir2) # 列出文件夹下所有的目录和文件
+# i=0
+# for i in range(len(dir_list)):
+#     new_path = os.path.join(file_dir2,dir_list[i])
+#     print(dir_list[i])
+#     #     # print(real_path)
+#     image = open(new_path,'rb')
+#     image = File(image)
+#     team=Team.objects.get(球队中文名__endswith=dir_list[i].split('.')[0])
+#     team.队标=image
+#     team.save()
 
 

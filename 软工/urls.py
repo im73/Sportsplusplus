@@ -21,12 +21,21 @@ from player_data.persons import views as info_view
 urlpatterns = [
 
     path('admin/', admin.site.urls),
-    path('login/',user_view.login),
-    path('register/',user_view.register),
+
+    path('api/login/',                          user_view.login),
+    path('api/register/',                       user_view.register),
+    path('api/user',                            user_view.users),
+    path('api/BackUser',                        user_view.BackUser),
+    path('api/back_login/',                     user_view.back_login),
+
+
+
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    path('api/back_login/',user_view.back_login),
-    path('api/user',user_view.users),
-    path('api/BackUser',user_view.BackUser),
-    path(r'GetImage/',user_view.GetImage),
-    path(r'api/teaminfo',info_view.get_teaminfo)
+
+    path(r'api/GetTeanmInfo',                                                       info_view.get_teaminfo),
+    path(r'api/GetPlayerImage/player_profile_json/<str:path>/portrait.png',         info_view.GetPlayerImage),
+    path(r'api/GetTeamImage/teams_img/<str:path>',                                  info_view.GetTeamImage),
+    path(r'api/GetPlayerInfo',                                                      info_view.get_playerinfo),
+    path(r'api/GetPlayerCareer',                                                    info_view.get_playercareer),
+    path(r'api/'),
 ]

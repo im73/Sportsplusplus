@@ -1,9 +1,13 @@
 # Create your views here.
 
 # Create your views here.
+from urllib import parse
+
 from django.http import HttpResponse, JsonResponse
 from django.template import loader
 from django.views.decorators.csrf import csrf_exempt
+from rest_framework.utils import json
+
 from app_user.user.models import User,email_very,back_user
 from app_user.user.serializers import UserSerializer,back_userSerializer
 import random
@@ -46,14 +50,11 @@ def register(request):
 
         try:
             emailob=email_very.objects.get(email=email)
-            print(verification_code)
-            print(emailob.very_code)
             if emailob.very_code!=verification_code:
                 return JsonResponse({'err_code':'验证码错误'}, status=400)
             user=User(nick_name=nick_name,password=password,email=email)
             user.save()
             emailob.delete()
-
             return JsonResponse({'message':'success'}, status=201)
         except Exception:
             print(Exception)
@@ -147,16 +148,28 @@ def BackUser(request):
 
 
 @csrf_exempt
-def GetImage(request):
-    if request.method == 'GET':
-        file_path = request.GET.get('image_path')
-        curr_dir = os.path.dirname(__file__)
-        parent_path = os.path.dirname(curr_dir)
-        parent_path = os.path.dirname(parent_path)
-        image_path = os.path.join(parent_path,file_path)
+def GetUserImage(request,path):
 
-        image_data = open(image_path,"rb").read()
-        return HttpResponse(image_data,content_type='image/jpg')
+    if request.method == 'GET':
+        image_path="media/teams_img/{0}".format(parse.unquote(path,encoding="utf8"))
+        try:
+            image_data = open(image_path,"rb").read()
+            return HttpResponse(image_data,content_type='image/jpg')
+        except:
+            return HttpResponse(json.dumps({'message':'没有获取到资源'},ensure_ascii=False),content_type="application/json,charset=utf-8",status=400)
+
+
+
+@csrf_exempt
+def GetMatchInfo(request):
+
+    if request.method == 'GET':
+        return HttpResponse(json.dumps({'message':'没有获取到资源'},ensure_ascii=False),content_type="application/json,charset=utf-8",status=400)
+
+
+
+
+
 
 
 
