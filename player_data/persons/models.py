@@ -64,9 +64,11 @@ class Player(models.Model):
     球队名 = models.ForeignKey(to="Team", to_field="球队名", on_delete=models.CASCADE,default="")
 
 
-class MatchPlayer(models.Model):
+class Match_player(models.Model):
 
-    球员名 = models.CharField(max_length=30)
+    类型 = models.IntegerField() # 1 首发， 2 替补
+    主客场 = models.IntegerField() # 1 客场， 2 主场
+    球员名 = models.CharField(max_length=30, primary_key=True)
     位置 = models.CharField(max_length=10)
     时间 = models.CharField(max_length=10)
     投篮 = models.CharField(max_length=10)
@@ -82,12 +84,60 @@ class MatchPlayer(models.Model):
     封盖 = models.CharField(max_length=10)
     得分 = models.CharField(max_length=10)
     正负 = models.CharField(max_length=10)
+    比赛id = models.ForeignKey(to="Match", to_field="id", on_delete=models.CASCADE, default="")
+
+
+class Match_teamsummary(models.Model):
+
+    主客场 = models.IntegerField() # 1 客场， 2 主场
+    比赛id = models.ForeignKey(to="Match", to_field="id", on_delete=models.CASCADE, default="")
+    投篮 = models.CharField(max_length=10)
+    三分 = models.CharField(max_length=10)
+    罚球 = models.CharField(max_length=10)
+    前场 = models.CharField(max_length=10)
+    后场 = models.CharField(max_length=10)
+    篮板 = models.CharField(max_length=10)
+    助攻 = models.CharField(max_length=10)
+    犯规 = models.CharField(max_length=10)
+    抢断 = models.CharField(max_length=10)
+    失误 = models.CharField(max_length=10)
+    封盖 = models.CharField(max_length=10)
+    得分 = models.CharField(max_length=10)
+    投篮命中率 = models.CharField(max_length=10)
+    三分命中率 = models.CharField(max_length=10)
+    罚球命中率 = models.CharField(max_length=10)
+
+
+class Score(models.Model):
+    第一节 = models.IntegerField()
+    第二节 = models.IntegerField()
+    第三节 = models.IntegerField()
+    第四节 = models.IntegerField()
+    总分 = models.IntegerField()
 
 
 class Match(models.Model):
 
-    统计 = models.ForeignKey(MatchPlayer, on_delete=models.CASCADE, related_name="统计信息")
-    命中率 = models.ForeignKey(MatchPlayer, on_delete=models.CASCADE, related_name="命中率信息")
+    id = models.CharField(max_length=10, primary_key=True)
+    日期 = models.CharField(max_length=20)
+    主场球队中文名 = models.CharField(max_length=20)
+    客场球队中文名 = models.CharField(max_length=20)
+    主场第一节 = models.CharField(max_length=10)
+    主场第二节 = models.CharField(max_length=10)
+    主场第三节 = models.CharField(max_length=10)
+    主场第四节 = models.CharField(max_length=10)
+    主场总分 = models.CharField(max_length=10)
+    客场第一节 = models.CharField(max_length=10)
+    客场第二节 = models.CharField(max_length=10)
+    客场第三节 = models.CharField(max_length=10)
+    客场第四节 = models.CharField(max_length=10)
+    客场总分 = models.CharField(max_length=10)
 
 
+
+
+# for i in range(1, 21):
+#     setattr(Match, '替补%d' % i, models.ForeignKey(MatchPlayer, on_delete=models.CASCADE, related_name="替补%d信息" % i))
+# for j in range(1, 5):
+#     setattr(Match, '首发%d' % i, models.ForeignKey(MatchPlayer, on_delete=models.CASCADE, related_name="首发%d信息" % i))
 
