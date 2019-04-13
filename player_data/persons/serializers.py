@@ -1,7 +1,7 @@
 from rest_framework import serializers
 
 from player_data import persons
-from player_data.persons.models import Team,Player,Career,Record
+from player_data.persons.models import Team,Player,Career,Record,Match_player,Match_teamsummary,Match,Score
 
 
 class TeamSerializer(serializers.ModelSerializer):
@@ -86,4 +86,75 @@ class RecordSerializer(serializers.ModelSerializer):
             '序号',
             '排名',
             '数值',
+        )
+
+class Match_playerSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Match_player
+        fields = (
+            '类型',
+            '主客场',
+            '球员名',
+            '位置',
+            '时间',
+            '投篮',
+            '三分',
+            '罚球',
+            '前场',
+            '后场',
+            '篮板',
+            '助攻',
+            '犯规',
+            '抢断',
+            '失误',
+            '封盖',
+            '得分',
+            '正负',
+            '比赛id',
+        )
+
+class Match_teamsummarySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Match_teamsummary
+        fields = (
+            '类型',
+            '比赛id',
+            '投篮',
+            '三分',
+            '罚球',
+            '前场',
+            '后场',
+            '篮板',
+            '助攻',
+            '犯规',
+            '抢断',
+            '失误',
+            '封盖',
+            '得分',
+            '投篮命中率',
+            '三分命中率',
+            '罚球命中率',
+        )
+
+class ScoreSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Score
+        fields = (
+            '第一节',
+            '第二节',
+            '第三节',
+            '第四节',
+            '总分',
+        )
+
+class MatchSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Match
+        fields = (
+            'id',
+            '日期',
+            '主场球队中文名',
+            '客场球队中文名',
+            '主场分数统计',
+            '客场分数统计',
         )
