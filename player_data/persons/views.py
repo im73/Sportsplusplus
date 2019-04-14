@@ -9,6 +9,7 @@ from requests import Response
 from rest_framework.renderers import JSONRenderer
 from rest_framework.parsers import JSONParser
 from rest_framework.utils import json
+import time
 
 
 from player_data.persons.models import Team,Player,Career,Match,Match_teamsummary,Match_player
@@ -51,7 +52,8 @@ def get_playercareer(request):
 def GetMatchInfo(request):
 
     if request.method == 'GET':
-        querylist = Match.objects.all()
+
+        querylist = Match.objects.filter(日期__istartswith=time.strftime("%Y-%m-"))
         serializer=MatchSerializer(querylist,many=True)
         return HttpResponse(json.dumps(serializer.data,ensure_ascii=False),content_type="application/json,charset=utf-8",status=200)
 @csrf_exempt
@@ -86,12 +88,10 @@ def GetPlayerImage(request,path):
             return HttpResponse(json.dumps({'message':'没有获取到资源'},ensure_ascii=False),content_type="application/json,charset=utf-8",status=400)
 
 @csrf_exempt
-def GetTeamImage(request,path):
+def GetTeamImage(request,teamname):
 
     if request.method == 'GET':
-        print(path)
-        image_path="media/teams_img/{0}".format(parse.unquote(path,encoding="utf8"))
-        print(image_path)
+        image_path=Team.objects.get(球队中文名__endswith=teamname).队标.path
         try:
             image_data = open(image_path,"rb").read()
             return HttpResponse(image_data,content_type='image/jpg')

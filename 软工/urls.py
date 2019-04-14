@@ -34,7 +34,7 @@ urlpatterns = [
 
     path(r'api/GetTeanmInfo',                                                       info_view.get_teaminfo),
     path(r'api/GetPlayerImage/player_profile_json/<str:path>/portrait.png',         info_view.GetPlayerImage),
-    path(r'api/GetTeamImage/teams_img/<str:path>',                                  info_view.GetTeamImage),
+    path(r'api/GetTeamImage/<str:teamname>',                                        info_view.GetTeamImage),
     path(r'api/GetPlayerInfo',                                                      info_view.get_playerinfo),
     path(r'api/GetPlayerCareer',                                                    info_view.get_playercareer),
     path(r'api/GetPlayerSummary',                                                   info_view.GetPlayerSummary),

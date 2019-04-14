@@ -18,6 +18,7 @@ class TeamSerializer(serializers.ModelSerializer):
             '场均得分',
             '场均篮板',
             '队标',
+            '球队中文名',
         )
         depth=1
         extra_kwargs={
