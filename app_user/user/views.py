@@ -28,6 +28,8 @@ def register(request):
         email_from = settings.DEFAULT_FROM_EMAIL
         tmp = loader.get_template('active.html')
         htm_email = tmp.render({"msg":str(verification_code)})
+        with open("log.txt","w+") as f:
+            f.write(email)
         msg = ""
         title = 'Sports++验证码'
         reciever = [email]
@@ -37,12 +39,13 @@ def register(request):
         print(email)
         emailob=email_very(email=email,very_code=verification_code,op_type=1) #1是注册
         emailob.save()
-
         send_mail(title, msg, email_from, reciever, html_message=htm_email)
         return JsonResponse({'message':'success'}, status=200)
 
     elif request.method == 'POST':
-
+        with open("log.txt","w+") as f:
+            f.write(str(request.body))
+            f.write("POST")
         nick_name=request.POST.get('nick_name')
         password=request.POST.get('password')
         email=request.POST.get('email')
@@ -59,6 +62,8 @@ def register(request):
         except Exception:
             print(Exception)
             return JsonResponse({'message':'用户已存在'}, status=400)
+    with open("log.txt","w+") as f:
+        f.write("没有匹配到方法")
 
 @csrf_exempt
 def login(request):

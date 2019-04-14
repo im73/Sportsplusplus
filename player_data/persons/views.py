@@ -60,6 +60,7 @@ def GetMatchInfo(request):
 def GetMatchSummary(request):
 
     if request.method == 'GET':
+
         match_id=request.GET.get('match_id')
         querylist = Match_teamsummary.objects.filter(比赛id=match_id)
         serializer=Match_teamsummarySerializer(querylist,many=True)
