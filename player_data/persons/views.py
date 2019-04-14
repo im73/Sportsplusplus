@@ -77,12 +77,11 @@ def GetPlayerSummary(request):
 
 
 @csrf_exempt
-def GetPlayerImage(request,path):
+def GetPlayerImage(request,PlayerName):
 
     if request.method == 'GET':
-        image_path="media/player_profile_json/{0}/portrait.png".format(parse.unquote(path,encoding ='utf-8').encode('utf8'))
-        print(image_path)
         try:
+            image_path=Player.objects.get(中文名=PlayerName.replace(" ","")).头像.path
             image_data = open(image_path,"rb").read()
             return HttpResponse(image_data,content_type='image/jpg')
         except:
