@@ -66,8 +66,8 @@ class Player(models.Model):
 
 class Match_player(models.Model):
 
-    类型 = models.IntegerField() # 1 首发， 2 替补
-    主客场 = models.IntegerField() # 1 客场， 2 主场
+    类型 = models.CharField(max_length=10) # 1 首发， 2 替补
+    主客场 = models.CharField(max_length=50) # 1 客场， 2 主场
     球员名 = models.CharField(max_length=30, primary_key=True)
     位置 = models.CharField(max_length=10)
     时间 = models.CharField(max_length=10)
@@ -89,7 +89,7 @@ class Match_player(models.Model):
 
 class Match_teamsummary(models.Model):
 
-    主客场 = models.IntegerField() # 1 客场， 2 主场
+    主客场 = models.CharField(max_length=50) # 1 客场， 2 主场
     比赛id = models.ForeignKey(to="Match", to_field="id", on_delete=models.CASCADE, default="")
     投篮 = models.CharField(max_length=10)
     三分 = models.CharField(max_length=10)

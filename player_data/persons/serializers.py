@@ -7,6 +7,7 @@ from player_data.persons.models import Team,Player,Career,Record,Match_player,Ma
 class TeamSerializer(serializers.ModelSerializer):
     class Meta:
         model = Team
+
         fields = (
             '球队名',
             '主教练',

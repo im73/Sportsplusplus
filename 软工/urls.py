@@ -22,16 +22,16 @@ urlpatterns = [
 
     path('admin/', admin.site.urls),
 
-    path('api/login',                          user_view.login),
-    path('api/register',                       user_view.register),
+    path('api/login',                           user_view.login),
+    path('api/register',                        user_view.register),
     path('api/user',                            user_view.users),
     path('api/BackUser',                        user_view.BackUser),
-    path('api/back_login',                     user_view.back_login),
+    path('api/back_login',                      user_view.back_login),
 
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 
     path(r'api/GetTeanmInfo',                                                       info_view.get_teaminfo),
-    path(r'api/GetPlayerImage/<str:PlayerName>',                                          info_view.GetPlayerImage),
+    path(r'api/GetPlayerImage/<str:PlayerName>',                                    info_view.GetPlayerImage),
     path(r'api/GetTeamImage/<str:teamname>',                                        info_view.GetTeamImage),
     path(r'api/GetPlayerInfo',                                                      info_view.get_playerinfo),
     path(r'api/GetPlayerCareer',                                                    info_view.get_playercareer),
