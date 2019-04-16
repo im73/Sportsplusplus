@@ -90,11 +90,11 @@ def GetPlayerImage(request,PlayerName):
             return HttpResponse(json.dumps({'message':'没有获取到资源'},ensure_ascii=False),content_type="application/json,charset=utf-8",status=400)
 
 @csrf_exempt
-def GetTeamImage(request,teamname):
+def GetTeamImage(request,Teamname):
 
     if request.method == 'GET':
-
-        image_path=Team.objects.get(球队中文名__endswith=teamname).队标.path
+        print(Teamname)
+        image_path=Team.objects.get(球队中文名__endswith=parse.unquote(Teamname)).队标.path
         try:
             image_data = open(image_path,"rb").read()
             return HttpResponse(image_data,content_type='image/jpg')
