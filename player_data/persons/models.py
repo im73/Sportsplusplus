@@ -68,7 +68,7 @@ class Match_player(models.Model):
 
     类型 = models.CharField(max_length=10) # 1 首发， 2 替补
     主客场 = models.CharField(max_length=50) # 1 客场， 2 主场
-    球员名 = models.CharField(max_length=30, primary_key=True)
+    球员名 = models.CharField(max_length=30)
     位置 = models.CharField(max_length=10)
     时间 = models.CharField(max_length=10)
     投篮 = models.CharField(max_length=10)
@@ -106,6 +106,7 @@ class Match_teamsummary(models.Model):
     投篮命中率 = models.CharField(max_length=10)
     三分命中率 = models.CharField(max_length=10)
     罚球命中率 = models.CharField(max_length=10)
+    home_away = models.IntegerField()
 
 
 class Score(models.Model):
