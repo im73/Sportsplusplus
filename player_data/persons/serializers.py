@@ -1,7 +1,7 @@
 from rest_framework import serializers
 
 from player_data import persons
-from player_data.persons.models import Team,Player,Career,Record,Match_player,Match_teamsummary,Match,Score
+from player_data.persons.models import Team,Player,Career,Record,Match,Score, Match_player,Match_teamsummary
 
 
 class TeamSerializer(serializers.ModelSerializer):

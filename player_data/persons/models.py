@@ -106,6 +106,7 @@ class Match_teamsummary(models.Model):
     投篮命中率 = models.CharField(max_length=10)
     三分命中率 = models.CharField(max_length=10)
     罚球命中率 = models.CharField(max_length=10)
+    home_away = models.IntegerField()
 
 
 class Score(models.Model):
