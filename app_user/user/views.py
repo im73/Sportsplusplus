@@ -23,6 +23,7 @@ def register(request):
     user register by ph_number.
     """
     if request.method == 'GET':
+
         email=request.GET.get('email')
         verification_code=random.randrange(100000,999999)
         email_from = settings.DEFAULT_FROM_EMAIL
