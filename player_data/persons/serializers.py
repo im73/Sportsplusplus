@@ -141,6 +141,7 @@ class Match_teamsummarySerializer(serializers.ModelSerializer):
             '投篮命中率',
             '三分命中率',
             '罚球命中率',
+            'home_away',
         )
 
 class ScoreSerializer(serializers.ModelSerializer):
