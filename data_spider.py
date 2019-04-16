@@ -7,6 +7,7 @@ import time
 
 class GetLiveGames(object):
     def __init__(self):
+
         self.dates = ''
         self.today_url = 'https://data.nba.net/10s/prod/v1/today.json'
         self.teams_url = 'https://data.nba.net/10s/prod/v2/2018/teams.json'

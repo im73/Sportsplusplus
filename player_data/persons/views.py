@@ -2,6 +2,8 @@
 
 
 from urllib import parse
+
+
 from django.http import HttpResponse, JsonResponse
 from django.template import loader
 from django.views.decorators.csrf import csrf_exempt
@@ -91,6 +93,7 @@ def GetPlayerImage(request,PlayerName):
 def GetTeamImage(request,teamname):
 
     if request.method == 'GET':
+
         image_path=Team.objects.get(球队中文名__endswith=teamname).队标.path
         try:
             image_data = open(image_path,"rb").read()
