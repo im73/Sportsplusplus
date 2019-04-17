@@ -113,13 +113,24 @@ def users(request):
     if request.method == 'DELETE':
 
         id=request.GET.get('id')
-
         bkob=User.objects.get(id=id)
-        print(bkob)
         bkob.delete()
         return JsonResponse({'message':'用户删除'}, status=204)
+
         # except :
         #     return JsonResponse({'message':'用户不存在'}, status=400)
+    if request.method == 'PUT':
+        try:
+            id = request.GET.get('id')
+            email = request.GET.get('email')
+            nick_name = request.GET.get('nick_name')
+            user=User.objects.get(id=id)
+            user.email=email
+            user.nick_name=nick_name
+            user.save()
+            return JsonResponse({'message':'修改成功'}, status=200)
+        except:
+            return JsonResponse({'message':'修改失败'}, status=400)
 
 @csrf_exempt
 def BackUser(request):

@@ -55,7 +55,11 @@ def GetMatchInfo(request):
 
     if request.method == 'GET':
 
-        querylist = Match.objects.filter(日期__istartswith=time.strftime("%Y-%m-"))
+        if request.GET.get('match_id') == "":
+
+            querylist = Match.objects.filter(日期__istartswith=time.strftime("%Y-%m-"))
+        else :
+            querylist = Match.objects.filter(id=request.GET.get('match_id'))
         serializer=MatchSerializer(querylist,many=True)
         return HttpResponse(json.dumps(serializer.data,ensure_ascii=False),content_type="application/json,charset=utf-8",status=200)
 @csrf_exempt
