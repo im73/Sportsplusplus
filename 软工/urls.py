@@ -21,7 +21,6 @@ from player_data.persons import views as info_view
 urlpatterns = [
 
     path('admin/', admin.site.urls),
-
     path('api/login',                           user_view.login),
     path('api/register',                        user_view.register),
     path('api/user',                            user_view.users),
