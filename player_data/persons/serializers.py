@@ -158,4 +158,27 @@ class ScoreSerializer(serializers.ModelSerializer):
 class MatchSerializer(serializers.ModelSerializer):
     class Meta:
         model = Match
-        fields = '__all__'
+        fields = (
+            'id',
+            '日期',
+            '主场球队中文名',
+            '客场球队中文名',
+            '主场第一节',
+            '主场第二节',
+            '主场第三节',
+            '主场第四节',
+            '主场加时一',
+            '主场加时二',
+            '主场加时三',
+            '主场加时四',
+            '客场加时一',
+            '客场加时二',
+            '客场加时三',
+            '客场加时四',
+            '主场总分',
+            '客场第一节',
+            '客场第二节',
+            '客场第三节',
+            '客场第四节',
+            '客场总分',
+        )

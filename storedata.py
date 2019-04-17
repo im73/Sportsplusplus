@@ -147,51 +147,52 @@ dir_list = os.listdir(file_dir2) # 列出文件夹下所有的目录和文件
 i=0
 print(dir_list)
 for i in range(len(dir_list)):
-    new_path = os.path.join(file_dir2, dir_list[i])
-    file_list = os.listdir(new_path)
-
-    real_path1 = os.path.join(new_path, file_list[0])
-    real_path2 = os.path.join(new_path, file_list[1])
-    real_path3 = os.path.join(new_path, file_list[2])
-
-    workbook1 = xlrd.open_workbook(real_path1)
-    sheet1 = workbook1.sheet_by_index(0)
-    workbook2 = xlrd.open_workbook(real_path2)
-    sheet2 = workbook2.sheet_by_index(0)
-    workbook3 = xlrd.open_workbook(real_path3)
-    sheet3 = workbook3.sheet_by_index(0)
+    print(dir_list[i])
+    # new_path = os.path.join(file_dir2, dir_list[i])
+    # file_list = os.listdir(new_path)
+    #
+    # real_path1 = os.path.join(new_path, file_list[0])
+    # real_path2 = os.path.join(new_path, file_list[1])
+    # real_path3 = os.path.join(new_path, file_list[2])
+    #
+    # workbook1 = xlrd.open_workbook(real_path1)
+    # sheet1 = workbook1.sheet_by_index(0)
+    # workbook2 = xlrd.open_workbook(real_path2)
+    # sheet2 = workbook2.sheet_by_index(0)
+    # workbook3 = xlrd.open_workbook(real_path3)
+    # sheet3 = workbook3.sheet_by_index(0)
+    # # if sheet1.nrows > 10:
     # if sheet1.nrows > 10:
-    if sheet1.nrows > 10:
-        # 客场
-        away_summary = Match_teamsummary(主客场=sheet3.cell_value(2, 1), home_away=1,
-                     投篮=sheet1.cell_value(sheet1.nrows-2, 4), 三分=sheet1.cell_value(sheet1.nrows-2, 5), 罚球=sheet1.cell_value(sheet1.nrows-2, 6),
-                     前场=sheet1.cell_value(sheet1.nrows-2, 7), 后场=sheet1.cell_value(sheet1.nrows-2, 8), 篮板=sheet1.cell_value(sheet1.nrows-2, 9),
-                     助攻=sheet1.cell_value(sheet1.nrows-2, 10), 犯规=sheet1.cell_value(sheet1.nrows-2, 11), 抢断=sheet1.cell_value(sheet1.nrows-2, 12),
-                     失误=sheet1.cell_value(sheet1.nrows-2, 13), 封盖=sheet1.cell_value(sheet1.nrows-2, 14), 得分=sheet1.cell_value(sheet1.nrows-2, 15),
-                     投篮命中率=sheet1.cell_value(sheet1.nrows-1, 4), 三分命中率=sheet1.cell_value(sheet1.nrows-1, 5), 罚球命中率=sheet1.cell_value(sheet1.nrows-1, 6),
-                     比赛id=Match.objects.get(id=dir_list[i].split('-')[3]))
-
-        away_summary.save()
-        # 主场
-        home_summary = Match_teamsummary(主客场=sheet3.cell_value(3, 1), home_away=2,
-                                         投篮=sheet2.cell_value(sheet2.nrows - 2, 4),
-                                         三分=sheet2.cell_value(sheet2.nrows - 2, 5),
-                                         罚球=sheet2.cell_value(sheet2.nrows - 2, 6),
-                                         前场=sheet2.cell_value(sheet2.nrows - 2, 7),
-                                         后场=sheet2.cell_value(sheet2.nrows - 2, 8),
-                                         篮板=sheet2.cell_value(sheet2.nrows - 2, 9),
-                                         助攻=sheet2.cell_value(sheet2.nrows - 2, 10),
-                                         犯规=sheet2.cell_value(sheet2.nrows - 2, 11),
-                                         抢断=sheet2.cell_value(sheet2.nrows - 2, 12),
-                                         失误=sheet2.cell_value(sheet2.nrows - 2, 13),
-                                         封盖=sheet2.cell_value(sheet2.nrows - 2, 14),
-                                         得分=sheet2.cell_value(sheet2.nrows - 2, 15),
-                                         投篮命中率=sheet2.cell_value(sheet2.nrows - 1, 4),
-                                         三分命中率=sheet2.cell_value(sheet2.nrows - 1, 5),
-                                         罚球命中率=sheet2.cell_value(sheet2.nrows - 1, 6),
-                                         比赛id=Match.objects.get(id=dir_list[i].split('-')[3]))
-
-        home_summary.save()
+    #     # 客场
+    #     away_summary = Match_teamsummary(主客场=sheet3.cell_value(2, 1), home_away=1,
+    #                  投篮=sheet1.cell_value(sheet1.nrows-2, 4), 三分=sheet1.cell_value(sheet1.nrows-2, 5), 罚球=sheet1.cell_value(sheet1.nrows-2, 6),
+    #                  前场=sheet1.cell_value(sheet1.nrows-2, 7), 后场=sheet1.cell_value(sheet1.nrows-2, 8), 篮板=sheet1.cell_value(sheet1.nrows-2, 9),
+    #                  助攻=sheet1.cell_value(sheet1.nrows-2, 10), 犯规=sheet1.cell_value(sheet1.nrows-2, 11), 抢断=sheet1.cell_value(sheet1.nrows-2, 12),
+    #                  失误=sheet1.cell_value(sheet1.nrows-2, 13), 封盖=sheet1.cell_value(sheet1.nrows-2, 14), 得分=sheet1.cell_value(sheet1.nrows-2, 15),
+    #                  投篮命中率=sheet1.cell_value(sheet1.nrows-1, 4), 三分命中率=sheet1.cell_value(sheet1.nrows-1, 5), 罚球命中率=sheet1.cell_value(sheet1.nrows-1, 6),
+    #                  比赛id=Match.objects.get(id=dir_list[i].split('-')[3]))
+    #
+    #     away_summary.save()
+    #     # 主场
+    #     home_summary = Match_teamsummary(主客场=sheet3.cell_value(3, 1), home_away=2,
+    #                                      投篮=sheet2.cell_value(sheet2.nrows - 2, 4),
+    #                                      三分=sheet2.cell_value(sheet2.nrows - 2, 5),
+    #                                      罚球=sheet2.cell_value(sheet2.nrows - 2, 6),
+    #                                      前场=sheet2.cell_value(sheet2.nrows - 2, 7),
+    #                                      后场=sheet2.cell_value(sheet2.nrows - 2, 8),
+    #                                      篮板=sheet2.cell_value(sheet2.nrows - 2, 9),
+    #                                      助攻=sheet2.cell_value(sheet2.nrows - 2, 10),
+    #                                      犯规=sheet2.cell_value(sheet2.nrows - 2, 11),
+    #                                      抢断=sheet2.cell_value(sheet2.nrows - 2, 12),
+    #                                      失误=sheet2.cell_value(sheet2.nrows - 2, 13),
+    #                                      封盖=sheet2.cell_value(sheet2.nrows - 2, 14),
+    #                                      得分=sheet2.cell_value(sheet2.nrows - 2, 15),
+    #                                      投篮命中率=sheet2.cell_value(sheet2.nrows - 1, 4),
+    #                                      三分命中率=sheet2.cell_value(sheet2.nrows - 1, 5),
+    #                                      罚球命中率=sheet2.cell_value(sheet2.nrows - 1, 6),
+    #                                      比赛id=Match.objects.get(id=dir_list[i].split('-')[3]))
+    #
+    #     home_summary.save()
         # for k in range (8, sheet1.nrows-2): # 替补
         #
         #     match_player = Match_player(类型='替补', 主客场=sheet3.cell_value(2, 1), 球员名=sheet1.cell_value(k, 1), 位置=sheet1.cell_value(k, 2), 时间=sheet1.cell_value(k, 3),
@@ -232,7 +233,7 @@ for i in range(len(dir_list)):
         # # 主场
         # home_summary = Match_teamsummary.objects.get(比赛id=dir_list[i].split('-')[3], 主客场=sheet3.cell_value(3, 1))
         # home_summary.home_away = 2
-        print(dir_list[i])
+
             # 比赛id=Match.objects.get(id=dir_list[i].split('-')[3])
             # match_player = Match_player.objects.get(球员名=sheet1.cell_value(j, 1))
             # match_player.类型 = 1
