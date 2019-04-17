@@ -30,7 +30,7 @@ urlpatterns = [
 
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 
-    path(r'api/GetTeanmInfo',                                                       info_view.get_teaminfo),
+    path(r'api/GetTeamInfo',                                                       info_view.get_teaminfo),
     path(r'api/GetPlayerImage/<str:PlayerName>',                                    info_view.GetPlayerImage),
     path(r'api/GetTeamImage/<str:Teamname>',                                        info_view.GetTeamImage),
     path(r'api/GetPlayerInfo',                                                      info_view.get_playerinfo),
