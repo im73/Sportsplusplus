@@ -14,7 +14,7 @@ class back_userSerializer(serializers.ModelSerializer):
 
     class Meta:
         model=back_user
-        fields='__all__'
+        excludes=()
 
 
 
