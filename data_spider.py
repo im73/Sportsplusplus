@@ -315,17 +315,19 @@ class DataSpider(object):
         pass
 
     def get_history_games_info_hupu(self):
-        print("hahaha")
-        date_set = self.get_date_set('2019-4-1', '2019-04-17')
+
+        date_set = self.get_date_set(time.strftime("%Y-%m-%d"), time.strftime("%Y-%m-%d"))
+
         for date in date_set:
             text = requests.get(self.games_info_hupu.format(date)).text
             soup = BeautifulSoup(text, "lxml")
             games = soup.find_all(attrs={'class': 'table_choose clearfix'})
             games = [game.find(attrs={'class': 'd'}).get('href') for game in games]
+            print(games)
             for game in games:
                 game_id = game.split('/')[-1]
-                print(game_id)
-                if (not os.path.exists('./history_games(date)/{}-{}'.format(date, game_id))) & history_in_database(game_id)==0:
+
+                if (not os.path.exists('./history_games(date)/{}-{}'.format(date, game_id))) & (history_in_database(game_id)==0):
                     os.mkdir('./history_games(date)/{}-{}'.format(date, game_id))
                 else:
                     continue
@@ -461,8 +463,8 @@ class DataSpider(object):
                     f.close()
 
 
-if __name__ == '__main__':
-    ds = DataSpider()
+# if __name__ == '__main__':
+#     ds = DataSpider()
     # ds.get_scores()
     # ds.get_active_players()
     # ds.get_schedule()

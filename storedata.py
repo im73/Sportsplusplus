@@ -1,3 +1,4 @@
+import shutil
 from io import StringIO
 import json
 import sys
@@ -147,11 +148,11 @@ import os
 # db = pymysql.connect("114.116.156.240", "root", "Buaa2019!", "app", charset='utf8')
 # cursor = db.cursor()
 import xlrd, xlwt
-file_dir2="./history_games(date)"
-dir_list = os.listdir(file_dir2) # 列出文件夹下所有的目录和文件
-i=0
-while True: # 不断循环
 
+def store_history_game():
+    file_dir2="./history_games(date)"
+    dir_list = os.listdir(file_dir2) # 列出文件夹下所有的目录和文件
+    i=0
     for i in range(len(dir_list)): # 遍历文件夹内所有子文件夹
         # 判断是否为已存文件
         try:
@@ -175,6 +176,7 @@ while True: # 不断循环
             sheet3 = workbook3.sheet_by_index(0)
 
             if sheet1.nrows > 10: # 判断是否为空表
+
                 # 存Match内容，区分是否有加时
                 match = Match(id=dir_list[i].split('-')[3],
                               日期=dir_list[i].split('-')[0]+'-'+dir_list[i].split('-')[1]+'-'+dir_list[i].split('-')[2],
@@ -305,6 +307,9 @@ while True: # 不断循环
                                                 正负=sheet2.cell_value(k, 16),
                                                 比赛id=Match.objects.get(id=dir_list[i].split('-')[3]))
                     match_player.save()
+                with open("history.txt","a+") as f:
+                    f.write("存储："+dir_list[i].split('-')[3]+"\n")
+                f.close()
 
         # 客场
         # away_summary = Match_teamsummary.objects.get(比赛id=dir_list[i].split('-')[3], 主客场=sheet3.cell_value(2, 1))
@@ -427,6 +432,17 @@ while True: # 不断循环
 #     match.客场总分 = a
 #
 #     match.save()
+
+
+def delete_files() :
+    os.chdir("./history_games(date)")
+    fileList = list(os.listdir())
+    for file in fileList:
+        if os.path.isfile(file):
+            os.remove(file)
+            print("delete successfully")
+        else:
+            shutil.rmtree(file)
 
 
 
