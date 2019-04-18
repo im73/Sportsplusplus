@@ -1,3 +1,5 @@
+from urllib import parse
+
 from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render
 
@@ -43,7 +45,7 @@ def Sbscribe(request):
         teamname=request.GET.get('teamname')
 
         user=User.objects.get(nick_name=username)
-        team=Team.objects.get(球队中文名__endswith=teamname)
+        team=Team.objects.get(球队中文名__endswith=parse.unquote(teamname))
 
         sbob=sb.objects.get(user=user,team=team)
         sbob.delete()

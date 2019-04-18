@@ -8,6 +8,6 @@ class subscribeSerializer(serializers.ModelSerializer):
         model = subscribe
 
         fields = (
-            'team'
+            'team',
         )
         depth=1

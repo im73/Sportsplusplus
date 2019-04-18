@@ -102,6 +102,7 @@ def back_login(request):
 def users(request):
 
     if request.method == 'GET':
+
         queryset=User.objects.all()
         serializer = UserSerializer(queryset, many=True)
 
