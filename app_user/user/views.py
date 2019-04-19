@@ -146,7 +146,11 @@ def BackUser(request):
 
         username=request.GET.get('username')
         password=request.GET.get('password')
-        backuser=back_user(username=username,password=password)
+        phnumber=request.GET.get('phnumber')
+        truename=request.GET.get('truename')
+
+
+        backuser=back_user(username=username,password=password,phnumber=phnumber,truename=truename)
 
         try:
             backuser.save()
@@ -156,13 +160,36 @@ def BackUser(request):
 
     if request.method == 'DELETE':
 
-        id=request.GET.get('id')
+        id=request.GET.get('userid')
         try:
             bkob=back_user.objects.get(id=id)
             bkob.delete()
             return JsonResponse({'message':'用户删除'}, status=204)
         except :
             return JsonResponse({'message':'用户不存在'}, status=400)
+
+    if request.method == 'PUT':
+
+        userid=request.GET.get('userid')
+        username=request.GET.get('username')
+        password=request.GET.get('password')
+        phnumber=request.GET.get('phnumber')
+        truename=request.GET.get('truename')
+
+        Backuser=back_user.objects.get(id=userid)
+
+        Backuser.username=username
+        if password!="":
+            Backuser.password=password
+        Backuser.phnumber=phnumber
+        Backuser.truename=truename
+        Backuser.addtime=Backuser.addtime
+        print(Backuser.addtime)
+        # try:
+        Backuser.save()
+        return JsonResponse({'message':'用户信息修改成功'}, status=200)
+        # except:
+        return JsonResponse({'message':'用户名重复'}, status=400)
 
 
 @csrf_exempt

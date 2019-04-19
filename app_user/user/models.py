@@ -25,6 +25,7 @@ class back_user(models.Model):
     password=models.CharField(max_length=15,null=False,default="")
     truename=models.CharField(max_length=40,null=False,default="")
     phnumber=models.CharField(max_length=11,null=False,default="",unique=True)
+    addtime=models.DateTimeField(auto_now_add=True)
     class Meta:
         verbose_name = u"管理人员"
         verbose_name_plural = verbose_name

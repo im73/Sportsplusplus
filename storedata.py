@@ -1,4 +1,5 @@
 import shutil
+import time
 from io import StringIO
 import json
 import sys
@@ -155,11 +156,13 @@ def store_history_game():
     i=0
     for i in range(len(dir_list)): # 遍历文件夹内所有子文件夹
         # 判断是否为已存文件
-        try:
-            match = Match.objects.get(id=dir_list[i].split('-')[3])
+        num=Match.objects.filter(id=dir_list[i].split('-')[3]).count()
+        if  (num==0) | ((dir_list[i].split('-')[0]+'-'+dir_list[i].split('-')[1]+'-'+dir_list[i].split('-')[2])==time.strftime("%Y-%m-%d")):
             # print(dir_list[i])
         # 若未存，则开始存子文件夹内文件
-        except:
+            if num==1:
+                matchob=Match.objects.get(id=dir_list[i].split('-')[3])
+                matchob.delete()
             print(dir_list[i], '---------dont exist, start to store')
             new_path = os.path.join(file_dir2, dir_list[i])
             file_list = os.listdir(new_path)
