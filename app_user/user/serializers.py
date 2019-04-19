@@ -11,10 +11,10 @@ class UserSerializer(serializers.ModelSerializer):
         fields=('id','email','nick_name','password','register_time')
 
 class back_userSerializer(serializers.ModelSerializer):
-
+    addtime = serializers.DateTimeField(format="%Y-%m-%d ", required=False)
     class Meta:
         model=back_user
-        fields='__all__'
+        exclude = ('password',)
 
 
 
