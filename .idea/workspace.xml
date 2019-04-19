@@ -2,24 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b047bb0b-4241-4ad3-a197-7125741d666d" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_user/operation/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_user/operation/serializer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_user/operation/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_user/operation/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_user/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_user/user/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/软工/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/软工/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/软工.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/软工.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_data/persons/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/player_data/persons/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_data/persons/migrations/0002_auto_20190416_1123.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_data/persons/migrations/0003_match_teamsummary_home_away.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_data/persons/migrations/0004_match_teamsummary_home_away.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_data/persons/migrations/0005_remove_match_teamsummary_home_away.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_data/persons/migrations/0006_remove_match_teamsummary_home_away.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_data/persons/migrations/0007_match_teamsummary_home_away.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_data/persons/migrations/0008_match_teamsummary_home_away.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_data/persons/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/player_data/persons/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_data/persons/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/player_data/persons/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storedata.py" beforeDir="false" afterPath="$PROJECT_DIR$/storedata.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/$data_api.coverage" NAME="data_api Coverage Results" MODIFIED="1555173835152" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/$tests.coverage" NAME="tests Coverage Results" MODIFIED="1553776648480" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app_user/user" />
+    <SUITE FILE_PATH="coverage/Sportsplusplus$data_api.coverage" NAME="data_api Coverage Results" MODIFIED="1555671044747" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/$.coverage" NAME="数据修改 Coverage Results" MODIFIED="1555332302709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/$store.coverage" NAME="data_api Coverage Results" MODIFIED="1554551326346" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/$tests.coverage" NAME="tests Coverage Results" MODIFIED="1553776648480" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app_user/user" />
+    <SUITE FILE_PATH="coverage/$data_api.coverage" NAME="data_api Coverage Results" MODIFIED="1555173835152" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -42,64 +52,46 @@
     <session id="-2119060096">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.19" value="2" />
           <entry key="project.open.time.22" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="12" />
+          <entry key="py" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="12" />
+          <entry key="Python" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="2140" />
+          <entry key="py" value="3849" />
           <entry key="py@软工" value="66" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CommandLine" value="66" />
-          <entry key="Python" value="2140" />
+          <entry key="Python" value="3849" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/软工/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="34" column="16" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
-              <folding>
-                <element signature="e#626#658#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="serializers.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app_user/user/serializers.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_user/user/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="41" selection-start-line="41" selection-end-line="41" />
+            <state relative-caret-position="263">
+              <caret line="33" selection-start-line="33" selection-end-line="41" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -107,76 +99,45 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/软工/settings.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/player_data/persons/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="795">
-              <caret line="53" column="20" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/player_data/persons/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="477">
-              <caret line="100" column="75" selection-start-line="100" selection-start-column="75" selection-end-line="100" selection-end-column="75" />
+            <state relative-caret-position="275">
+              <caret line="154" column="51" lean-forward="true" selection-start-line="154" selection-start-column="51" selection-end-line="154" selection-end-column="51" />
               <folding>
-                <element signature="e#3#27#0" expanded="true" />
+                <marker date="1555666553388" expanded="true" signature="5339:5825" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app_user/operation/views.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/player_data/persons/serializers.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-              <folding>
-                <element signature="e#0#24#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tests.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app_user/operation/tests.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app_user/operation/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="56" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app_user/user/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
-              <caret line="126" column="45" lean-forward="true" selection-start-line="126" selection-start-column="45" selection-end-line="126" selection-end-column="45" />
-              <folding>
-                <element signature="e#53#77#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="serializer.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app_user/operation/serializer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+            <state relative-caret-position="1298">
+              <caret line="187" column="26" selection-start-line="187" selection-start-column="26" selection-end-line="187" selection-end-column="26" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
+                <marker date="1555666943578" expanded="true" signature="4143:4148" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/软工/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="177">
+              <caret line="90" column="32" lean-forward="true" selection-start-line="90" selection-start-column="32" selection-end-line="90" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/storedata.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="151">
+              <caret line="351" column="51" lean-forward="true" selection-start-line="351" selection-start-column="51" selection-end-line="351" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -236,11 +197,8 @@
         <option value="$PROJECT_DIR$/user/serializers.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/app_user/user/serializers.py" />
-        <option value="$PROJECT_DIR$/storedata.py" />
         <option value="$PROJECT_DIR$/datamodify.py" />
-        <option value="$PROJECT_DIR$/player_data/persons/models.py" />
         <option value="$PROJECT_DIR$/data_spider.py" />
-        <option value="$PROJECT_DIR$/player_data/persons/serializers.py" />
         <option value="$PROJECT_DIR$/app_user/user/models.py" />
         <option value="$PROJECT_DIR$/app_user/operation/models.py" />
         <option value="$PROJECT_DIR$/app_user/operation/migrations/0001_initial.py" />
@@ -252,6 +210,14 @@
         <option value="$PROJECT_DIR$/player_data/persons/views.py" />
         <option value="$PROJECT_DIR$/app_user/operation/views.py" />
         <option value="$PROJECT_DIR$/app_user/user/views.py" />
+        <option value="$PROJECT_DIR$/player_data/persons/migrations/0002_auto_20190419_1724.py" />
+        <option value="$PROJECT_DIR$/player_data/persons/models.py" />
+        <option value="$PROJECT_DIR$/player_data/persons/serializers.py" />
+        <option value="$PROJECT_DIR$/player_data/persons/migrations/0002_auto_20190419_1737.py" />
+        <option value="$PROJECT_DIR$/player_data/persons/migrations/0001_initial.py" />
+        <option value="$PROJECT_DIR$/player_data/persons/migrations/0002_auto_20190419_1749.py" />
+        <option value="$PROJECT_DIR$/player_data/persons/migrations/0003_auto_20190419_1758.py" />
+        <option value="$PROJECT_DIR$/storedata.py" />
       </list>
     </option>
   </component>
@@ -261,14 +227,27 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths />
-  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1" />
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="811" />
+    <option name="x" value="-8" />
+    <option name="width" value="977" />
+    <option name="height" value="1050" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>Python</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>PyArgumentListInspection</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -280,40 +259,30 @@
         <subPane>
           <expand>
             <path>
-              <item name="软工" type="b2602c69:ProjectViewProjectNode" />
-              <item name="软工" type="462c0819:PsiDirectoryNode" />
+              <item name="Sportsplusplus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sportsplusplus" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="软工" type="b2602c69:ProjectViewProjectNode" />
-              <item name="软工" type="462c0819:PsiDirectoryNode" />
-              <item name="app_user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="软工" type="b2602c69:ProjectViewProjectNode" />
-              <item name="软工" type="462c0819:PsiDirectoryNode" />
-              <item name="app_user" type="462c0819:PsiDirectoryNode" />
-              <item name="operation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="软工" type="b2602c69:ProjectViewProjectNode" />
-              <item name="软工" type="462c0819:PsiDirectoryNode" />
-              <item name="app_user" type="462c0819:PsiDirectoryNode" />
-              <item name="user" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="软工" type="b2602c69:ProjectViewProjectNode" />
-              <item name="软工" type="462c0819:PsiDirectoryNode" />
+              <item name="Sportsplusplus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sportsplusplus" type="462c0819:PsiDirectoryNode" />
               <item name="player_data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="软工" type="b2602c69:ProjectViewProjectNode" />
-              <item name="软工" type="462c0819:PsiDirectoryNode" />
+              <item name="Sportsplusplus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sportsplusplus" type="462c0819:PsiDirectoryNode" />
               <item name="player_data" type="462c0819:PsiDirectoryNode" />
               <item name="persons" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="软工" type="b2602c69:ProjectViewProjectNode" />
-              <item name="软工" type="462c0819:PsiDirectoryNode" />
+              <item name="Sportsplusplus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sportsplusplus" type="462c0819:PsiDirectoryNode" />
+              <item name="player_data" type="462c0819:PsiDirectoryNode" />
+              <item name="persons" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Sportsplusplus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sportsplusplus" type="462c0819:PsiDirectoryNode" />
               <item name="软工" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -355,7 +324,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Django server.软工">
+  <component name="RunManager" selected="Python.data_api">
     <configuration name="数据修改" type="PythonConfigurationType" factoryName="Python">
       <module name="软工" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -374,6 +343,9 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <configuration name="data_api" type="PythonConfigurationType" factoryName="Python">
       <module name="软工" />
@@ -382,7 +354,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="$USER_HOME$/venv/软工/bin/python" />
+      <option name="SDK_HOME" value="C:\Users\29595\PycharmProjects\Sportsplusplus\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -393,6 +365,9 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <configuration name="tests" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="软工" />
@@ -412,6 +387,9 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
     </configuration>
     <configuration name="软工" type="Python.DjangoServer" factoryName="Django server">
       <module name="软工" />
@@ -435,6 +413,7 @@
       <option name="runNoReload" value="false" />
       <option name="useCustomRunCommand" value="false" />
       <option name="customRunCommand" value="" />
+      <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Django server.软工" />
@@ -717,33 +696,33 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="811" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49713877" weight="0.32633054" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.54005724" side_tool="true" weight="0.3907563" />
-      <window_info anchor="bottom" id="Database Changes" order="9" sideWeight="0.4985694" weight="0.32969698" />
-      <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.48426324" weight="0.2787115" />
-      <window_info anchor="bottom" id="Python Console" order="13" sideWeight="0.4914163" weight="0.32633054" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4599428" weight="0.3809524" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.46709585" weight="0.27310926" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20386267" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="4" weight="0.3297568" />
-      <window_info anchor="right" id="SciView" order="3" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.06903485" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49642345" weight="0.28848484" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4599428" visible="true" weight="0.29650348" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49713877" weight="0.32633054" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="8" />
+      <window_info anchor="bottom" id="manage.py@软工" order="9" sideWeight="0.4792561" weight="0.32352942" />
+      <window_info anchor="bottom" id="Database Changes" order="10" sideWeight="0.4985694" weight="0.32969698" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.46709585" weight="0.17762238" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.54005724" side_tool="true" weight="0.3907563" />
+      <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.48426324" weight="0.2787115" />
+      <window_info anchor="bottom" id="Python Console" order="14" sideWeight="0.4914163" weight="0.32633054" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="15" sideWeight="0.49928468" weight="0.32969698" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="manage.py@软工" order="8" sideWeight="0.4792561" weight="0.32352942" />
-      <window_info anchor="bottom" id="Messages" order="7" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49642345" weight="0.28848484" />
-      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="14" sideWeight="0.49928468" weight="0.32969698" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" weight="0.3297568" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -809,41 +788,7 @@
     <MESSAGE value="增加订阅" />
     <option name="LAST_COMMIT_MESSAGE" value="增加订阅" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="1" />
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app_user/user/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="19" lean-forward="true" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_user/user/apps.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_user/user/admin.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_user/user/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" lean-forward="true" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_user/user/migrations/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/forum/migrations/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/player_data/persons/apps.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="43185">
@@ -861,27 +806,9 @@
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$USER_HOME$/venv/软工/lib/python3.6/site-packages/rest_framework/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="1306" selection-start-line="1306" selection-end-line="1306" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/venv/软工/lib/python3.6/site-packages/django/core/handlers/exception.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="585" selection-start-line="585" selection-end-line="585" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/venv/软工/lib/python3.6/site-packages/rest_framework/serializers.py" />
+    <entry file="file://$USER_HOME$/venv/软工/lib/python3.6/site-packages/django/core/handlers/exception.py" />
+    <entry file="file:///usr/local/Cellar/python/3.6.5/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py" />
     <entry file="file://$PROJECT_DIR$/media/teams_img/76人.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -908,30 +835,13 @@
     <entry file="file://$PROJECT_DIR$/api/send_email.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/storedata.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/forum/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/player_data/persons/migrations/0006_auto_20190415_1219.py" />
-    <entry file="file://$USER_HOME$/venv/软工/lib/python3.6/site-packages/django/db/migrations/graph.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="95" selection-start-line="95" selection-end-line="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/venv/软工/lib/python3.6/site-packages/django/db/models/query.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="398" selection-start-line="398" selection-end-line="398" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$USER_HOME$/venv/软工/lib/python3.6/site-packages/django/db/migrations/graph.py" />
+    <entry file="file://$USER_HOME$/venv/软工/lib/python3.6/site-packages/django/db/models/query.py" />
+    <entry file="file://$PROJECT_DIR$/log.txt" />
     <entry file="file://$PROJECT_DIR$/datamodify.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
@@ -959,16 +869,7 @@
     <entry file="file://$PROJECT_DIR$/app_user/user/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/canvas-nest.js-master/README-zh.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="450">
-            <caret line="30" column="6" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Downloads/canvas-nest.js-master/README-zh.md" />
     <entry file="file://$PROJECT_DIR$/forum/migrations/0001_initial.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -988,13 +889,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/venv/软工/lib/python3.6/site-packages/django/middleware/clickjacking.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/venv/软工/lib/python3.6/site-packages/django/middleware/clickjacking.py" />
     <entry file="file://$PROJECT_DIR$/app_user/serializer.py" />
     <entry file="file://$PROJECT_DIR$/app_user/operation/migrations/0001_initial.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1003,107 +898,143 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/player_data/persons/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/player_data/persons/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1200">
-          <caret line="80" column="23" selection-start-line="80" selection-start-column="23" selection-end-line="80" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/软工/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="53" column="20" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/软工/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="34" column="16" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
-          <folding>
-            <element signature="e#626#658#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="589">
+          <caret line="35" column="16" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app_user/user/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
+        <state relative-caret-position="361">
           <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_user/user/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_user/operation/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="56" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/player_data/persons/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
+        <state relative-caret-position="1615">
           <caret line="100" column="75" selection-start-line="100" selection-start-column="75" selection-end-line="100" selection-end-column="75" />
-          <folding>
-            <element signature="e#3#27#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app_user/operation/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_user/operation/serializer.py">
+    <entry file="file://$PROJECT_DIR$/app_user/operation/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_user/operation/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="114">
+          <caret line="9" column="56" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app_user/user/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="126" column="45" lean-forward="true" selection-start-line="126" selection-start-column="45" selection-end-line="126" selection-end-column="45" />
+        <state relative-caret-position="2166">
+          <caret line="127" column="40" selection-start-line="127" selection-start-column="40" selection-end-line="127" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_user/operation/serializer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_user/operation/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/player_data/persons/migrations/0009_auto_20190419_1723.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-684" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/软工/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="90" column="32" lean-forward="true" selection-start-line="90" selection-start-column="32" selection-end-line="90" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/player_data/persons/migrations/0002_auto_20190419_1724.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-950">
+          <caret line="25" column="10" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/player_data/persons/migrations/0002_auto_20190419_1732.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/player_data/persons/migrations/0002_auto_20190419_1737.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="22" column="59" lean-forward="true" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/player_data/persons/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="170" column="10" selection-start-line="170" selection-start-column="10" selection-end-line="170" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/player_data/persons/migrations/0002_auto_20190419_1749.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/player_data/persons/migrations/0003_auto_20190419_1758.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="28" column="10" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/player_data/persons/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1298">
+          <caret line="187" column="26" selection-start-line="187" selection-start-column="26" selection-end-line="187" selection-end-column="26" />
           <folding>
-            <element signature="e#53#77#0" expanded="true" />
+            <element signature="e#0#38#0" expanded="true" />
+            <marker date="1555666943578" expanded="true" signature="4143:4148" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_user/user/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="33" selection-start-line="33" selection-end-line="41" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/player_data/persons/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="154" column="51" lean-forward="true" selection-start-line="154" selection-start-column="51" selection-end-line="154" selection-end-column="51" />
+          <folding>
+            <marker date="1555666553388" expanded="true" signature="5339:5825" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storedata.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="351" column="51" lean-forward="true" selection-start-line="351" selection-start-column="51" selection-end-line="351" selection-end-column="51" />
         </state>
       </provider>
     </entry>
