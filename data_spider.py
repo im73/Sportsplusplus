@@ -6,7 +6,8 @@ import time
 import os
 import datetime
 from storedata import history_in_database
-
+from openpyxl import load_workbook
+import datetime
 class DataSpider(object):
 
     def __init__(self):
@@ -315,8 +316,9 @@ class DataSpider(object):
         pass
 
     def get_history_games_info_hupu(self):
+        time=datetime.datetime.now()
 
-        date_set = self.get_date_set(time.strftime("%Y-%m-%d"), time.strftime("%Y-%m-%d"))
+        date_set = self.get_date_set((time-datetime.timedelta(days=1)).strftime("%Y-%m-%d"), time.strftime("%Y-%m-%d"))
 
         for date in date_set:
             text = requests.get(self.games_info_hupu.format(date)).text

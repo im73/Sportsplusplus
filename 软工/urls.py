@@ -39,4 +39,5 @@ urlpatterns = [
     path(r'api/GetPlayerSummary',                                                   info_view.GetPlayerSummary),
     path(r'api/GetTeamSummary',                                                     info_view.GetMatchSummary),
     path(r'api/GetMatch',                                                           info_view.GetMatchInfo),
+    path(r'api/GetSchedule',                                                        info_view.GetSchedule),
 ]

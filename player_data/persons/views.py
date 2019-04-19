@@ -104,3 +104,15 @@ def GetTeamImage(request,Teamname):
             return HttpResponse(image_data,content_type='image/jpg')
         except:
             return HttpResponse(json.dumps({'message':'没有获取到资源'},ensure_ascii=False),content_type="application/json,charset=utf-8",status=400)
+
+def GetSchedule(request):
+
+    if request.method=="GET":
+
+        teamname=request.GET.get('teamname')
+        querylist=Schedule.objects.filter(teamname=teamname)
+        serializer=ScheduleSerializer(querylist,many=True)
+
+        return HttpResponse(json.dumps(serializer.data,ensure_ascii=False),content_type="application/json,charset=utf-8",status=200)
+
+

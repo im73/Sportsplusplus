@@ -141,12 +141,3 @@ class Match(models.Model):
     客场第三节 = models.CharField(max_length=10)
     客场第四节 = models.CharField(max_length=10)
     客场总分 = models.CharField(max_length=10)
-
-
-
-
-# for i in range(1, 21):
-#     setattr(Match, '替补%d' % i, models.ForeignKey(MatchPlayer, on_delete=models.CASCADE, related_name="替补%d信息" % i))
-# for j in range(1, 5):
-#     setattr(Match, '首发%d' % i, models.ForeignKey(MatchPlayer, on_delete=models.CASCADE, related_name="首发%d信息" % i))
-
