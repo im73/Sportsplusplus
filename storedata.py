@@ -1,3 +1,4 @@
+import shutil
 from io import StringIO
 import json
 import sys
@@ -27,6 +28,23 @@ from player_data.persons.serializers import PlayerSerializer, TeamSerializer, Re
 from django.core.files import File
 #接下来就可以使用model了
 
+def history_in_database(macth_id):
+
+    if Match.objects.filter(id=macth_id).count()==0:
+        return 0
+    else:
+        return 1
+
+
+def delete_files() :
+    os.chdir("./history_games(date)")
+    fileList = list(os.listdir())
+    for file in fileList:
+        if os.path.isfile(file):
+            os.remove(file)
+            print("delete successfully")
+        else:
+            shutil.rmtree(file)
 #添加球员信息
 # with open('./active_players(1).json') as f:
 #     active_players = json.load(f)
@@ -310,6 +328,86 @@ def store_history_game():
                 with open("history.txt","a+") as f:
                     f.write("存储："+dir_list[i].split('-')[3]+"\n")
                 f.close()
+def store_schedule():
+    file_dir2 = "./team_schedule"  # 给定路径
+    dir_list = os.listdir(file_dir2)  # 列出文件夹下所有的目录和文件
+    new_path = os.path.join(file_dir2, dir_list[0]) # 第二个子文件夹
+    file_list = os.listdir(new_path)
+
+    for i in range(len(file_list)):
+        real_path1 = os.path.join(new_path, file_list[i])
+        # print(real_path1)
+        workbook1 = xlrd.open_workbook(real_path1)
+        sheet1 = workbook1.sheet_by_index(0)
+
+        for j in range(sheet1.nrows):
+            a = str(sheet1.cell_value(j, 1))
+            b = str(sheet1.cell_value(j, 2))
+            c = str(sheet1.cell_value(j, 4))
+            if len(a.split(' ')) > 3:
+                # print(sheet1.cell_value(j, 1))
+                count_schedule = Schedule.objects.filter(赛季球队=sheet1.cell_value(1, 1), 客队=a.split(' ')[0], 主队=a.split(' ')[4], 日期=c.split(' ')[0]).count()
+                print(count_schedule)
+                if count_schedule == 0: # 判断是否存过赛程
+                    if (b.split(' ')[0] == '-'):  # 比赛前瞻
+                        print(a.split(' ')[0], a.split(' ')[4], sheet1.cell_value(j, 3),
+                              c.split(' ')[0], c.split(' ')[1], sheet1.cell_value(j, 5))
+                        sched = Schedule(
+                            英文名=file_list[i].split('.')[0],
+                            赛季球队=sheet1.cell_value(1, 1),
+                            客队=a.split(' ')[0],
+                            主队=a.split(' ')[4],
+                            客队比分='0',
+                            主队比分='0',
+                            结果=sheet1.cell_value(j, 3),
+                            日期=c.split(' ')[0],
+                            北京时间=c.split(' ')[1],
+                            类型=sheet1.cell_value(j, 5),
+                        )
+                        sched.save()
+                    else:
+                        print(a.split(' ')[0], a.split(' ')[4], b.split(' ')[0], b.split(' ')[2], sheet1.cell_value(j, 3),
+                              c.split(' ')[0], c.split(' ')[1], sheet1.cell_value(j, 5))
+                        print(0)
+                        sched = Schedule(
+                            英文名=file_list[i].split('.')[0],
+                            赛季球队=sheet1.cell_value(1, 1),
+                            客队=a.split(' ')[0],
+                            主队=a.split(' ')[4],
+                            客队比分=b.split(' ')[0],
+                            主队比分=b.split(' ')[2],
+                            结果=sheet1.cell_value(j, 3),
+                            日期=c.split(' ')[0],
+                            北京时间=c.split(' ')[1],
+                            类型=sheet1.cell_value(j, 5),
+                        )
+                        count = Match.objects.filter(主场球队中文名=sched.主队, 客场球队中文名=sched.客队, 日期=sched.日期).count()
+                        if count!=0:
+                            match = Match.objects.get(主场球队中文名=sched.主队, 客场球队中文名=sched.客队, 日期=sched.日期)
+                            sched.比赛id=Match(id=match.id)
+                        sched.save()
+
+                else:         # 存过则 判断是否为赛程预测，若存过内容为预测且表中内容为数据统计，则用表内信息覆盖数据库内容
+
+                    schedule = Schedule.objects.get(赛季球队=sheet1.cell_value(1, 1), 客队=a.split(' ')[0], 主队=a.split(' ')[4], 日期=c.split(' ')[0])
+
+                    if schedule.类型=='比赛前瞻':
+                        print(schedule.类型, sheet1.cell_value(j, 5))
+                        if sheet1.cell_value(j, 5)=='数据统计':
+
+                            print('前瞻->数据统计', a.split(' ')[0], a.split(' ')[4], b.split(' ')[0], b.split(' ')[2], sheet1.cell_value(j, 3),
+                                  c.split(' ')[0], c.split(' ')[1], sheet1.cell_value(j, 5))
+                            schedule.客队比分=b.split(' ')[0]
+                            schedule.主队比分=b.split(' ')[2]
+                            schedule.日期=c.split(' ')[0]
+                            schedule.北京时间=c.split(' ')[1]
+                            schedule.结果=sheet1.cell_value(j, 3)
+                            schedule.类型=sheet1.cell_value(j, 5)
+                            count = Match.objects.filter(主场球队中文名=schedule.主队, 客场球队中文名=schedule.客队, 日期=schedule.日期).count()
+                            if count != 0:
+                                match = Match.objects.get(主场球队中文名=schedule.主队, 客场球队中文名=schedule.客队, 日期=schedule.日期)
+                                schedule.比赛id = Match(id=match.id)
+                            schedule.save()
 
 # file_dir2 = "./team_schedule"  # 给定路径
 # dir_list = os.listdir(file_dir2)  # 列出文件夹下所有的目录和文件
@@ -326,122 +424,47 @@ def store_history_game():
 #         a = str(sheet1.cell_value(j, 1))
 #         b = str(sheet1.cell_value(j, 2))
 #         c = str(sheet1.cell_value(j, 4))
-#         if len(a.split(' ')) > 3:
-#             # print(sheet1.cell_value(j, 1))
-#             count_schedule = Schedule.objects.filter(赛季球队=sheet1.cell_value(1, 1), 客队=a.split(' ')[0], 主队=a.split(' ')[4], 日期=c.split(' ')[0])
-#             print(count_schedule)
-#             if count_schedule == 0: # 判断是否存过赛程
-#                 if (b.split(' ')[0] == '-'):  # 比赛前瞻
-#                     print(a.split(' ')[0], a.split(' ')[4], sheet1.cell_value(j, 3),
-#                           c.split(' ')[0], c.split(' ')[1], sheet1.cell_value(j, 5))
-#                     # sched = Schedule(
-#                     #     赛季球队=sheet1.cell_value(1, 1),
-#                     #     客队=a.split(' ')[0],
-#                     #     主队=a.split(' ')[4],
-#                     #     客队比分='0',
-#                     #     主队比分='0',
-#                     #     结果=sheet1.cell_value(j, 3),
-#                     #     日期=c.split(' ')[0],
-#                     #     北京时间=c.split(' ')[1],
-#                     #     类型=sheet1.cell_value(j, 5),
-#                     # )
-#                     # sched.save()
-#                 else:
-#                     print(a.split(' ')[0], a.split(' ')[4], b.split(' ')[0], b.split(' ')[2], sheet1.cell_value(j, 3),
-#                           c.split(' ')[0], c.split(' ')[1], sheet1.cell_value(j, 5))
-#                     print(0)
-#                     # sched = Schedule(
-#                     #     赛季球队=sheet1.cell_value(1, 1),
-#                     #     客队=a.split(' ')[0],
-#                     #     主队=a.split(' ')[4],
-#                     #     客队比分=b.split(' ')[0],
-#                     #     主队比分=b.split(' ')[2],
-#                     #     结果=sheet1.cell_value(j, 3),
-#                     #     日期=c.split(' ')[0],
-#                     #     北京时间=c.split(' ')[1],
-#                     #     类型=sheet1.cell_value(j, 5),
-#                     # )
-#                     # count = Match.objects.filter(主场球队中文名=sched.主队, 客场球队中文名=sched.客队, 日期=sched.日期).count()
-#                     # if count!=0:
-#                     #     match = Match.objects.get(主场球队中文名=sched.主队, 客场球队中文名=sched.客队, 日期=sched.日期)
-#                     #     sched.比赛id=Match(id=match.id)
-#                     # sched.save()
 #
-#             else: # 存过则 判断是否为赛程预测，若存过内容为预测且表中内容为数据统计，则用表内信息覆盖数据库内容
-#                 schedule = Schedule.objects.get(赛季球队=sheet1.cell_value(1, 1), 客队=a.split(' ')[0], 主队=a.split(' ')[4], 日期=c.split(' ')[0])
-#                 if schedule.类型=='比赛前瞻':
-#                     if sheet1.cell_value(j, 5)=='数据统计':
+#         if len(a.split(' '))>3:
 #
-#                         print('前瞻->数据统计', a.split(' ')[0], a.split(' ')[4], b.split(' ')[0], b.split(' ')[2], sheet1.cell_value(j, 3),
-#                               c.split(' ')[0], c.split(' ')[1], sheet1.cell_value(j, 5))
-#                         # schedule.客队比分=b.split(' ')[0]
-#                         # schedule.主队比分=b.split(' ')[2]
-#                         # schedule.日期=c.split(' ')[0]
-#                         # schedule.北京时间=c.split(' ')[1]
-#                         # schedule.结果=sheet1.cell_value(j, 3)
-#                         # schedule.类型=sheet1.cell_value(j, 5)
-#                         # count = Match.objects.filter(主场球队中文名=schedule.主队, 客场球队中文名=schedule.客队, 日期=schedule.日期).count()
-#                         # if count != 0:
-#                         #     match = Match.objects.get(主场球队中文名=schedule.主队, 客场球队中文名=schedule.客队, 日期=schedule.日期)
-#                         #     schedule.比赛id = Match(id=match.id)
-#                         # schedule.save()
-
-file_dir2 = "./team_schedule"  # 给定路径
-dir_list = os.listdir(file_dir2)  # 列出文件夹下所有的目录和文件
-new_path = os.path.join(file_dir2, dir_list[0]) # 第二个子文件夹
-file_list = os.listdir(new_path)
-
-for i in range(len(file_list)):
-    real_path1 = os.path.join(new_path, file_list[i])
-    # print(real_path1)
-    workbook1 = xlrd.open_workbook(real_path1)
-    sheet1 = workbook1.sheet_by_index(0)
-
-    for j in range(sheet1.nrows):
-        a = str(sheet1.cell_value(j, 1))
-        b = str(sheet1.cell_value(j, 2))
-        c = str(sheet1.cell_value(j, 4))
-
-        if len(a.split(' '))>3:
-
-            if (b.split(' ')[0] == '-'):  # 比赛前瞻
-                print(a.split(' ')[0], a.split(' ')[4], sheet1.cell_value(j, 3),
-                      c.split(' ')[0], c.split(' ')[1], sheet1.cell_value(j, 5))
-                sched = Schedule(
-                    英文名=file_list[i].split('.')[0],
-                    赛季球队=sheet1.cell_value(1, 1),
-                    客队=a.split(' ')[0],
-                    主队=a.split(' ')[4],
-                    客队比分='0',
-                    主队比分='0',
-                    结果=sheet1.cell_value(j, 3),
-                    日期=c.split(' ')[0],
-                    北京时间=c.split(' ')[1],
-                    类型=sheet1.cell_value(j, 5),
-                )
-                sched.save()
-            else:
-                print(a.split(' ')[0], a.split(' ')[4], b.split(' ')[0], b.split(' ')[2], sheet1.cell_value(j, 3),
-                      c.split(' ')[0], c.split(' ')[1], sheet1.cell_value(j, 5))
-                print(0)
-                sched = Schedule(
-                    英文名=file_list[i].split('.')[0],
-                    赛季球队=sheet1.cell_value(1, 1),
-                    客队=a.split(' ')[0],
-                    主队=a.split(' ')[4],
-                    客队比分=b.split(' ')[0],
-                    主队比分=b.split(' ')[2],
-                    结果=sheet1.cell_value(j, 3),
-                    日期=c.split(' ')[0],
-                    北京时间=c.split(' ')[1],
-                    类型=sheet1.cell_value(j, 5),
-                )
-                count = Match.objects.filter(主场球队中文名=sched.主队, 客场球队中文名=sched.客队, 日期=sched.日期).count()
-                if count!=0:
-                    match = Match.objects.get(主场球队中文名=sched.主队, 客场球队中文名=sched.客队, 日期=sched.日期)
-                    sched.比赛id=Match(id=match.id)
-
-                sched.save()
+#             if (b.split(' ')[0] == '-'):  # 比赛前瞻
+#                 print(a.split(' ')[0], a.split(' ')[4], sheet1.cell_value(j, 3),
+#                       c.split(' ')[0], c.split(' ')[1], sheet1.cell_value(j, 5))
+#                 sched = Schedule(
+#                     英文名=file_list[i].split('.')[0],
+#                     赛季球队=sheet1.cell_value(1, 1),
+#                     客队=a.split(' ')[0],
+#                     主队=a.split(' ')[4],
+#                     客队比分='0',
+#                     主队比分='0',
+#                     结果=sheet1.cell_value(j, 3),
+#                     日期=c.split(' ')[0],
+#                     北京时间=c.split(' ')[1],
+#                     类型=sheet1.cell_value(j, 5),
+#                 )
+#                 sched.save()
+#             else:
+#                 print(a.split(' ')[0], a.split(' ')[4], b.split(' ')[0], b.split(' ')[2], sheet1.cell_value(j, 3),
+#                       c.split(' ')[0], c.split(' ')[1], sheet1.cell_value(j, 5))
+#                 print(0)
+#                 sched = Schedule(
+#                     英文名=file_list[i].split('.')[0],
+#                     赛季球队=sheet1.cell_value(1, 1),
+#                     客队=a.split(' ')[0],
+#                     主队=a.split(' ')[4],
+#                     客队比分=b.split(' ')[0],
+#                     主队比分=b.split(' ')[2],
+#                     结果=sheet1.cell_value(j, 3),
+#                     日期=c.split(' ')[0],
+#                     北京时间=c.split(' ')[1],
+#                     类型=sheet1.cell_value(j, 5),
+#                 )
+#                 count = Match.objects.filter(主场球队中文名=sched.主队, 客场球队中文名=sched.客队, 日期=sched.日期).count()
+#                 if count!=0:
+#                     match = Match.objects.get(主场球队中文名=sched.主队, 客场球队中文名=sched.客队, 日期=sched.日期)
+#                     sched.比赛id=Match(id=match.id)
+#
+#                 sched.save()
 
 
 
