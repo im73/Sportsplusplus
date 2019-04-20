@@ -182,6 +182,7 @@ class MatchSerializer(serializers.ModelSerializer):
             '客场第四节',
             '客场总分',
         )
+
 class ScheduleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Schedule

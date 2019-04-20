@@ -14,8 +14,9 @@ from rest_framework.utils import json
 import time
 
 
-from player_data.persons.models import Team,Player,Career,Match, Match_player, Match_teamsummary
-from player_data.persons.serializers import TeamSerializer,PlayerSerializer,CareerSerializer,MatchSerializer, Match_playerSerializer, Match_teamsummarySerializer
+from player_data.persons.models import Team, Player, Career, Match, Match_player, Match_teamsummary, Schedule
+from player_data.persons.serializers import TeamSerializer, PlayerSerializer, CareerSerializer, MatchSerializer, \
+    Match_playerSerializer, Match_teamsummarySerializer, ScheduleSerializer
 import random
 
 
@@ -104,3 +105,15 @@ def GetTeamImage(request,Teamname):
             return HttpResponse(image_data,content_type='image/jpg')
         except:
             return HttpResponse(json.dumps({'message':'没有获取到资源'},ensure_ascii=False),content_type="application/json,charset=utf-8",status=400)
+@csrf_exempt
+def GetSchedule(request):
+
+    if request.method=="GET":
+
+        teamname=request.GET.get('teamname')
+        querylist=Schedule.objects.filter(英文名=teamname)
+        serializer=ScheduleSerializer(querylist,many=True)
+
+        return HttpResponse(json.dumps(serializer.data,ensure_ascii=False),content_type="application/json,charset=utf-8",status=200)
+
+

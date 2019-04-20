@@ -19,7 +19,7 @@ from rest_framework.renderers import JSONRenderer
 import django
 django.setup()
 import data_spider
-from player_data.persons.models import Player, Team, Record ,Match_teamsummary, Match, Match_player, Score
+from player_data.persons.models import Player, Team, Record ,Match_teamsummary, Match, Match_player, Score,Schedule
 from player_data.persons.serializers import PlayerSerializer, TeamSerializer, RecordSerializer, CareerSerializer,MatchSerializer,Match_playerSerializer,Match_teamsummarySerializer,ScoreSerializer
 from django.core.files import File
 
@@ -34,7 +34,7 @@ from django.core.files import File
 #     ob.save()
 
 
-queryset =Match_player.objects.filter(主客场='2')
+queryset=Schedule.objects.all()
 
 for ob in queryset:
     if ob.主客场=='1':

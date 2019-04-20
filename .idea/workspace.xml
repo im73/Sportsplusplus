@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b047bb0b-4241-4ad3-a197-7125741d666d" name="Default" comment="整合新">
+    <list default="true" id="b047bb0b-4241-4ad3-a197-7125741d666d" name="Default" comment="数据存储">
+      <change afterPath="$PROJECT_DIR$/player_data/persons/migrations/0004_auto_20190420_1743.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/player_data/persons/migrations/0005_auto_20190420_1752.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_user/user/migrations/0003_back_user_addtime.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_spider.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_data/persons/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/player_data/persons/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_data/persons/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/player_data/persons/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storedata.py" beforeDir="false" afterPath="$PROJECT_DIR$/storedata.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/软工/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/软工/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,7 +19,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Sportsplusplus$data_api.coverage" NAME="data_api Coverage Results" MODIFIED="1555777133677" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Sportsplusplus$data_api.coverage" NAME="data_api Coverage Results" MODIFIED="1555751892092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/$.coverage" NAME="数据修改 Coverage Results" MODIFIED="1555332302709" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/$store.coverage" NAME="data_api Coverage Results" MODIFIED="1554551326346" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/$tests.coverage" NAME="tests Coverage Results" MODIFIED="1553776648480" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app_user/user" />
@@ -50,26 +58,26 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="45" />
+          <entry key="py" value="40" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="45" />
+          <entry key="Python" value="40" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="4913" />
+          <entry key="py" value="4815" />
           <entry key="py@软工" value="197" />
-          <entry key="txt" value="12" />
+          <entry key="txt" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CommandLine" value="162" />
-          <entry key="PLAIN_TEXT" value="47" />
-          <entry key="Python" value="4913" />
+          <entry key="PLAIN_TEXT" value="39" />
+          <entry key="Python" value="4815" />
         </counts>
       </usages-collector>
     </session>
@@ -89,51 +97,64 @@
         <entry file="file://$PROJECT_DIR$/app_user/operation/migrations/0001_initial.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="152">
-              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+              <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/软工/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="91" column="32" selection-start-line="91" selection-start-column="17" selection-end-line="91" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app_user/operation/serializer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/app_user/operation/migrations/__init__.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/storedata.py">
+        <entry file="file://$PROJECT_DIR$/软工/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="330" column="19" selection-start-line="330" selection-start-column="19" selection-end-line="330" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="245">
+              <caret line="91" column="32" lean-forward="true" selection-start-line="91" selection-start-column="17" selection-end-line="91" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Desktop/storedata.py">
+        <entry file="file://$PROJECT_DIR$/player_data/persons/migrations/0004_auto_20190420_1743.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="43" column="18" lean-forward="true" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="18" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="215">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/player_data/persons/migrations/0001_initial.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1018">
+              <caret line="130" column="56" lean-forward="true" selection-start-line="130" selection-start-column="56" selection-end-line="130" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/player_data/persons/migrations/0005_auto_20190420_1752.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/forum/migrations/0001_initial.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="118">
+              <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app_user/user/migrations/0001_initial.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -221,13 +242,13 @@
         <option value="$PROJECT_DIR$/data_spider.py" />
         <option value="$PROJECT_DIR$/player_data/persons/serializers.py" />
         <option value="$PROJECT_DIR$/软工/settings.py" />
+        <option value="$PROJECT_DIR$/storedata.py" />
         <option value="$PROJECT_DIR$/forum/migrations/0001_initial.py" />
         <option value="$PROJECT_DIR$/app_user/operation/migrations/0001_initial.py" />
         <option value="$PROJECT_DIR$/app_user/user/migrations/0003_back_user_addtime.py" />
         <option value="$PROJECT_DIR$/player_data/persons/migrations/0004_auto_20190420_1743.py" />
         <option value="$PROJECT_DIR$/player_data/persons/models.py" />
         <option value="$PROJECT_DIR$/player_data/persons/migrations/0005_auto_20190420_1752.py" />
-        <option value="$PROJECT_DIR$/storedata.py" />
       </list>
     </option>
   </component>
@@ -238,8 +259,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="702" />
-    <option name="y" value="51" />
+    <option name="x" value="41" />
     <option name="width" value="980" />
     <option name="height" value="1050" />
   </component>
@@ -276,6 +296,28 @@
             <path>
               <item name="Sportsplusplus" type="b2602c69:ProjectViewProjectNode" />
               <item name="Sportsplusplus" type="462c0819:PsiDirectoryNode" />
+              <item name="app_user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Sportsplusplus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sportsplusplus" type="462c0819:PsiDirectoryNode" />
+              <item name="app_user" type="462c0819:PsiDirectoryNode" />
+              <item name="operation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Sportsplusplus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sportsplusplus" type="462c0819:PsiDirectoryNode" />
+              <item name="forum" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Sportsplusplus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sportsplusplus" type="462c0819:PsiDirectoryNode" />
+              <item name="forum" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Sportsplusplus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Sportsplusplus" type="462c0819:PsiDirectoryNode" />
               <item name="player_data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -294,11 +336,6 @@
             <path>
               <item name="Sportsplusplus" type="b2602c69:ProjectViewProjectNode" />
               <item name="Sportsplusplus" type="462c0819:PsiDirectoryNode" />
-              <item name="team_schedule" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Sportsplusplus" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Sportsplusplus" type="462c0819:PsiDirectoryNode" />
               <item name="软工" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -310,9 +347,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="SearchEverywhereHistoryKey" value="shutil&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/storedata.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -714,28 +750,7 @@
       <option name="project" value="LOCAL" />
       <updated>1555678591641</updated>
     </task>
-    <task id="LOCAL-00038" summary="数据存储新">
-      <created>1555754368005</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1555754368005</updated>
-    </task>
-    <task id="LOCAL-00039" summary="整合">
-      <created>1555757321912</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1555757321912</updated>
-    </task>
-    <task id="LOCAL-00040" summary="整合新">
-      <created>1555770136174</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1555770136174</updated>
-    </task>
-    <option name="localTasksCounter" value="41" />
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TodoView">
@@ -751,19 +766,19 @@
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14678285" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14678285" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49642345" weight="0.28848484" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4599428" visible="true" weight="0.2951049" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4599428" weight="0.2951049" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49713877" weight="0.32633054" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Messages" order="8" />
-      <window_info anchor="bottom" id="manage.py@软工" order="9" sideWeight="0.4792561" weight="0.24195804" />
+      <window_info anchor="bottom" id="manage.py@软工" order="9" sideWeight="0.4792561" visible="true" weight="0.4167832" />
       <window_info anchor="bottom" id="Database Changes" order="10" sideWeight="0.4985694" weight="0.32867134" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.46709585" weight="0.33986014" />
       <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.54005724" side_tool="true" weight="0.3907563" />
@@ -813,6 +828,9 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/../DevCloud" />
     </ignored-roots>
+    <MESSAGE value="验证码" />
+    <MESSAGE value="球队信息添加完毕" />
+    <MESSAGE value="球员信息添加完毕" />
     <MESSAGE value="为model添加verbose_name" />
     <MESSAGE value="邮箱注册功能完成" />
     <MESSAGE value="登录，注册功能完成" />
@@ -835,13 +853,20 @@
     <MESSAGE value="修改url" />
     <MESSAGE value="增加订阅" />
     <MESSAGE value="数据存储" />
-    <MESSAGE value="数据存储新" />
-    <MESSAGE value="整合" />
-    <MESSAGE value="整合新" />
-    <option name="LAST_COMMIT_MESSAGE" value="整合新" />
+    <option name="LAST_COMMIT_MESSAGE" value="数据存储" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/media/teams_img/凯尔特人.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/player_data/persons/tests.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/软工/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -880,6 +905,11 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$USER_HOME$/Downloads/canvas-nest.js-master/README-zh.md" />
+    <entry file="file://$PROJECT_DIR$/forum/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-32" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/forum/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -924,6 +954,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2166">
           <caret line="127" column="40" selection-start-line="127" selection-start-column="40" selection-end-line="127" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_user/operation/serializer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -983,6 +1020,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/storedata.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="380" selection-start-line="380" selection-end-line="380" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/player_data/persons/migrations/0003_auto_20190419_1758.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -1024,7 +1071,7 @@
     <entry file="file://$PROJECT_DIR$/app_user/operation/migrations/0001_initial.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
-          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -1040,6 +1087,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app_user/operation/migrations/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/player_data/persons/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="146" selection-start-line="146" selection-end-line="146" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/player_data/persons/migrations/0004_auto_20190420_1743.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1062,52 +1116,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/forum/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-659" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_user/operation/serializer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/player_data/persons/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="146" selection-start-line="146" selection-end-line="146" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37-32/Lib/shutil.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/storedata.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="43" column="18" lean-forward="true" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/软工/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="91" column="32" selection-start-line="91" selection-start-column="17" selection-end-line="91" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storedata.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="330" column="19" selection-start-line="330" selection-start-column="19" selection-end-line="330" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="245">
+          <caret line="91" column="32" lean-forward="true" selection-start-line="91" selection-start-column="17" selection-end-line="91" selection-end-column="32" />
         </state>
       </provider>
     </entry>

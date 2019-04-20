@@ -187,13 +187,13 @@ def store_history_game():
             real_path3 = os.path.join(new_path, file_list[2])
 
             workbook1 =  load_workbook(real_path1)
-            sheet1 = workbook1.get_sheet_by_name("Sheet1")
+            sheet3 = workbook1.get_sheet_by_name("Sheet1")
             workbook2 =  load_workbook(real_path2)
             sheet2 = workbook2.get_sheet_by_name("Sheet1")
             workbook3 =  load_workbook(real_path3)
-            sheet3 = workbook3.get_sheet_by_name("Sheet1")
+            sheet1 = workbook3.get_sheet_by_name("Sheet1")
 
-            if sheet1.max_row > 10: # 判断是否为空表
+            if sheet1.nrows > 10: # 判断是否为空表
 
                 # 存Match内容，区分是否有加时
                 match = Match(id=dir_list[i].split('-')[3],

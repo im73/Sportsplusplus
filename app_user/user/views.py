@@ -154,7 +154,8 @@ def BackUser(request):
 
         try:
             backuser.save()
-            return JsonResponse({'message':'用户创建成功'}, status=200)
+            serializer = back_userSerializer(backuser)
+            return JsonResponse(serializer.data,safe=False,status=201)
         except:
             return JsonResponse({'message':'用户名重复'}, status=400)
 
@@ -185,11 +186,11 @@ def BackUser(request):
         Backuser.truename=truename
         Backuser.addtime=Backuser.addtime
         print(Backuser.addtime)
-        # try:
-        Backuser.save()
-        return JsonResponse({'message':'用户信息修改成功'}, status=200)
-        # except:
-        return JsonResponse({'message':'用户名重复'}, status=400)
+        try:
+            Backuser.save()
+            return JsonResponse({'message':'用户信息修改成功'}, status=200)
+        except:
+            return JsonResponse({'message':'用户名重复'}, status=400)
 
 
 @csrf_exempt
