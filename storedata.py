@@ -175,23 +175,25 @@ def store_history_game():
         if  (num==0) | ((dir_list[i].split('-')[0]+'-'+dir_list[i].split('-')[1]+'-'+dir_list[i].split('-')[2])==time.strftime("%Y-%m-%d")):
             # print(dir_list[i])
         # 若未存，则开始存子文件夹内文件
-            if num==1:
-                matchob=Match.objects.get(id=dir_list[i].split('-')[3])
-                matchob.delete()
+
             print(dir_list[i], '---------dont exist, start to store')
             new_path = os.path.join(file_dir2, dir_list[i])
             file_list = os.listdir(new_path)
-
+            if len(file_list)==0:
+                continue
+            if num==1:
+                matchob=Match.objects.get(id=dir_list[i].split('-')[3])
+                matchob.delete()
             real_path1 = os.path.join(new_path, file_list[0])
             real_path2 = os.path.join(new_path, file_list[1])
             real_path3 = os.path.join(new_path, file_list[2])
 
-            workbook1 =  load_workbook(real_path1)
-            sheet3 = workbook1.get_sheet_by_name("Sheet1")
-            workbook2 =  load_workbook(real_path2)
-            sheet2 = workbook2.get_sheet_by_name("Sheet1")
-            workbook3 =  load_workbook(real_path3)
-            sheet1 = workbook3.get_sheet_by_name("Sheet1")
+            workbook1 =  xlrd.open_workbook(real_path1)
+            sheet1 = workbook1.sheet_by_index(0)
+            workbook2 =  xlrd.open_workbook(real_path2)
+            sheet2 = workbook2.sheet_by_index(0)
+            workbook3 =  xlrd.open_workbook(real_path3)
+            sheet3 = workbook3.sheet_by_index(0)
 
             if sheet1.nrows > 10: # 判断是否为空表
 

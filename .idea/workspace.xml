@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b047bb0b-4241-4ad3-a197-7125741d666d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_spider.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datamodify.py" beforeDir="false" afterPath="$PROJECT_DIR$/datamodify.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storedata.py" beforeDir="false" afterPath="$PROJECT_DIR$/storedata.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,9 +16,11 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/$data_api.coverage" NAME="data_api Coverage Results" MODIFIED="1555754990451" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/$auto_history_game.coverage" NAME="auto_schedule Coverage Results" MODIFIED="1555668337873" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/$modify.coverage" NAME="modify Coverage Results" MODIFIED="1555779744771" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/$auto_history_game.coverage" NAME="auto_history_game Coverage Results" MODIFIED="1555780661556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/$tests.coverage" NAME="tests Coverage Results" MODIFIED="1553776648480" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app_user/user" />
     <SUITE FILE_PATH="coverage/$.coverage" NAME="test Coverage Results" MODIFIED="1555662937094" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/$auto_schedule.coverage" NAME="auto_schedule Coverage Results" MODIFIED="1555779715031" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/$store.coverage" NAME="data_api Coverage Results" MODIFIED="1554551326346" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
@@ -80,14 +85,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="storedata.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="storedata.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/storedata.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-35">
-              <caret line="393" column="31" lean-forward="true" selection-start-line="393" selection-start-column="31" selection-end-line="393" selection-end-column="31" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="180">
+              <caret line="185" column="32" selection-start-line="185" selection-start-column="32" selection-end-line="185" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="data_spider.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data_spider.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="321" column="8" selection-start-line="321" selection-start-column="8" selection-end-line="321" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="auto_schedule.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/auto_schedule.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -101,6 +121,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="datamodify.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/datamodify.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="45" column="19" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_user/operation/models.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -110,11 +139,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="auto_history_game.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="auto_history_game.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/auto_history_game.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="105">
+              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -122,42 +151,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="datamodify.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/datamodify.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="38" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/player_data/persons/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="147" column="8" selection-start-line="147" selection-start-column="8" selection-end-line="147" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/player_data/persons/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="119" lean-forward="true" selection-start-line="119" selection-end-line="119" />
+            <state relative-caret-position="1785">
+              <caret line="119" selection-start-line="119" selection-end-line="119" />
               <folding>
                 <element signature="e#3#27#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="serializers.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/player_data/persons/serializers.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#38#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -166,7 +166,7 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/软工/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
+            <state relative-caret-position="570">
               <caret line="42" selection-start-line="42" selection-end-line="42" />
             </state>
           </provider>
@@ -192,6 +192,7 @@
       <find>date</find>
       <find>hist</find>
       <find>career</find>
+      <find>get_</find>
     </findStrings>
     <replaceStrings>
       <replace>'</replace>
@@ -240,18 +241,18 @@
         <option value="$PROJECT_DIR$/app_user/user/models.py" />
         <option value="$PROJECT_DIR$/app_user/user/migrations/0003_back_user_addtime.py" />
         <option value="$PROJECT_DIR$/history.txt" />
-        <option value="$PROJECT_DIR$/data_spider.py" />
-        <option value="$PROJECT_DIR$/auto_history_game.py" />
         <option value="$PROJECT_DIR$/auto_schedule.py" />
         <option value="$PROJECT_DIR$/app_user/user/views.py" />
         <option value="$PROJECT_DIR$/app_user/user/serializers.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/player_data/persons/serializers.py" />
         <option value="$PROJECT_DIR$/player_data/persons/models.py" />
-        <option value="$PROJECT_DIR$/datamodify.py" />
         <option value="$PROJECT_DIR$/软工/urls.py" />
-        <option value="$PROJECT_DIR$/storedata.py" />
         <option value="$PROJECT_DIR$/player_data/persons/views.py" />
+        <option value="$PROJECT_DIR$/data_spider.py" />
+        <option value="$PROJECT_DIR$/datamodify.py" />
+        <option value="$PROJECT_DIR$/auto_history_game.py" />
+        <option value="$PROJECT_DIR$/storedata.py" />
       </list>
     </option>
   </component>
@@ -347,8 +348,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Django server.软工">
-    <configuration name="数据修改" type="PythonConfigurationType" factoryName="Python">
+  <component name="RunManager" selected="Python.auto_history_game">
+    <configuration name="auto_history_game" type="PythonConfigurationType" factoryName="Python">
       <module name="软工" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -361,7 +362,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/datamodify.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/auto_history_game.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -386,7 +387,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="data_api" type="PythonConfigurationType" factoryName="Python">
+    <configuration name="modify" type="PythonConfigurationType" factoryName="Python">
       <module name="软工" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -399,7 +400,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/storedata.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/datamodify.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -450,8 +451,8 @@
     <list>
       <item itemvalue="Django server.软工" />
       <item itemvalue="Python.auto_schedule" />
-      <item itemvalue="Python.数据修改" />
-      <item itemvalue="Python.data_api" />
+      <item itemvalue="Python.auto_history_game" />
+      <item itemvalue="Python.modify" />
       <item itemvalue="Python.test" />
     </list>
     <recent_temporary>
@@ -786,7 +787,14 @@
       <option name="project" value="LOCAL" />
       <updated>1555758054033</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Merge branch 'master' of https://github.com/im73/Sportsplusplus&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;自动存取">
+      <created>1555779986402</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1555779986402</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TodoView">
@@ -800,15 +808,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49713877" weight="0.32633054" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.54005724" side_tool="true" weight="0.3907563" />
       <window_info anchor="bottom" id="Database Changes" order="9" sideWeight="0.4985694" weight="0.32969698" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4599428" weight="0.32848486" />
-      <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.48426324" visible="true" weight="0.27757576" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4599428" visible="true" weight="0.32848486" />
+      <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.48426324" weight="0.27757576" />
       <window_info anchor="bottom" id="Python Console" order="13" sideWeight="0.4914163" weight="0.3260606" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.46709585" weight="0.27272728" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21816881" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22103004" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" weight="0.3297568" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -863,7 +872,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/../DevCloud" />
     </ignored-roots>
-    <MESSAGE value="后台管理" />
     <MESSAGE value="修复了一些bug" />
     <MESSAGE value="Merge branch 'master' of https://github.com/im73/Sportsplusplus&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;开始实现借口" />
     <MESSAGE value="Merge branch 'master' of https://github.com/im73/Sportsplusplus&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;player_data/persons/models.py&#10;#&#9;storedata.py&#10;完成了一些接口" />
@@ -888,7 +896,8 @@
     <MESSAGE value="Merge branch 'master' of https://github.com/im73/Sportsplusplus&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;data_spider.py&#10;#&#9;player_data/persons/models.py&#10;#&#9;storedata.py" />
     <MESSAGE value="Merge branch 'master' of https://github.com/im73/Sportsplusplus&#10;&#10;# Conflicts:&#10;#&#9;storedata.py" />
     <MESSAGE value="Merge branch 'master' of https://github.com/im73/Sportsplusplus&#10;&#10;# Conflicts:&#10;#&#9;storedata.py&#10;little bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/im73/Sportsplusplus&#10;&#10;# Conflicts:&#10;#&#9;storedata.py&#10;little bug" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/im73/Sportsplusplus&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;自动存取" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/im73/Sportsplusplus&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;自动存取" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1073,20 +1082,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/auto_schedule.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data_spider.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="54" column="26" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app_user/user/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1127,16 +1122,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/datamodify.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="38" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/player_data/persons/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
+        <state relative-caret-position="2205">
           <caret line="147" column="8" selection-start-line="147" selection-start-column="8" selection-end-line="147" selection-end-column="8" />
         </state>
       </provider>
@@ -1152,7 +1140,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/软工/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
+        <state relative-caret-position="570">
           <caret line="42" selection-start-line="42" selection-end-line="42" />
         </state>
       </provider>
@@ -1180,31 +1168,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/player_data/persons/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="119" lean-forward="true" selection-start-line="119" selection-end-line="119" />
+        <state relative-caret-position="1785">
+          <caret line="119" selection-start-line="119" selection-end-line="119" />
           <folding>
             <element signature="e#3#27#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/storedata.py">
+    <entry file="file://$PROJECT_DIR$/auto_schedule.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-35">
-          <caret line="393" column="31" lean-forward="true" selection-start-line="393" selection-start-column="31" selection-end-line="393" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="45">
+          <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/auto_history_game.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="105">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datamodify.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="45" column="19" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_spider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="321" column="8" selection-start-line="321" selection-start-column="8" selection-end-line="321" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storedata.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="185" column="32" selection-start-line="185" selection-start-column="32" selection-end-line="185" selection-end-column="32" />
         </state>
       </provider>
     </entry>

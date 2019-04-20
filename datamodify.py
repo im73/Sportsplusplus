@@ -34,11 +34,14 @@ from django.core.files import File
 #     ob.save()
 
 
-queryset=Schedule.objects.all()
-
+# queryset=Schedule.objects.all()
+#
+# for ob in queryset:
+#     if ob.主客场=='1':
+#         ob.主客场=ob.比赛id.客场球队中文名
+#     elif ob.主客场=='2':
+#         ob.主客场=ob.比赛id.主场球队中文名
+#     ob.save()
+queryset=Match.objects.filter(日期='2019-04-20')
 for ob in queryset:
-    if ob.主客场=='1':
-        ob.主客场=ob.比赛id.客场球队中文名
-    elif ob.主客场=='2':
-        ob.主客场=ob.比赛id.主场球队中文名
-    ob.save()
+    ob.delete()
