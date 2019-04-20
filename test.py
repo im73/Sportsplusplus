@@ -1,4 +1,6 @@
-import datetime
+from  data_spider import DataSpider
+from storedata import store_history_game,delete_files
 
-time=datetime.datetime.now()
-print(time-datetime.timedelta(days=1))
+
+ds = DataSpider()
+ds.get_team_schedule_hupu()
