@@ -145,6 +145,7 @@ class Match(models.Model):
 
 class Schedule(models.Model):
 
+    英文名 = models.CharField(max_length=50)
     赛季球队 = models.CharField(max_length=50)
     主队 = models.CharField(max_length=50)
     客队 = models.CharField(max_length=50)
@@ -154,7 +155,7 @@ class Schedule(models.Model):
     日期 = models.CharField(max_length=20)
     北京时间 = models.CharField(max_length=20)
     类型 = models.CharField(max_length=10) # 数据统计or预测
-    比赛id = models.ForeignKey(to="Match", to_field="id", on_delete=models.CASCADE, default=None)
+    比赛id = models.ForeignKey(to="Match", to_field="id", on_delete=models.CASCADE, default="", null=True)
 
 # for i in range(1, 21):
 #     setattr(Match, '替补%d' % i, models.ForeignKey(MatchPlayer, on_delete=models.CASCADE, related_name="替补%d信息" % i))

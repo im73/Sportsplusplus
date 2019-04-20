@@ -2,168 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b047bb0b-4241-4ad3-a197-7125741d666d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/player_data/persons/migrations/0002_auto_20190419_1749.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/player_data/persons/migrations/0003_auto_20190419_1758.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml-4.3.3.dist-info/INSTALLER" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml-4.3.3.dist-info/LICENSES.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml-4.3.3.dist-info/METADATA" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml-4.3.3.dist-info/RECORD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml-4.3.3.dist-info/WHEEL" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml-4.3.3.dist-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/ElementInclude.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/_elementpath.cp37-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/_elementpath.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/builder.cp37-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/builder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/cssselect.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/doctestcompare.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/etree.cp37-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/etree.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/etree_api.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/html/ElementSoup.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/html/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/html/_diffcommand.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/html/_html5builder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/html/_setmixin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/html/builder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/html/clean.cp37-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/html/clean.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/html/defs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/html/diff.cp37-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/html/diff.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/html/formfill.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/html/html5parser.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/html/soupparser.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/html/usedoctest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/__init__.pxd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/c14n.pxd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/config.pxd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/dtdvalid.pxd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/etree_defs.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/etreepublic.pxd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/htmlparser.pxd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libexslt/exslt.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libexslt/exsltconfig.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libexslt/exsltexports.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libexslt/libexslt.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/DOCBparser.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/HTMLparser.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/HTMLtree.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/SAX.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/SAX2.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/c14n.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/catalog.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/chvalid.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/debugXML.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/dict.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/encoding.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/entities.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/globals.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/hash.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/list.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/nanoftp.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/nanohttp.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/parser.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/parserInternals.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/pattern.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/relaxng.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/schemasInternals.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/schematron.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/threads.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/tree.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/uri.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/valid.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/xinclude.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/xlink.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/xmlIO.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/xmlautomata.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/xmlerror.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/xmlexports.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/xmlmemory.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/xmlmodule.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/xmlreader.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/xmlregexp.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/xmlsave.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/xmlschemas.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/xmlschemastypes.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/xmlstring.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/xmlunicode.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/xmlversion.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/xmlwriter.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/xpath.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/xpathInternals.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxml/xpointer.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxslt/attributes.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxslt/documents.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxslt/extensions.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxslt/extra.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxslt/functions.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxslt/imports.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxslt/keys.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxslt/libxslt.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxslt/namespaces.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxslt/numbersInternals.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxslt/preproc.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxslt/security.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxslt/templates.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxslt/transform.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxslt/trio.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxslt/triodef.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxslt/variables.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxslt/win32config.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxslt/xslt.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxslt/xsltInternals.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxslt/xsltconfig.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxslt/xsltexports.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxslt/xsltlocale.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/libxslt/xsltutils.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/lxml-version.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/relaxng.pxd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/schematron.pxd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/tree.pxd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/uri.pxd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/xinclude.pxd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/xmlerror.pxd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/xmlparser.pxd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/xmlschema.pxd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/xpath.pxd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/includes/xslt.pxd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/isoschematron/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/isoschematron/resources/rng/iso-schematron.rng" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/isoschematron/resources/xsl/RNG2Schtrn.xsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/isoschematron/resources/xsl/XSD2Schtrn.xsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_abstract_expand.xsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_dsdl_include.xsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_schematron_message.xsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_schematron_skeleton_for_xslt1.xsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/iso_svrl_for_xslt1.xsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/isoschematron/resources/xsl/iso-schematron-xslt1/readme.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/lxml.etree.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/lxml.etree_api.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/objectify.cp37-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/pyclasslookup.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/sax.cp37-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/sax.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/lxml/usedoctest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/软工.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/软工.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datamodify.py" beforeDir="false" afterPath="$PROJECT_DIR$/datamodify.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/player_data/persons/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/player_data/persons/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/player_data/persons/migrations/0002_auto_20190416_1123.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/player_data/persons/migrations/0003_match_teamsummary_home_away.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/player_data/persons/migrations/0004_match_teamsummary_home_away.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/player_data/persons/migrations/0005_remove_match_teamsummary_home_away.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/player_data/persons/migrations/0006_remove_match_teamsummary_home_away.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/player_data/persons/migrations/0007_match_teamsummary_home_away.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/player_data/persons/migrations/0008_match_teamsummary_home_away.py" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/player_data/persons/migrations/0004_auto_20190420_1743.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/player_data/persons/migrations/0005_auto_20190420_1752.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_user/user/migrations/0003_back_user_addtime.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/player_data/persons/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/player_data/persons/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/player_data/persons/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/player_data/persons/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/player_data/persons/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/player_data/persons/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storedata.py" beforeDir="false" afterPath="$PROJECT_DIR$/storedata.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/软工/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/软工/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/软工/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/软工/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -173,7 +20,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/$data_api.coverage" NAME="data_api Coverage Results" MODIFIED="1555751639174" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/$data_api.coverage" NAME="data_api Coverage Results" MODIFIED="1555754990451" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/$auto_history_game.coverage" NAME="auto_schedule Coverage Results" MODIFIED="1555668337873" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/$tests.coverage" NAME="tests Coverage Results" MODIFIED="1553776648480" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app_user/user" />
     <SUITE FILE_PATH="coverage/$.coverage" NAME="test Coverage Results" MODIFIED="1555662937094" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -232,19 +79,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="storedata.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/storedata.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="57" lean-forward="true" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="0001_initial.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="0001_initial.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_user/operation/migrations/0001_initial.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
@@ -253,10 +88,37 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="storedata.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/storedata.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2553">
+              <caret line="66" column="32" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="serializer.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app_user/operation/serializer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app_user/operation/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="9" column="56" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="datamodify.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/datamodify.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
+            <state relative-caret-position="480">
               <caret line="38" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
             </state>
           </provider>
@@ -274,21 +136,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="auto_history_game.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/auto_history_game.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/player_data/persons/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
+            <state relative-caret-position="433">
               <caret line="147" column="8" selection-start-line="147" selection-start-column="8" selection-end-line="147" selection-end-column="8" />
             </state>
           </provider>
@@ -297,22 +148,10 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/player_data/persons/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="113" column="53" selection-start-line="113" selection-start-column="53" selection-end-line="113" selection-end-column="53" />
+            <state relative-caret-position="358">
+              <caret line="116" column="32" selection-start-line="116" selection-start-column="32" selection-end-line="116" selection-end-column="32" />
               <folding>
                 <element signature="e#3#27#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app_user/user/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3270">
-              <caret line="218" selection-start-line="218" selection-end-line="218" />
-              <folding>
-                <element signature="e#53#77#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -332,8 +171,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/软工/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="463">
-              <caret line="43" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="387">
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
             </state>
           </provider>
         </entry>
@@ -407,7 +246,6 @@
         <option value="$PROJECT_DIR$/app_user/user/migrations/0003_back_user_addtime.py" />
         <option value="$PROJECT_DIR$/history.txt" />
         <option value="$PROJECT_DIR$/data_spider.py" />
-        <option value="$PROJECT_DIR$/软工/urls.py" />
         <option value="$PROJECT_DIR$/auto_history_game.py" />
         <option value="$PROJECT_DIR$/auto_schedule.py" />
         <option value="$PROJECT_DIR$/app_user/user/views.py" />
@@ -415,8 +253,9 @@
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/player_data/persons/serializers.py" />
         <option value="$PROJECT_DIR$/player_data/persons/models.py" />
-        <option value="$PROJECT_DIR$/player_data/persons/views.py" />
         <option value="$PROJECT_DIR$/datamodify.py" />
+        <option value="$PROJECT_DIR$/软工/urls.py" />
+        <option value="$PROJECT_DIR$/player_data/persons/views.py" />
         <option value="$PROJECT_DIR$/storedata.py" />
       </list>
     </option>
@@ -431,8 +270,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="85" />
+    <option name="y" value="99" />
     <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="height" value="821" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -440,7 +281,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -479,6 +319,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -490,15 +331,15 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/app_user" />
       <recent name="$PROJECT_DIR$/templates" />
       <recent name="$PROJECT_DIR$/player" />
       <recent name="$PROJECT_DIR$/media/player" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -513,7 +354,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.data_api">
+  <component name="RunManager" selected="Django server.软工">
     <configuration name="数据修改" type="PythonConfigurationType" factoryName="Python">
       <module name="软工" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -938,6 +779,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49713877" weight="0.32633054" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.54005724" side_tool="true" weight="0.3907563" />
@@ -946,7 +788,7 @@
       <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.48426324" weight="0.27757576" />
       <window_info anchor="bottom" id="Python Console" order="13" sideWeight="0.4914163" weight="0.3260606" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.46709585" weight="0.27272728" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21530758" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21816881" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" weight="0.3297568" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -1186,13 +1028,7 @@
     <entry file="file://$PROJECT_DIR$/log.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app_user/user/migrations/0003_back_user_addtime.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="77" selection-start-line="15" selection-start-column="77" selection-end-line="15" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app_user/user/migrations/0003_back_user_addtime.py" />
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1209,20 +1045,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_user/operation/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="56" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_user/operation/serializer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/id2name.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -1294,10 +1116,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/软工/urls.py">
+    <entry file="file://$PROJECT_DIR$/datamodify.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="480">
+          <caret line="38" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/player_data/persons/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="147" column="8" selection-start-line="147" selection-start-column="8" selection-end-line="147" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -1310,36 +1139,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/player_data/persons/models.py">
+    <entry file="file://$PROJECT_DIR$/软工/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="147" column="8" selection-start-line="147" selection-start-column="8" selection-end-line="147" selection-end-column="8" />
+        <state relative-caret-position="387">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/player_data/persons/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="113" column="53" selection-start-line="113" selection-start-column="53" selection-end-line="113" selection-end-column="53" />
+        <state relative-caret-position="358">
+          <caret line="116" column="32" selection-start-line="116" selection-start-column="32" selection-end-line="116" selection-end-column="32" />
           <folding>
             <element signature="e#3#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/datamodify.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="38" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storedata.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="57" lean-forward="true" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1348,6 +1160,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storedata.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2553">
+          <caret line="66" column="32" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_user/operation/serializer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_user/operation/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="56" selection-start-line="9" selection-start-column="56" selection-end-line="9" selection-end-column="56" />
         </state>
       </provider>
     </entry>

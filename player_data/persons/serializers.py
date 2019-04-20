@@ -186,4 +186,15 @@ class MatchSerializer(serializers.ModelSerializer):
 class ScheduleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Schedule
-        fields = '__all__'
+        fields = (
+            '赛季球队',
+            '主队',
+            '客队',
+            '主队比分',
+            '客队比分',
+            '结果',
+            '日期',
+            '北京时间',
+            '类型',
+            '比赛id',
+        )
