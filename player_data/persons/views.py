@@ -111,7 +111,7 @@ def GetSchedule(request):
     if request.method=="GET":
 
         teamname=request.GET.get('teamname')
-        querylist=Schedule.objects.get(赛季球队=teamname)
+        querylist=Schedule.objects.filter(英文名=teamname)
         serializer=ScheduleSerializer(querylist,many=True)
 
         return HttpResponse(json.dumps(serializer.data,ensure_ascii=False),content_type="application/json,charset=utf-8",status=200)
