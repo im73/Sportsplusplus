@@ -1,15 +1,16 @@
-import shutil
-import time
 from io import StringIO
 import json
 import sys
 import os
+
+import time
 
 import pymysql
 from django.utils.six import BytesIO
 pwd = os.path.dirname(os.path.realpath(__file__))
 # 获取项目名的目录(因为我的当前文件是在项目名下的文件夹下的文件.所以是../)
 from openpyxl import load_workbook
+
 sys.path.append(pwd+"../")
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "软工.settings")
 import requests
@@ -21,27 +22,11 @@ from rest_framework.renderers import JSONRenderer
 import django
 django.setup()
 import data_spider
-from player_data.persons.models import Player, Team, Record ,Match_teamsummary, Match, Match_player, Score
-from player_data.persons.serializers import PlayerSerializer, TeamSerializer, RecordSerializer, CareerSerializer,MatchSerializer,Match_playerSerializer,Match_teamsummarySerializer,ScoreSerializer
+from player_data.persons.models import Player, Team, Record ,Match_teamsummary, Match, Match_player, Score, Schedule
+from player_data.persons.serializers import PlayerSerializer, TeamSerializer, RecordSerializer, CareerSerializer,MatchSerializer,Match_playerSerializer,Match_teamsummarySerializer,ScoreSerializer,ScheduleSerializer
 from django.core.files import File
 #接下来就可以使用model了
-def history_in_database(macth_id):
 
-    if Match.objects.filter(id=macth_id).count()==0:
-        return 0
-    else:
-        return 1
-
-
-def delete_files() :
-    os.chdir("./history_games(date)")
-    fileList = list(os.listdir())
-    for file in fileList:
-        if os.path.isfile(file):
-            os.remove(file)
-            print("delete successfully")
-        else:
-            shutil.rmtree(file)
 #添加球员信息
 # with open('./active_players(1).json') as f:
 #     active_players = json.load(f)
@@ -145,21 +130,22 @@ import os
 #         team_info['场均得分']=str(team_index*5+3)
 #         team_info['场均篮板']=str(team_index*5+4)
 #
-# content = JSONRenderer().render(team_info)
-# stream = BytesIO(content)
-# data = JSONParser().parse(stream)
-# serializer = TeamSerializer(data=data)
-#
-# if serializer.is_valid():
-#     serializer.save()
-# else:
-#     print(serializer.errors)
+        # content = JSONRenderer().render(team_info)
+        # stream = BytesIO(content)
+        # data = JSONParser().parse(stream)
+        # serializer = TeamSerializer(data=data)
+        #
+        # if serializer.is_valid():
+        #     serializer.save()
+        # else:
+        #     print(serializer.errors)
 #         team_index=team_index+1
 
 
 # db = pymysql.connect("114.116.156.240", "root", "Buaa2019!", "app", charset='utf8')
 # cursor = db.cursor()
 import xlrd, xlwt
+
 
 def store_history_game():
     file_dir2="./history_games(date)"
@@ -325,6 +311,148 @@ def store_history_game():
                     f.write("存储："+dir_list[i].split('-')[3]+"\n")
                 f.close()
 
+# file_dir2 = "./team_schedule"  # 给定路径
+# dir_list = os.listdir(file_dir2)  # 列出文件夹下所有的目录和文件
+# new_path = os.path.join(file_dir2, dir_list[0]) # 第二个子文件夹
+# file_list = os.listdir(new_path)
+#
+# for i in range(len(file_list)):
+#     real_path1 = os.path.join(new_path, file_list[i])
+#     # print(real_path1)
+#     workbook1 = xlrd.open_workbook(real_path1)
+#     sheet1 = workbook1.sheet_by_index(0)
+#
+#     for j in range(sheet1.nrows):
+#         a = str(sheet1.cell_value(j, 1))
+#         b = str(sheet1.cell_value(j, 2))
+#         c = str(sheet1.cell_value(j, 4))
+#         if len(a.split(' ')) > 3:
+#             # print(sheet1.cell_value(j, 1))
+#             count_schedule = Schedule.objects.filter(赛季球队=sheet1.cell_value(1, 1), 客队=a.split(' ')[0], 主队=a.split(' ')[4], 日期=c.split(' ')[0])
+#             print(count_schedule)
+#             if count_schedule == 0: # 判断是否存过赛程
+#                 if (b.split(' ')[0] == '-'):  # 比赛前瞻
+#                     print(a.split(' ')[0], a.split(' ')[4], sheet1.cell_value(j, 3),
+#                           c.split(' ')[0], c.split(' ')[1], sheet1.cell_value(j, 5))
+#                     # sched = Schedule(
+#                     #     赛季球队=sheet1.cell_value(1, 1),
+#                     #     客队=a.split(' ')[0],
+#                     #     主队=a.split(' ')[4],
+#                     #     客队比分='0',
+#                     #     主队比分='0',
+#                     #     结果=sheet1.cell_value(j, 3),
+#                     #     日期=c.split(' ')[0],
+#                     #     北京时间=c.split(' ')[1],
+#                     #     类型=sheet1.cell_value(j, 5),
+#                     # )
+#                     # sched.save()
+#                 else:
+#                     print(a.split(' ')[0], a.split(' ')[4], b.split(' ')[0], b.split(' ')[2], sheet1.cell_value(j, 3),
+#                           c.split(' ')[0], c.split(' ')[1], sheet1.cell_value(j, 5))
+#                     print(0)
+#                     # sched = Schedule(
+#                     #     赛季球队=sheet1.cell_value(1, 1),
+#                     #     客队=a.split(' ')[0],
+#                     #     主队=a.split(' ')[4],
+#                     #     客队比分=b.split(' ')[0],
+#                     #     主队比分=b.split(' ')[2],
+#                     #     结果=sheet1.cell_value(j, 3),
+#                     #     日期=c.split(' ')[0],
+#                     #     北京时间=c.split(' ')[1],
+#                     #     类型=sheet1.cell_value(j, 5),
+#                     # )
+#                     # count = Match.objects.filter(主场球队中文名=sched.主队, 客场球队中文名=sched.客队, 日期=sched.日期).count()
+#                     # if count!=0:
+#                     #     match = Match.objects.get(主场球队中文名=sched.主队, 客场球队中文名=sched.客队, 日期=sched.日期)
+#                     #     sched.比赛id=Match(id=match.id)
+#                     # sched.save()
+#
+#             else: # 存过则 判断是否为赛程预测，若存过内容为预测且表中内容为数据统计，则用表内信息覆盖数据库内容
+#                 schedule = Schedule.objects.get(赛季球队=sheet1.cell_value(1, 1), 客队=a.split(' ')[0], 主队=a.split(' ')[4], 日期=c.split(' ')[0])
+#                 if schedule.类型=='比赛前瞻':
+#                     if sheet1.cell_value(j, 5)=='数据统计':
+#
+#                         print('前瞻->数据统计', a.split(' ')[0], a.split(' ')[4], b.split(' ')[0], b.split(' ')[2], sheet1.cell_value(j, 3),
+#                               c.split(' ')[0], c.split(' ')[1], sheet1.cell_value(j, 5))
+#                         # schedule.客队比分=b.split(' ')[0]
+#                         # schedule.主队比分=b.split(' ')[2]
+#                         # schedule.日期=c.split(' ')[0]
+#                         # schedule.北京时间=c.split(' ')[1]
+#                         # schedule.结果=sheet1.cell_value(j, 3)
+#                         # schedule.类型=sheet1.cell_value(j, 5)
+#                         # count = Match.objects.filter(主场球队中文名=schedule.主队, 客场球队中文名=schedule.客队, 日期=schedule.日期).count()
+#                         # if count != 0:
+#                         #     match = Match.objects.get(主场球队中文名=schedule.主队, 客场球队中文名=schedule.客队, 日期=schedule.日期)
+#                         #     schedule.比赛id = Match(id=match.id)
+#                         # schedule.save()
+
+file_dir2 = "./team_schedule"  # 给定路径
+dir_list = os.listdir(file_dir2)  # 列出文件夹下所有的目录和文件
+new_path = os.path.join(file_dir2, dir_list[0]) # 第二个子文件夹
+file_list = os.listdir(new_path)
+
+for i in range(len(file_list)):
+    real_path1 = os.path.join(new_path, file_list[i])
+    # print(real_path1)
+    workbook1 = xlrd.open_workbook(real_path1)
+    sheet1 = workbook1.sheet_by_index(0)
+
+    for j in range(sheet1.nrows):
+        a = str(sheet1.cell_value(j, 1))
+        b = str(sheet1.cell_value(j, 2))
+        c = str(sheet1.cell_value(j, 4))
+
+        if len(a.split(' '))>3:
+
+            if (b.split(' ')[0] == '-'):  # 比赛前瞻
+                print(a.split(' ')[0], a.split(' ')[4], sheet1.cell_value(j, 3),
+                      c.split(' ')[0], c.split(' ')[1], sheet1.cell_value(j, 5))
+                sched = Schedule(
+                    英文名=file_list[i].split('.')[0],
+                    赛季球队=sheet1.cell_value(1, 1),
+                    客队=a.split(' ')[0],
+                    主队=a.split(' ')[4],
+                    客队比分='0',
+                    主队比分='0',
+                    结果=sheet1.cell_value(j, 3),
+                    日期=c.split(' ')[0],
+                    北京时间=c.split(' ')[1],
+                    类型=sheet1.cell_value(j, 5),
+                )
+                sched.save()
+            else:
+                print(a.split(' ')[0], a.split(' ')[4], b.split(' ')[0], b.split(' ')[2], sheet1.cell_value(j, 3),
+                      c.split(' ')[0], c.split(' ')[1], sheet1.cell_value(j, 5))
+                print(0)
+                sched = Schedule(
+                    英文名=file_list[i].split('.')[0],
+                    赛季球队=sheet1.cell_value(1, 1),
+                    客队=a.split(' ')[0],
+                    主队=a.split(' ')[4],
+                    客队比分=b.split(' ')[0],
+                    主队比分=b.split(' ')[2],
+                    结果=sheet1.cell_value(j, 3),
+                    日期=c.split(' ')[0],
+                    北京时间=c.split(' ')[1],
+                    类型=sheet1.cell_value(j, 5),
+                )
+                count = Match.objects.filter(主场球队中文名=sched.主队, 客场球队中文名=sched.客队, 日期=sched.日期).count()
+                if count!=0:
+                    match = Match.objects.get(主场球队中文名=sched.主队, 客场球队中文名=sched.客队, 日期=sched.日期)
+                    sched.比赛id=Match(id=match.id)
+
+                sched.save()
+
+
+
+
+                #
+                # else:
+                #     print('')
+                #     # print(sheet1.cell_value(j, 1), '数据统计')
+        # except:
+        #     print("data line")
+
         # 客场
         # away_summary = Match_teamsummary.objects.get(比赛id=dir_list[i].split('-')[3], 主客场=sheet3.cell_value(2, 1))
         # away_summary.home_away = 1
@@ -332,33 +460,33 @@ def store_history_game():
         # home_summary = Match_teamsummary.objects.get(比赛id=dir_list[i].split('-')[3], 主客场=sheet3.cell_value(3, 1))
         # home_summary.home_away = 2
 
-        # 比赛id=Match.objects.get(id=dir_list[i].split('-')[3])
-        # match_player = Match_player.objects.get(球员名=sheet1.cell_value(j, 1))
-        # match_player.类型 = 1
-        # match_player.主客场 = 2   # 主场
-        #
-        # match_player.位置 = sheet1.cell_value(j, 2)
-        # match_player.时间 = sheet1.cell_value(j, 3)
-        # match_player.投篮 = sheet1.cell_value(j, 4)
-        # match_player.三分 = sheet1.cell_value(j, 5)
-        # match_player.罚球 = sheet1.cell_value(j, 6)
-        # match_player.前场 = sheet1.cell_value(j, 7)
-        # match_player.后场 = sheet1.cell_value(j, 8)
-        # match_player.篮板 = sheet1.cell_value(j, 9)
-        # match_player.助攻 = sheet1.cell_value(j, 10)
-        # match_player.犯规 = sheet1.cell_value(j, 11)
-        # match_player.抢断 = sheet1.cell_value(j, 12)
-        # match_player.失误 = sheet1.cell_value(j, 13)
-        # match_player.封盖 = sheet1.cell_value(j, 14)
-        # match_player.得分 = sheet1.cell_value(j, 15)
-        # match_player.正负 = sheet1.cell_value(j, 16)
-        # match_player.比赛id = dir_list[i].split('-')[3]
-        # match_player.save()
-        #
+            # 比赛id=Match.objects.get(id=dir_list[i].split('-')[3])
+            # match_player = Match_player.objects.get(球员名=sheet1.cell_value(j, 1))
+            # match_player.类型 = 1
+            # match_player.主客场 = 2   # 主场
+            #
+            # match_player.位置 = sheet1.cell_value(j, 2)
+            # match_player.时间 = sheet1.cell_value(j, 3)
+            # match_player.投篮 = sheet1.cell_value(j, 4)
+            # match_player.三分 = sheet1.cell_value(j, 5)
+            # match_player.罚球 = sheet1.cell_value(j, 6)
+            # match_player.前场 = sheet1.cell_value(j, 7)
+            # match_player.后场 = sheet1.cell_value(j, 8)
+            # match_player.篮板 = sheet1.cell_value(j, 9)
+            # match_player.助攻 = sheet1.cell_value(j, 10)
+            # match_player.犯规 = sheet1.cell_value(j, 11)
+            # match_player.抢断 = sheet1.cell_value(j, 12)
+            # match_player.失误 = sheet1.cell_value(j, 13)
+            # match_player.封盖 = sheet1.cell_value(j, 14)
+            # match_player.得分 = sheet1.cell_value(j, 15)
+            # match_player.正负 = sheet1.cell_value(j, 16)
+            # match_player.比赛id = dir_list[i].split('-')[3]
+            # match_player.save()
+            #
 
-        # for k in range (9,sheet1.nrows-2):
-        #     print(sheet1.cell_value(k, 1))
-        #     k = k+1
+            # for k in range (9,sheet1.nrows-2):
+            #     print(sheet1.cell_value(k, 1))
+            #     k = k+1
         # print(real_path1, real_path2, real_path3)
         # print(dir_list[i].split('-')[0] + '-' + dir_list[i].split('-')[1] + '-' + dir_list[i].split('-')[2])
         #
@@ -407,45 +535,6 @@ def store_history_game():
 #         player.save()
 #     i = i+1
 # print(i)
-# matchset = Match.objects.all()
-# for match in matchset:
-#     a = match.主场第一节
-#     match.主场第一节 = match.客场第一节
-#     match.客场第一节 = a
-#
-#     a = match.主场第二节
-#     match.主场第二节 = match.客场第二节
-#     match.客场第二节 = a
-#
-#     a = match.主场第三节
-#     match.主场第三节 = match.客场第三节
-#     match.客场第三节 = a
-#
-#     a = match.主场第四节
-#     match.主场第四节 = match.客场第四节
-#     match.客场第四节 = a
-#
-#     a = match.主场加时一
-#     match.主场加时一 = match.客场加时一
-#     match.客场加时一 = a
-#
-#     a = match.主场加时二
-#     match.主场加时二 = match.客场加时二
-#     match.客场加时二 = a
-#
-#     a = match.主场加时三
-#     match.主场加时三 = match.客场加时三
-#     match.客场加时三 = a
-#
-#     a = match.主场加时四
-#     match.主场加时四 = match.客场加时四
-#     match.客场加时四 = a
-#
-#     a = match.主场总分
-#     match.主场总分 = match.客场总分
-#     match.客场总分 = a
-#
-#     match.save()
 
 
 
