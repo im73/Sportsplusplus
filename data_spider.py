@@ -5,7 +5,7 @@ import pandas as pd
 import time
 import os
 import datetime
-from storedata import history_in_database
+# from storedata import history_in_database
 
 class DataSpider(object):
 

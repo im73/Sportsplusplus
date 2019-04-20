@@ -92,7 +92,7 @@ DATABASES = {
         'HOST': '114.116.156.240',
         'POST': '3306',
         'OPTIONS': { 'init_command': 'SET default_storage_engine=INNODB,character_set_connection=utf8,collation_connection=utf8_unicode_ci;' },
-
+        'OPTIONS':{"init_command":"SET foreign_key_checks = 0;"},
     }
 }
 
