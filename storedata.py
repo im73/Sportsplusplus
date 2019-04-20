@@ -1,3 +1,4 @@
+import shutil
 from io import StringIO
 import json
 import sys
@@ -27,6 +28,23 @@ from player_data.persons.serializers import PlayerSerializer, TeamSerializer, Re
 from django.core.files import File
 #接下来就可以使用model了
 
+def history_in_database(macth_id):
+
+    if Match.objects.filter(id=macth_id).count()==0:
+        return 0
+    else:
+        return 1
+
+
+def delete_files() :
+    os.chdir("./history_games(date)")
+    fileList = list(os.listdir())
+    for file in fileList:
+        if os.path.isfile(file):
+            os.remove(file)
+            print("delete successfully")
+        else:
+            shutil.rmtree(file)
 #添加球员信息
 # with open('./active_players(1).json') as f:
 #     active_players = json.load(f)
