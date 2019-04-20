@@ -1,7 +1,7 @@
 from rest_framework import serializers
 
 from player_data import persons
-from player_data.persons.models import Team,Player,Career,Record,Match,Score, Match_player,Match_teamsummary
+from player_data.persons.models import Team,Player,Career,Record,Match,Score, Match_player,Match_teamsummary, Schedule
 
 
 class TeamSerializer(serializers.ModelSerializer):
@@ -182,3 +182,7 @@ class MatchSerializer(serializers.ModelSerializer):
             '客场第四节',
             '客场总分',
         )
+class ScheduleSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Schedule
+        fields = '__all__'
