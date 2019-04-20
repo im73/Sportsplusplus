@@ -143,7 +143,8 @@ class Match(models.Model):
     客场总分 = models.CharField(max_length=10)
 
 
-class Schedule:
+class Schedule(models.Model):
+
     赛季球队 = models.CharField(max_length=50)
     主队 = models.CharField(max_length=50)
     客队 = models.CharField(max_length=50)

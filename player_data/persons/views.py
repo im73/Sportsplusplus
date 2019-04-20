@@ -14,8 +14,9 @@ from rest_framework.utils import json
 import time
 
 
-from player_data.persons.models import Team,Player,Career,Match, Match_player, Match_teamsummary
-from player_data.persons.serializers import TeamSerializer,PlayerSerializer,CareerSerializer,MatchSerializer, Match_playerSerializer, Match_teamsummarySerializer
+from player_data.persons.models import Team, Player, Career, Match, Match_player, Match_teamsummary, Schedule
+from player_data.persons.serializers import TeamSerializer, PlayerSerializer, CareerSerializer, MatchSerializer, \
+    Match_playerSerializer, Match_teamsummarySerializer, ScheduleSerializer
 import random
 
 
@@ -110,7 +111,7 @@ def GetSchedule(request):
     if request.method=="GET":
 
         teamname=request.GET.get('teamname')
-        querylist=Schedule.objects.filter(teamname=teamname)
+        querylist=Schedule.objects.get(赛季球队=teamname)
         serializer=ScheduleSerializer(querylist,many=True)
 
         return HttpResponse(json.dumps(serializer.data,ensure_ascii=False),content_type="application/json,charset=utf-8",status=200)
