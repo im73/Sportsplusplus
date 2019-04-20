@@ -105,7 +105,7 @@ def GetTeamImage(request,Teamname):
             return HttpResponse(image_data,content_type='image/jpg')
         except:
             return HttpResponse(json.dumps({'message':'没有获取到资源'},ensure_ascii=False),content_type="application/json,charset=utf-8",status=400)
-
+@csrf_exempt
 def GetSchedule(request):
 
     if request.method=="GET":
