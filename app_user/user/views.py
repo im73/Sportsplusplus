@@ -25,7 +25,8 @@ def register(request):
     if request.method == 'GET':
 
         email=request.GET.get('email')
-        verification_code=random.randrange(100000,999999)
+        # verification_code=random.randrange(100000,999999)
+        verification_code=666666
         email_from = settings.DEFAULT_FROM_EMAIL
         tmp = loader.get_template('active.html')
         htm_email = tmp.render({"msg":str(verification_code)})

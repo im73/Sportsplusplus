@@ -330,14 +330,14 @@ def store_history_game():
                 with open("history.txt","a+") as f:
                     f.write("存储："+dir_list[i].split('-')[3]+"\n")
                 f.close()
+
 def store_schedule():
     file_dir2 = "./team_schedule"  # 给定路径
-    dir_list = os.listdir(file_dir2)  # 列出文件夹下所有的目录和文件
-    new_path = os.path.join(file_dir2, dir_list[0]) # 第二个子文件夹
-    file_list = os.listdir(new_path)
+
+    file_list = os.listdir(file_dir2)
 
     for i in range(len(file_list)):
-        real_path1 = os.path.join(new_path, file_list[i])
+        real_path1 = os.path.join(file_dir2, file_list[i])
         # print(real_path1)
         workbook1 = xlrd.open_workbook(real_path1)
         sheet1 = workbook1.sheet_by_index(0)
@@ -349,11 +349,10 @@ def store_schedule():
             if len(a.split(' ')) > 3:
                 # print(sheet1.cell_value(j, 1))
                 count_schedule = Schedule.objects.filter(赛季球队=sheet1.cell_value(1, 1), 客队=a.split(' ')[0], 主队=a.split(' ')[4], 日期=c.split(' ')[0]).count()
-                print(count_schedule)
+
                 if count_schedule == 0: # 判断是否存过赛程
                     if (b.split(' ')[0] == '-'):  # 比赛前瞻
-                        print(a.split(' ')[0], a.split(' ')[4], sheet1.cell_value(j, 3),
-                              c.split(' ')[0], c.split(' ')[1], sheet1.cell_value(j, 5))
+
                         sched = Schedule(
                             英文名=file_list[i].split('.')[0],
                             赛季球队=sheet1.cell_value(1, 1),
@@ -368,9 +367,7 @@ def store_schedule():
                         )
                         sched.save()
                     else:
-                        print(a.split(' ')[0], a.split(' ')[4], b.split(' ')[0], b.split(' ')[2], sheet1.cell_value(j, 3),
-                              c.split(' ')[0], c.split(' ')[1], sheet1.cell_value(j, 5))
-                        print(0)
+
                         sched = Schedule(
                             英文名=file_list[i].split('.')[0],
                             赛季球队=sheet1.cell_value(1, 1),
@@ -394,7 +391,7 @@ def store_schedule():
                     schedule = Schedule.objects.get(赛季球队=sheet1.cell_value(1, 1), 客队=a.split(' ')[0], 主队=a.split(' ')[4], 日期=c.split(' ')[0])
 
                     if schedule.类型=='比赛前瞻':
-                        print(schedule.类型, sheet1.cell_value(j, 5))
+
                         if sheet1.cell_value(j, 5)=='数据统计':
 
                             print('前瞻->数据统计', a.split(' ')[0], a.split(' ')[4], b.split(' ')[0], b.split(' ')[2], sheet1.cell_value(j, 3),
