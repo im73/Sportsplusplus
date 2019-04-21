@@ -215,7 +215,21 @@ def GetMatchInfo(request):
         return HttpResponse(json.dumps({'message':'没有获取到资源'},ensure_ascii=False),content_type="application/json,charset=utf-8",status=400)
 
 
+def Changepassword(request):
 
+    if request.method=='PUT':
+        username=request.GET.get('username')
+        oldpassword=request.GET.get('old')
+        new=request.GET.get('new')
+
+        userob=User.objects.get(nick_name=username)
+        if userob.password==oldpassword:
+            userob.password=new
+            userob.save()
+            return HttpResponse(json.dumps({'message':'密码修改成功'},ensure_ascii=False),content_type="application/json,charset=utf-8",status=200)
+
+        else:
+            return HttpResponse(json.dumps({'message':'原密码输入错误'},ensure_ascii=False),content_type="application/json,charset=utf-8",status=400)
 
 
 

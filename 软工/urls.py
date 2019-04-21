@@ -21,6 +21,7 @@ from app_user.operation import  views as op_view
 
 urlpatterns = [
 
+
     path('admin/', admin.site.urls),
     path('api/login',                           user_view.login),
     path('api/register',                        user_view.register),
@@ -28,6 +29,7 @@ urlpatterns = [
     path('api/BackUser',                        user_view.BackUser),
     path('api/back_login',                      user_view.back_login),
     path('api/Subscribe',                       op_view.Sbscribe),
+    path('api/Changepassword',                  user_view.Changepassword),
 
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 
