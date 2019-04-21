@@ -329,9 +329,11 @@ class DataSpider(object):
             soup = BeautifulSoup(text, "lxml")
             games = soup.find_all(attrs={'class': 'border_a'})
             for game in games:
-                state = game.find(attrs={'class': 'team_vs_b'}).find(attrs={'class': 'b'}).string[1:]
-                print(state)
-                if state != '已结束' or date == today_date:
+                state = game.find(attrs={'class': 'team_vs_b'})
+                if state:
+                    state = state.find(attrs={'class': 'b'}).string[1:]
+                # print(state)
+                if state != '已结束' or date > today_date:
                     continue
                 game = game.find(attrs={'class': 'table_choose clearfix'}).find(attrs={'class': 'd'}).get('href')
                 game_id = game.split('/')[-1]
@@ -459,21 +461,19 @@ class DataSpider(object):
                 with open('./teams_img/{}.png'.format(team_name), 'wb') as f:
                     f.write(img)
                     f.close()
+
     def get_future_game_info_hupu(self):
         time=datetime.datetime.now()
-        date_set = self.get_date_set(time.strftime("%Y-%m-%d"),(time+datetime.timedelta(days=5)).strftime("%Y-%m-%d") )
+        date_set = self.get_date_set(time.strftime("%Y-%m-%d"),(time+datetime.timedelta(days=10)).strftime("%Y-%m-%d") )
         print(date_set)
         for date in date_set:
             text = requests.get(self.games_info_hupu.format(date)).text
             soup = BeautifulSoup(text, "lxml")
             games = soup.find_all(attrs={'class': 'border_a'})
             for game in games:
-                state = game.find(attrs={'class': 'team_vs_b'}).find(attrs={'class': 'b'}).string
-                if not state:
-                    state = '未开始'
-                if state != '未开始':
-                    print("ERROR")
-                    break
+                state = game.find(attrs={'class': 'team_vs_b'})
+                if state:
+                    continue
                 game = game.find(attrs={'class': 'table_choose clearfix'}).find(attrs={'class': 'd'}).get('href')
                 game_id = game.split('/')[-1]
                 if not os.path.exists('./history_games(date)/{}-{}'.format(date, game_id)):
@@ -483,7 +483,7 @@ class DataSpider(object):
                 team_a = game_soup.find(attrs={'class': 'team_a'}).find(attrs={'class': 'message'}).find('a').string
                 team_b = game_soup.find(attrs={'class': 'team_b'}).find(attrs={'class': 'message'}).find('a').string
                 output = {'0': ['', team_a, team_b],
-                          '1': ['一', '', ''],
+                          '1': ['一', '未开始', ''],
                           '2': ['二', '', ''],
                           '3': ['三', '', ''],
                           '4': ['四', '', ''],
@@ -494,22 +494,27 @@ class DataSpider(object):
 
     def get_playing_game_info_hupu(self):
         today_date = str(datetime.date.today())
-        print(today_date)
         text = requests.get(self.games_info_hupu.format(today_date)).text
         soup = BeautifulSoup(text, "lxml")
         games = soup.find_all(attrs={'class': 'border_a'})
         game_number = len(games)
         over_games = set()
         for game in games:
-            state = game.find(attrs={'class': 'team_vs_b'}).find(attrs={'class': 'b'}).string[1:]
+            state = game.find(attrs={'class': 'team_vs_b'})
             if not state:
-                state = "未开始"
+                state = game.find(attrs={'class': 'team_vs_c'})
+                if state:
+                    state = state.find(attrs={'class': 'b'}).string[1:]
+                else:
+                    state = "未开始"
+            else:
+                state = state.find(attrs={'class': 'b'}).string[1:]
             if state == '已结束':
                 game = game.find(attrs={'class': 'table_choose clearfix'}).find(attrs={'class': 'd'}).get('href')
                 game_id = game.split('/')[-1]
                 if os.path.exists('./history_games(date)/{}-{}-playing'.format(today_date, game_id)):
                     os.rename('./history_games(date)/{}-{}-playing'.format(today_date, game_id),
-                          './history_games(date)/{}-{}'.format(today_date, game_id))
+                              './history_games(date)/{}-{}'.format(today_date, game_id))
                 over_games.add(game_id)
                 if len(over_games) == game_number:
                     break
@@ -517,6 +522,9 @@ class DataSpider(object):
                 # the game is playing
                 game = game.find(attrs={'class': 'table_choose clearfix'}).find(attrs={'class': 'd'}).get('href')
                 game_id = game.split('/')[-1]
+                if os.path.exists('./history_games(date)/{}-{}'.format(today_date, game_id)):
+                    os.rename('./history_games(date)/{}-{}'.format(today_date, game_id),
+                              './history_games(date)/{}-{}-playing'.format(today_date, game_id))
                 if not os.path.exists('./history_games(date)/{}-{}-playing'.format(today_date, game_id)):
                     os.mkdir('./history_games(date)/{}-{}-playing'.format(today_date, game_id))
                 game_text = requests.get(game).text
@@ -535,11 +543,11 @@ class DataSpider(object):
                     team_a = game_soup.find(attrs={'class': 'team_a'}).find(attrs={'class': 'message'}).find('a').string
                     team_b = game_soup.find(attrs={'class': 'team_b'}).find(attrs={'class': 'message'}).find('a').string
                     output = {'0': ['', team_a, team_b],
-                          '1': ['一', '', ''],
-                          '2': ['二', '', ''],
-                          '3': ['三', '', ''],
-                          '4': ['四', '', ''],
-                          '5': ['总分', '', '']}
+                              '1': ['一', '', ''],
+                              '2': ['二', '', ''],
+                              '3': ['三', '', ''],
+                              '4': ['四', '', ''],
+                              '5': ['总分', '', '']}
                     df = DataFrame(output)
                     df.to_excel('./history_games(date)/{}-{}-playing/summary.xlsx'.format(today_date, game_id))
                 print(today_date + " " + game_id)
