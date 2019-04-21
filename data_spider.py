@@ -464,7 +464,7 @@ class DataSpider(object):
 
     def get_future_game_info_hupu(self):
         time=datetime.datetime.now()
-        date_set = self.get_date_set(time.strftime("%Y-%m-%d"),(time+datetime.timedelta(days=10)).strftime("%Y-%m-%d") )
+        date_set = self.get_date_set(time.strftime("%Y-%m-%d"),(time+datetime.timedelta(days=3)).strftime("%Y-%m-%d") )
         print(date_set)
         for date in date_set:
             text = requests.get(self.games_info_hupu.format(date)).text
@@ -472,8 +472,10 @@ class DataSpider(object):
             games = soup.find_all(attrs={'class': 'border_a'})
             for game in games:
                 state = game.find(attrs={'class': 'team_vs_b'})
+                state = state.find(attrs={'class': 'b'})
                 if state:
-                    continue
+                    if state.string:
+                        continue
                 game = game.find(attrs={'class': 'table_choose clearfix'}).find(attrs={'class': 'd'}).get('href')
                 game_id = game.split('/')[-1]
                 if not os.path.exists('./history_games(date)/{}-{}'.format(date, game_id)):

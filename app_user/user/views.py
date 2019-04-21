@@ -39,15 +39,13 @@ def register(request):
         if emailob.count()!=0:
             emailob.first().delete()
         print(email)
-        emailob=email_very(email=email,very_code=verification_code,op_type=1) #1是注册
+        emailob=email_very(email=email,very_code=str(verification_code),op_type=1) #1是注册
         emailob.save()
         send_mail(title, msg, email_from, reciever, html_message=htm_email)
         return JsonResponse({'message':'success'}, status=200)
 
     elif request.method == 'POST':
-        with open("log.txt","w+") as f:
-            f.write(str(request.body))
-            f.write("POST")
+
         nick_name=request.POST.get('nick_name')
         password=request.POST.get('password')
         email=request.POST.get('email')
@@ -55,6 +53,9 @@ def register(request):
 
         try:
             emailob=email_very.objects.get(email=email)
+            with open("log.txt","a+") as f:
+                f.write(emailob.very_code)
+                f.write(verification_code)
             if emailob.very_code!=verification_code:
                 return JsonResponse({'err_code':'验证码错误'}, status=400)
             user=User(nick_name=nick_name,password=password,email=email)
