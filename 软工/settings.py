@@ -137,16 +137,17 @@ CORS_ORIGIN_ALLOW_ALL = True
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media').replace('\\', '/')     #设置静态文件路径为主目录下的media文件夹
-MEDIA_URL = '/media/'                                                 #url映射
-
+MEDIA_URL = '/media/'
+#url映射
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 # 邮件配置
-EMAIL_USE_SSL = False
+EMAIL_USE_TLS = True
 
-EMAIL_HOST = 'smtp.163.com'  # 如果是 163 改成 smtp.163.com
+EMAIL_HOST = 'smtp.gmail.com'  # 如果是 163 改成 smtp.163.com
 
-EMAIL_PORT = 25
+EMAIL_PORT = 587
 
-EMAIL_HOST_USER = 'sportsplusplus@163.com' # 帐号
+EMAIL_HOST_USER = 'Sportsplspls@gmail.com' # 帐号
 
 EMAIL_HOST_PASSWORD = '13179zqs'  # 授权码（****）
 # 默认邮件

@@ -25,8 +25,8 @@ def register(request):
     if request.method == 'GET':
 
         email=request.GET.get('email')
-        # verification_code=random.randrange(100000,999999)
-        verification_code=666666
+        verification_code=random.randrange(100000,999999)
+        # verification_code=666666
         email_from = settings.DEFAULT_FROM_EMAIL
         tmp = loader.get_template('active.html')
         htm_email = tmp.render({"msg":str(verification_code)})
@@ -41,7 +41,9 @@ def register(request):
         print(email)
         emailob=email_very(email=email,very_code=str(verification_code),op_type=1) #1是注册
         emailob.save()
+        print("haah")
         send_mail(title, msg, email_from, reciever, html_message=htm_email)
+        print("huhuhu")
         return JsonResponse({'message':'success'}, status=200)
 
     elif request.method == 'POST':
@@ -214,7 +216,7 @@ def GetMatchInfo(request):
     if request.method == 'GET':
         return HttpResponse(json.dumps({'message':'没有获取到资源'},ensure_ascii=False),content_type="application/json,charset=utf-8",status=400)
 
-
+@csrf_exempt
 def Changepassword(request):
 
     if request.method=='PUT':
