@@ -143,13 +143,13 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 # 邮件配置
 EMAIL_USE_TLS = True
 
-EMAIL_HOST = 'smtp.gmail.com'  # 如果是 163 改成 smtp.163.com
+EMAIL_HOST = 'smtp.qq.com'  # 如果是 163 改成 smtp.163.com
 
 EMAIL_PORT = 587
 
-EMAIL_HOST_USER = 'Sportsplspls@gmail.com' # 帐号
+EMAIL_HOST_USER = '775692044@qq.com' # 帐号
 
-EMAIL_HOST_PASSWORD = '13179zqs'  # 授权码（****）
+EMAIL_HOST_PASSWORD = 'jauezyzzpnnubbeg'  # 授权码（****）
 # 默认邮件
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
