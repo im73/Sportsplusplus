@@ -38,12 +38,12 @@ def register(request):
         emailob = email_very.objects.filter(email=email)
         if emailob.count()!=0:
             emailob.first().delete()
-        print(email)
+        
         emailob=email_very(email=email,very_code=str(verification_code),op_type=1) #1是注册
         emailob.save()
-        print("haah")
+
         send_mail(title, msg, email_from, reciever, html_message=htm_email)
-        print("huhuhu")
+
         return JsonResponse({'message':'success'}, status=200)
 
     elif request.method == 'POST':
@@ -63,7 +63,10 @@ def register(request):
             user=User(nick_name=nick_name,password=password,email=email)
             user.save()
             emailob.delete()
-            return JsonResponse({'message':'success'}, status=201)
+            response =  JsonResponse({'message':'success'}, status=201)
+            response.set_cookie("user",nick_name)
+            return response
+
         except Exception:
             print(Exception)
             return JsonResponse({'message':'用户已存在'}, status=400)
@@ -76,16 +79,21 @@ def login(request):
     user login by ph_number.
     """
     if request.method == 'GET':
+        cook=request.COOKIES.get("user")
+        print(cook)
+        if cook:
+            print(cook)
         nick_name=request.GET.get('nick_name')
         password=request.GET.get('password')
         user=User.objects.filter(nick_name=nick_name,password=password)
-        userob=User.objects.get(nick_name=nick_name,password=password)
+        print(user)
+        response =  JsonResponse({'message':'登录成功'}, status=200)
+        response.set_cookie("user",nick_name)
 
-        userob.save()
         if user.count()==0:
             return JsonResponse({'message':'用户名或密码错误'}, status=400)
         else:
-            return JsonResponse({'message':'登录成功'}, status=200)
+            return response
 
 
 @csrf_exempt

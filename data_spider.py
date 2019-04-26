@@ -484,12 +484,14 @@ class DataSpider(object):
                 game_soup = BeautifulSoup(game_text, "lxml")
                 team_a = game_soup.find(attrs={'class': 'team_a'}).find(attrs={'class': 'message'}).find('a').string
                 team_b = game_soup.find(attrs={'class': 'team_b'}).find(attrs={'class': 'message'}).find('a').string
-                output = {'0': ['', team_a, team_b],
+
+                output = {'0': ['', str(team_a), str(team_b)],
                           '1': ['一', '未开始', ''],
                           '2': ['二', '', ''],
                           '3': ['三', '', ''],
                           '4': ['四', '', ''],
                           '5': ['总分', '', '']}
+
                 df = DataFrame(output)
                 df.to_excel('./history_games(date)/{}-{}/summary.xlsx'.format(date, game_id))
                 print(date + " " + game_id)
