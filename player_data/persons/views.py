@@ -19,11 +19,16 @@ from player_data.persons.serializers import TeamSerializer, PlayerSerializer, Ca
     Match_playerSerializer, Match_teamsummarySerializer, ScheduleSerializer
 import random
 
-
+from app_user.user.models import tokens
 @csrf_exempt
 def get_teaminfo(request):
 
     if request.method == 'GET':
+
+        cookie=request.COOKIES.get("user")
+        tkob=tokens.objects.get(cookie=cookie)
+        tkob.active=1
+        tkob.save()
 
         teamlist=Team.objects.all()
         serializer = TeamSerializer(teamlist,many=True)
@@ -33,6 +38,11 @@ def get_teaminfo(request):
 def get_playerinfo(request):
 
     if request.method == 'GET':
+
+        cookie=request.COOKIES.get("user")
+        tkob=tokens.objects.get(cookie=cookie)
+        tkob.active=1
+        tkob.save()
 
         team_name=request.GET.get('teamname')
         Playerlist=Player.objects.filter(球队名=team_name)
@@ -45,6 +55,11 @@ def get_playercareer(request):
 
     if request.method == 'GET':
 
+        cookie=request.COOKIES.get("user")
+        tkob=tokens.objects.get(cookie=cookie)
+        tkob.active=1
+        tkob.save()
+
         player_index=request.GET.get('player_index')
         careerlist=Career.objects.filter(序号=player_index)
         serializer=CareerSerializer(careerlist,many=True)
@@ -55,6 +70,12 @@ def get_playercareer(request):
 def GetMatchInfo(request):
 
     if request.method == 'GET':
+
+        cookie=request.COOKIES.get("user")
+        tkob=tokens.objects.get(cookie=cookie)
+        tkob.active=1
+        tkob.save()
+
 
         if request.GET.get('match_id') == "":
 
@@ -68,6 +89,11 @@ def GetMatchSummary(request):
 
     if request.method == 'GET':
 
+        cookie=request.COOKIES.get("user")
+        tkob=tokens.objects.get(cookie=cookie)
+        tkob.active=1
+        tkob.save()
+
         match_id=request.GET.get('match_id')
         querylist = Match_teamsummary.objects.filter(比赛id=match_id)
         serializer=Match_teamsummarySerializer(querylist,many=True)
@@ -77,6 +103,12 @@ def GetMatchSummary(request):
 def GetPlayerSummary(request):
 
     if request.method == 'GET':
+
+        cookie=request.COOKIES.get("user")
+        tkob=tokens.objects.get(cookie=cookie)
+        tkob.active=1
+        tkob.save()
+
         match_id=request.GET.get('match_id')
         querylist = Match_player.objects.filter(比赛id=match_id)
         serializer=Match_playerSerializer(querylist,many=True)
@@ -99,7 +131,8 @@ def GetPlayerImage(request,PlayerName):
 def GetTeamImage(request,Teamname):
 
     if request.method == 'GET':
-        print(Teamname)
+
+
         image_path=Team.objects.get(球队中文名__endswith=parse.unquote(Teamname)).队标.path
         try:
             image_data = open(image_path,"rb").read()
@@ -111,6 +144,11 @@ def GetTeamImage(request,Teamname):
 def GetSchedule(request):
 
     if request.method=="GET":
+
+        cookie=request.COOKIES.get("user")
+        tkob=tokens.objects.get(cookie=cookie)
+        tkob.active=1
+        tkob.save()
 
         teamname=request.GET.get('teamname')
         querylist=Schedule.objects.filter(英文名=teamname)

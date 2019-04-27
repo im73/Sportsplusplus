@@ -8,7 +8,7 @@ from django.views.decorators.csrf import csrf_exempt
 from rest_framework.utils import json
 
 from app_user.operation.models import subscribe as sb
-from app_user.user.models import User
+from app_user.user.models import User,tokens
 from player_data.persons.models import Team
 from app_user.operation.serializer import subscribeSerializer
 
@@ -17,6 +17,11 @@ from app_user.operation.serializer import subscribeSerializer
 def Sbscribe(request):
 
     if request.method=="POST":
+
+        cookie=request.COOKIES.get("user")
+        tkob=tokens.objects.get(cookie=cookie)
+        tkob.active=1
+        tkob.save()
 
         username=request.POST.get('username')
         teamname=request.POST.get('teamname')
@@ -30,6 +35,11 @@ def Sbscribe(request):
 
     elif request.method=="GET":
 
+        cookie=request.COOKIES.get("user")
+        tkob=tokens.objects.get(cookie=cookie)
+        tkob.active=1
+        tkob.save()
+
         username=request.GET.get("username")
         user=User.objects.get(nick_name=username)
         sblist=sb.objects.filter(user=user)
@@ -40,6 +50,11 @@ def Sbscribe(request):
 
 
     elif request.method=="DELETE":
+
+        cookie=request.COOKIES.get("user")
+        tkob=tokens.objects.get(cookie=cookie)
+        tkob.active=1
+        tkob.save()
 
         username=request.GET.get('username')
         teamname=request.GET.get('teamname')
