@@ -6,14 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b047bb0b-4241-4ad3-a197-7125741d666d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_user/user/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_user/user/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app_user/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_user/user/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/auto_schedule.py" beforeDir="false" afterPath="$PROJECT_DIR$/auto_schedule.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/player_data/persons/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/player_data/persons/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storedata.py" beforeDir="false" afterPath="$PROJECT_DIR$/storedata.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/软工/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/软工/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/软工/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/软工/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -146,21 +139,11 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_user/user/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="296" lean-forward="true" selection-start-line="296" selection-end-line="296" />
+            <state relative-caret-position="211">
+              <caret line="294" lean-forward="true" selection-start-line="294" selection-end-line="294" />
               <folding>
                 <element signature="e#53#68#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="readme.md" pinned="false" current-in-tab="true">
-        <entry file="file://$USER_HOME$/Downloads/package/readme.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor />
             </state>
           </provider>
         </entry>
@@ -170,7 +153,7 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="auto_schedule.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="auto_schedule.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/auto_schedule.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
@@ -270,10 +253,10 @@
         <option value="$PROJECT_DIR$/app_user/user/models.py" />
         <option value="$PROJECT_DIR$/app_user/user/migrations/0004_auto_20190427_1709.py" />
         <option value="$PROJECT_DIR$/app_user/user/migrations/0003_auto_20190427_1011.py" />
-        <option value="$PROJECT_DIR$/auto_schedule.py" />
         <option value="$PROJECT_DIR$/软工/settings.py" />
         <option value="$PROJECT_DIR$/storedata.py" />
         <option value="$PROJECT_DIR$/app_user/user/views.py" />
+        <option value="$PROJECT_DIR$/auto_schedule.py" />
       </list>
     </option>
   </component>
@@ -510,13 +493,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1553575938261</updated>
-    </task>
-    <task id="LOCAL-00008" summary="验证码">
-      <created>1554304787669</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1554304787669</updated>
     </task>
     <task id="LOCAL-00009" summary="球队信息添加完毕">
       <created>1554456088386</created>
@@ -854,7 +830,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556362809387</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Merge branch 'master' of https://github.com/im73/Sportsplusplus&#10;                               &#10;                               # Conflicts:&#10;                               #&#9;.idea/workspace.xml&#10;                               增加用户统计api">
+      <created>1556390288043</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1556390288044</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TodoView">
@@ -932,7 +915,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/../DevCloud" />
     </ignored-roots>
-    <MESSAGE value="Merge branch 'master' of https://github.com/im73/Sportsplusplus&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;player_data/persons/models.py&#10;#&#9;storedata.py&#10;&#10;&#10;接口测试" />
     <MESSAGE value="Merge branch 'master' of https://github.com/im73/Sportsplusplus&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;player_data/persons/models.py&#10;#&#9;storedata.py&#10;&#10;&#10;球员头像获取方法修改" />
     <MESSAGE value="接口数据修改" />
     <MESSAGE value="球员头像修改" />
@@ -957,7 +939,8 @@
     <MESSAGE value="Merge branch 'master' of https://github.com/im73/Sportsplusplus&#10;            &#10;            # Conflicts:&#10;            #&#9;.idea/workspace.xml&#10;            邮箱验证码" />
     <MESSAGE value="Merge branch 'master' of https://github.com/im73/Sportsplusplus&#10;            &#10;            # Conflicts:&#10;            #&#9;.idea/workspace.xml&#10;            token实现" />
     <MESSAGE value="Merge branch 'master' of https://github.com/im73/Sportsplusplus&#10;                               &#10;                               # Conflicts:&#10;                               #&#9;.idea/workspace.xml&#10;                               增加cookie判断" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/im73/Sportsplusplus&#10;                               &#10;                               # Conflicts:&#10;                               #&#9;.idea/workspace.xml&#10;                               增加cookie判断" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/im73/Sportsplusplus&#10;                               &#10;                               # Conflicts:&#10;                               #&#9;.idea/workspace.xml&#10;                               增加用户统计api" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/im73/Sportsplusplus&#10;                               &#10;                               # Conflicts:&#10;                               #&#9;.idea/workspace.xml&#10;                               增加用户统计api" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1240,16 +1223,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/auto_schedule.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/auto_history_game.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1280,21 +1253,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Downloads/package/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app_user/user/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="296" lean-forward="true" selection-start-line="296" selection-end-line="296" />
+        <state relative-caret-position="211">
+          <caret line="294" lean-forward="true" selection-start-line="294" selection-end-line="294" />
           <folding>
             <element signature="e#53#68#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/package/readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/auto_schedule.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
