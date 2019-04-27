@@ -3,6 +3,7 @@ from django.db import models
 # Create your models here.
 from django.db import models
 
+
 # Create your models here.
 
 
@@ -42,3 +43,13 @@ class email_very(models.Model):
         verbose_name_plural = verbose_name
         ordering = ('date',)
 
+class tokens(models.Model):
+
+    cookie = models.UUIDField(max_length=100)
+    user = models.ForeignKey(User,on_delete=models.CASCADE)
+    active = models.SmallIntegerField()
+
+    class Meta:
+
+        verbose_name = u"Cookie"
+        verbose_name_plural = verbose_name

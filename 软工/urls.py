@@ -30,6 +30,7 @@ urlpatterns = [
     path('api/back_login',                      user_view.back_login),
     path('api/Subscribe',                       op_view.Sbscribe),
     path('api/Changepassword',                  user_view.Changepassword),
+    path('api/BackHome',                        info_view.GetSchedule),
 
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 
@@ -42,5 +43,6 @@ urlpatterns = [
     path(r'api/GetTeamSummary',                                                     info_view.GetMatchSummary),
     path(r'api/GetMatch',                                                           info_view.GetMatchInfo),
     path(r'api/GetSchedule',                                                        info_view.GetSchedule),
+
 
 ]

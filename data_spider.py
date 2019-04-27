@@ -463,9 +463,7 @@ class DataSpider(object):
                     f.close()
 
     def get_future_game_info_hupu(self):
-        time=datetime.datetime.now()
-        date_set = self.get_date_set(time.strftime("%Y-%m-%d"),(time+datetime.timedelta(days=3)).strftime("%Y-%m-%d") )
-        print(date_set)
+        date_set = self.get_date_set('2019-04-27', '2019-05-07')
         for date in date_set:
             text = requests.get(self.games_info_hupu.format(date)).text
             soup = BeautifulSoup(text, "lxml")
@@ -476,6 +474,7 @@ class DataSpider(object):
                 if state:
                     if state.string:
                         continue
+                begin_time = state.find('p').string
                 game = game.find(attrs={'class': 'table_choose clearfix'}).find(attrs={'class': 'd'}).get('href')
                 game_id = game.split('/')[-1]
                 if not os.path.exists('./history_games(date)/{}-{}'.format(date, game_id)):
@@ -484,14 +483,12 @@ class DataSpider(object):
                 game_soup = BeautifulSoup(game_text, "lxml")
                 team_a = game_soup.find(attrs={'class': 'team_a'}).find(attrs={'class': 'message'}).find('a').string
                 team_b = game_soup.find(attrs={'class': 'team_b'}).find(attrs={'class': 'message'}).find('a').string
-
                 output = {'0': ['', str(team_a), str(team_b)],
-                          '1': ['一', '未开始', ''],
+                          '1': ['一', str(begin_time), ''],
                           '2': ['二', '', ''],
                           '3': ['三', '', ''],
                           '4': ['四', '', ''],
                           '5': ['总分', '', '']}
-
                 df = DataFrame(output)
                 df.to_excel('./history_games(date)/{}-{}/summary.xlsx'.format(date, game_id))
                 print(date + " " + game_id)
@@ -503,8 +500,10 @@ class DataSpider(object):
         games = soup.find_all(attrs={'class': 'border_a'})
         game_number = len(games)
         over_games = set()
+        print(games)
         for game in games:
             state = game.find(attrs={'class': 'team_vs_b'})
+            print(state)
             if not state:
                 state = game.find(attrs={'class': 'team_vs_c'})
                 if state:
@@ -546,7 +545,7 @@ class DataSpider(object):
                 else:
                     team_a = game_soup.find(attrs={'class': 'team_a'}).find(attrs={'class': 'message'}).find('a').string
                     team_b = game_soup.find(attrs={'class': 'team_b'}).find(attrs={'class': 'message'}).find('a').string
-                    output = {'0': ['', team_a, team_b],
+                    output = {'0': ['', str(team_a), str(team_b)],
                               '1': ['一', '', ''],
                               '2': ['二', '', ''],
                               '3': ['三', '', ''],

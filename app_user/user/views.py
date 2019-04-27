@@ -8,12 +8,12 @@ from django.template import loader
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.utils import json
 
-from app_user.user.models import User,email_very,back_user
+from app_user.user.models import User,email_very,back_user,tokens
 from app_user.user.serializers import UserSerializer,back_userSerializer
 import random
 import os
 from django.core.mail import send_mail
-
+import uuid
 from 软工 import settings
 
 
@@ -22,6 +22,7 @@ def register(request):
     """
     user register by ph_number.
     """
+
     if request.method == 'GET':
 
         email=request.GET.get('email')
@@ -52,7 +53,7 @@ def register(request):
         password=request.POST.get('password')
         email=request.POST.get('email')
         verification_code=request.POST.get('veri_code')
-
+        token = uuid.uuid4()
         try:
             emailob=email_very.objects.get(email=email)
             with open("log.txt","a+") as f:
@@ -62,9 +63,13 @@ def register(request):
                 return JsonResponse({'err_code':'验证码错误'}, status=400)
             user=User(nick_name=nick_name,password=password,email=email)
             user.save()
+
+            tkob=tokens(user=user,active=1,cookie=token)
+            tkob.save()
+
             emailob.delete()
             response =  JsonResponse({'message':'success'}, status=201)
-            response.set_cookie("user",nick_name)
+            response.set_cookie("user",token)
             return response
 
         except Exception:
@@ -79,20 +84,35 @@ def login(request):
     user login by ph_number.
     """
     if request.method == 'GET':
+
+        token = uuid.uuid4()
         cook=request.COOKIES.get("user")
-        print(cook)
+
         if cook:
             print(cook)
+
         nick_name=request.GET.get('nick_name')
         password=request.GET.get('password')
         user=User.objects.filter(nick_name=nick_name,password=password)
-        print(user)
+
         response =  JsonResponse({'message':'登录成功'}, status=200)
-        response.set_cookie("user",nick_name)
+        response.set_cookie("user",token)
+
+
 
         if user.count()==0:
             return JsonResponse({'message':'用户名或密码错误'}, status=400)
         else:
+            if tokens.objects.filter(user=user.first()).count()==0:
+
+                tkob=tokens(user=user.first(),active=1,cookie=token)
+                tkob.save()
+            else:
+
+                tkob=tokens.objects.get(user=user.first())
+                tkob.cookie=token
+                tkob.save()
+
             return response
 
 
@@ -117,10 +137,7 @@ def users(request):
 
         queryset=User.objects.all()
         serializer = UserSerializer(queryset, many=True)
-
-
         return JsonResponse(serializer.data,safe=False)
-
 
 
     if request.method == 'DELETE':
@@ -228,6 +245,7 @@ def GetMatchInfo(request):
 def Changepassword(request):
 
     if request.method=='PUT':
+
         username=request.GET.get('username')
         oldpassword=request.GET.get('old')
         new=request.GET.get('new')
@@ -241,7 +259,12 @@ def Changepassword(request):
         else:
             return HttpResponse(json.dumps({'message':'原密码输入错误'},ensure_ascii=False),content_type="application/json,charset=utf-8",status=400)
 
+@csrf_exempt
+def BackHome(request):
 
+    if request.method=="GET":
+
+        return HttpResponse(json.dumps({'message':'原密码输入错误'},ensure_ascii=False),content_type="application/json,charset=utf-8",status=400)
 
 
 
