@@ -84,6 +84,7 @@ def GetMatchInfo(request):
             querylist = Match.objects.filter(id=request.GET.get('match_id'))
         serializer=MatchSerializer(querylist,many=True)
         return HttpResponse(json.dumps(serializer.data,ensure_ascii=False),content_type="application/json,charset=utf-8",status=200)
+
 @csrf_exempt
 def GetMatchSummary(request):
 

@@ -53,3 +53,13 @@ class tokens(models.Model):
 
         verbose_name = u"Cookie"
         verbose_name_plural = verbose_name
+
+class Active(models.Model):
+
+    date=models.DateTimeField(auto_now_add=True)
+    num=models.IntegerField()
+
+    class Meta:
+
+        verbose_name = u"活跃人数"
+        verbose_name_plural = verbose_name

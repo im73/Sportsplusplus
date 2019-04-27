@@ -1,6 +1,7 @@
 # Create your views here.
 
 # Create your views here.
+import datetime
 from urllib import parse
 
 from django.http import HttpResponse, JsonResponse
@@ -8,13 +9,14 @@ from django.template import loader
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.utils import json
 
-from app_user.user.models import User,email_very,back_user,tokens
+from app_user.user.models import User,email_very,back_user,tokens,Active
 from app_user.user.serializers import UserSerializer,back_userSerializer
 import random
 import os
 from django.core.mail import send_mail
 import uuid
 from 软工 import settings
+import time
 
 
 @csrf_exempt
@@ -111,6 +113,7 @@ def login(request):
 
                 tkob=tokens.objects.get(user=user.first())
                 tkob.cookie=token
+                tkob.active=1
                 tkob.save()
 
             return response
@@ -264,7 +267,35 @@ def BackHome(request):
 
     if request.method=="GET":
 
-        return HttpResponse(json.dumps({'message':'原密码输入错误'},ensure_ascii=False),content_type="application/json,charset=utf-8",status=400)
+        time=datetime.datetime.now()
+        begin_date=(time-datetime.timedelta(days=6)).strftime("%Y-%m-%d")
+        end_date=time.strftime("%Y-%m-%d")
+        dates = []
+        dt = datetime.datetime.strptime(begin_date, '%Y-%m-%d')
+        date = begin_date
+        while date <= end_date:
+            dates.append(date)
+            dt = dt + datetime.timedelta(1)
+            date = dt.strftime('%Y-%m-%d')
+        newnum=[]
+        totalnum=[]
+        tknum=[]
+
+        for i in range(len(dates)-1):
+            newnum.append(User.objects.filter(register_time__range=(dates[i],dates[i+1])).count())
+            totalnum.append(User.objects.filter(register_time__lte=dates[i+1]).count())
+            aclist=Active.objects.filter(date__range=(dates[i],dates[i+1]))
+            if aclist.count()==0:
+                tknum.append(0)
+            else:
+                tknum.append(aclist.first().num)
+        tknum.append(tokens.objects.filter(active=1).count())
+        newnum.append(User.objects.filter(register_time__gte=dates[-1]).count())
+        totalnum.append(User.objects.all().count())
+
+        data={"tknum":tknum,"newnum":newnum,"totalnum":totalnum,"dates":dates}
+
+        return HttpResponse(json.dumps(data,ensure_ascii=False),content_type="application/json,charset=utf-8",status=200)
 
 
 

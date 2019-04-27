@@ -4,3 +4,5 @@
 #
 # ds = DataSpider()
 # ds.get_playing_game_info_hupu()
+import time
+print(time.strftime("%Y-%m-%d"))

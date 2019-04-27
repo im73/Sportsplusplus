@@ -1,3 +1,4 @@
+import datetime
 import shutil
 from io import StringIO
 import json
@@ -27,7 +28,7 @@ from player_data.persons.models import Player, Team, Record ,Match_teamsummary, 
 from player_data.persons.serializers import PlayerSerializer, TeamSerializer, RecordSerializer, CareerSerializer,MatchSerializer,Match_playerSerializer,Match_teamsummarySerializer,ScoreSerializer,ScheduleSerializer
 from django.core.files import File
 #接下来就可以使用model了
-
+from app_user.user.models import tokens,Active
 def history_in_database(macth_id):
 
     if Match.objects.filter(id=macth_id).count()==0:
@@ -557,7 +558,14 @@ def store_schedule():
 #         player.save()
 #     i = i+1
 # print(i)
+def updatetoken():
 
+    time=datetime.datetime.now()
+    time=(time-datetime.timedelta(days=1)).strftime("%Y-%m-%d")
+    num=tokens.objects.filter(active=1).count()
+    tokens.objects.all().update(active=0)
+
+    Active(date=time,num=num).save()
 
 
 
