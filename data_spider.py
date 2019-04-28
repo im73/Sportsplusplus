@@ -463,7 +463,11 @@ class DataSpider(object):
                     f.close()
 
     def get_future_game_info_hupu(self):
-        date_set = self.get_date_set('2019-04-27', '2019-05-07')
+        today_date = str(datetime.date.today())
+        time=datetime.datetime.now()
+
+        date_set = self.get_date_set(time.strftime("%Y-%m-%d"),(time+datetime.timedelta(days=7)).strftime("%Y-%m-%d") )
+
         for date in date_set:
             text = requests.get(self.games_info_hupu.format(date)).text
             soup = BeautifulSoup(text, "lxml")
@@ -494,67 +498,64 @@ class DataSpider(object):
                 print(date + " " + game_id)
 
     def get_playing_game_info_hupu(self):
-        today_date = str(datetime.date.today())
-        text = requests.get(self.games_info_hupu.format(today_date)).text
-        soup = BeautifulSoup(text, "lxml")
-        games = soup.find_all(attrs={'class': 'border_a'})
-        game_number = len(games)
-        over_games = set()
-        print(games)
-        for game in games:
-            state = game.find(attrs={'class': 'team_vs_b'})
-            print(state)
-            if not state:
-                state = game.find(attrs={'class': 'team_vs_c'})
-                if state:
+            today_date = str(datetime.date.today())
+            text = requests.get(self.games_info_hupu.format(today_date)).text
+            soup = BeautifulSoup(text, "lxml")
+            games = soup.find_all(attrs={'class': 'border_a'})
+            game_number = len(games)
+            over_games = set()
+            for game in games:
+                state = game.find(attrs={'class': 'team_vs_b'})
+                if not state:
+                    state = game.find(attrs={'class': 'team_vs_c'})
+                    if state:
+                        state = "进行中"
+                    else:
+                        state = "未开始"
+                else:
                     state = state.find(attrs={'class': 'b'}).string[1:]
-                else:
-                    state = "未开始"
-            else:
-                state = state.find(attrs={'class': 'b'}).string[1:]
-            if state == '已结束':
-                game = game.find(attrs={'class': 'table_choose clearfix'}).find(attrs={'class': 'd'}).get('href')
-                game_id = game.split('/')[-1]
-                if os.path.exists('./history_games(date)/{}-{}-playing'.format(today_date, game_id)):
-                    os.rename('./history_games(date)/{}-{}-playing'.format(today_date, game_id),
-                              './history_games(date)/{}-{}'.format(today_date, game_id))
-                over_games.add(game_id)
-                if len(over_games) == game_number:
-                    break
-            elif state != '已结束' and state != '未开始':
+                if state == '已结束':
+                    game = game.find(attrs={'class': 'table_choose clearfix'}).find(attrs={'class': 'd'}).get('href')
+                    game_id = game.split('/')[-1]
+                    if os.path.exists('./history_games(date)/{}-{}-playing'.format(today_date, game_id)):
+                        os.rename('./history_games(date)/{}-{}-playing'.format(today_date, game_id),
+                                  './history_games(date)/{}-{}'.format(today_date, game_id))
+                    over_games.add(game_id)
+                    if len(over_games) == game_number:
+                        break
+                elif state != '已结束' and state != '未开始':
                 # the game is playing
-                game = game.find(attrs={'class': 'table_choose clearfix'}).find(attrs={'class': 'd'}).get('href')
-                game_id = game.split('/')[-1]
-                if os.path.exists('./history_games(date)/{}-{}'.format(today_date, game_id)):
-                    os.rename('./history_games(date)/{}-{}'.format(today_date, game_id),
-                              './history_games(date)/{}-{}-playing'.format(today_date, game_id))
-                if not os.path.exists('./history_games(date)/{}-{}-playing'.format(today_date, game_id)):
-                    os.mkdir('./history_games(date)/{}-{}-playing'.format(today_date, game_id))
-                game_text = requests.get(game).text
-                game_soup = BeautifulSoup(game_text, "lxml")
-                sum_table = game_soup.find(attrs={'class': 'itinerary_table'})
-                if sum_table:
-                    sum_table = pd.concat(pd.read_html(sum_table.prettify()))
-                    sum_table.to_excel('./history_games(date)/{}-{}-playing/summary.xlsx'.format(today_date, game_id))
-                    away_table = game_soup.find(attrs={'id': 'J_away_content'})
-                    away_table = pd.concat(pd.read_html(away_table.prettify()))
-                    away_table.to_excel('./history_games(date)/{}-{}-playing/away_table.xlsx'.format(today_date, game_id))
-                    home_table = game_soup.find(attrs={'id': 'J_home_content'})
-                    home_table = pd.concat(pd.read_html(home_table.prettify()))
-                    home_table.to_excel('./history_games(date)/{}-{}-playing/home_table.xlsx'.format(today_date, game_id))
-                else:
-                    team_a = game_soup.find(attrs={'class': 'team_a'}).find(attrs={'class': 'message'}).find('a').string
-                    team_b = game_soup.find(attrs={'class': 'team_b'}).find(attrs={'class': 'message'}).find('a').string
-                    output = {'0': ['', str(team_a), str(team_b)],
-                              '1': ['一', '', ''],
-                              '2': ['二', '', ''],
-                              '3': ['三', '', ''],
-                              '4': ['四', '', ''],
-                              '5': ['总分', '', '']}
-                    df = DataFrame(output)
-                    df.to_excel('./history_games(date)/{}-{}-playing/summary.xlsx'.format(today_date, game_id))
-                print(today_date + " " + game_id)
-
+                    game = game.find(attrs={'class': 'table_choose clearfix'}).find(attrs={'class': 'd'}).get('href')
+                    game_id = game.split('/')[-1]
+                    if os.path.exists('./history_games(date)/{}-{}'.format(today_date, game_id)):
+                        os.rename('./history_games(date)/{}-{}'.format(today_date, game_id),
+                                  './history_games(date)/{}-{}-playing'.format(today_date, game_id))
+                    if not os.path.exists('./history_games(date)/{}-{}-playing'.format(today_date, game_id)):
+                        os.mkdir('./history_games(date)/{}-{}-playing'.format(today_date, game_id))
+                    game_text = requests.get(game).text
+                    game_soup = BeautifulSoup(game_text, "lxml")
+                    sum_table = game_soup.find(attrs={'class': 'itinerary_table'})
+                    if sum_table:
+                        sum_table = pd.concat(pd.read_html(sum_table.prettify()))
+                        sum_table.to_excel('./history_games(date)/{}-{}-playing/summary.xlsx'.format(today_date, game_id))
+                        away_table = game_soup.find(attrs={'id': 'J_away_content'})
+                        away_table = pd.concat(pd.read_html(away_table.prettify()))
+                        away_table.to_excel('./history_games(date)/{}-{}-playing/away_table.xlsx'.format(today_date, game_id))
+                        home_table = game_soup.find(attrs={'id': 'J_home_content'})
+                        home_table = pd.concat(pd.read_html(home_table.prettify()))
+                        home_table.to_excel('./history_games(date)/{}-{}-playing/home_table.xlsx'.format(today_date, game_id))
+                    else:
+                        team_a = game_soup.find(attrs={'class': 'team_a'}).find(attrs={'class': 'message'}).find('a').string
+                        team_b = game_soup.find(attrs={'class': 'team_b'}).find(attrs={'class': 'message'}).find('a').string
+                        output = {'0': ['', team_a, team_b],
+                                  '1': ['一', '', ''],
+                                  '2': ['二', '', ''],
+                                '3': ['三', '', ''],
+                                '4': ['四', '', ''],
+                                '5': ['总分', '', '']}
+                        df = DataFrame(output)
+                        df.to_excel('./history_games(date)/{}-{}-playing/summary.xlsx'.format(today_date, game_id))
+                    print(today_date + " " + game_id)
 
 
 # if __name__ == '__main__':
