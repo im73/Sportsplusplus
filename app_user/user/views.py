@@ -284,7 +284,10 @@ def BackHome(request):
         for i in range(len(dates)-1):
             newnum.append(User.objects.filter(register_time__range=(dates[i],dates[i+1])).count())
             totalnum.append(User.objects.filter(register_time__lte=dates[i+1]).count())
-            aclist=Active.objects.filter(date__range=(dates[i],dates[i+1]))
+            if i<(len(dates)-2):
+                aclist=Active.objects.filter(date__range=(dates[i+1],dates[i+2]))
+            else:
+                aclist=Active.objects.filter(date__gte=dates[-1])
             if aclist.count()==0:
                 tknum.append(0)
             else:

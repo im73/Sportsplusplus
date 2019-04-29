@@ -18,10 +18,6 @@ def Sbscribe(request):
 
     if request.method=="POST":
 
-        cookie=request.COOKIES.get("user")
-        tkob=tokens.objects.get(cookie=cookie)
-        tkob.active=1
-        tkob.save()
 
         username=request.POST.get('username')
         teamname=request.POST.get('teamname')
@@ -35,10 +31,7 @@ def Sbscribe(request):
 
     elif request.method=="GET":
 
-        cookie=request.COOKIES.get("user")
-        tkob=tokens.objects.get(cookie=cookie)
-        tkob.active=1
-        tkob.save()
+
 
         username=request.GET.get("username")
         user=User.objects.get(nick_name=username)
@@ -51,10 +44,6 @@ def Sbscribe(request):
 
     elif request.method=="DELETE":
 
-        cookie=request.COOKIES.get("user")
-        tkob=tokens.objects.get(cookie=cookie)
-        tkob.active=1
-        tkob.save()
 
         username=request.GET.get('username')
         teamname=request.GET.get('teamname')

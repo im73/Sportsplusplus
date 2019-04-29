@@ -25,10 +25,6 @@ def get_teaminfo(request):
 
     if request.method == 'GET':
 
-        cookie=request.COOKIES.get("user")
-        tkob=tokens.objects.get(cookie=cookie)
-        tkob.active=1
-        tkob.save()
 
         teamlist=Team.objects.all()
         serializer = TeamSerializer(teamlist,many=True)
@@ -39,10 +35,6 @@ def get_playerinfo(request):
 
     if request.method == 'GET':
 
-        cookie=request.COOKIES.get("user")
-        tkob=tokens.objects.get(cookie=cookie)
-        tkob.active=1
-        tkob.save()
 
         team_name=request.GET.get('teamname')
         Playerlist=Player.objects.filter(球队名=team_name)
@@ -55,10 +47,7 @@ def get_playercareer(request):
 
     if request.method == 'GET':
 
-        cookie=request.COOKIES.get("user")
-        tkob=tokens.objects.get(cookie=cookie)
-        tkob.active=1
-        tkob.save()
+
 
         player_index=request.GET.get('player_index')
         careerlist=Career.objects.filter(序号=player_index)
@@ -71,10 +60,7 @@ def GetMatchInfo(request):
 
     if request.method == 'GET':
 
-        cookie=request.COOKIES.get("user")
-        tkob=tokens.objects.get(cookie=cookie)
-        tkob.active=1
-        tkob.save()
+
 
 
         if request.GET.get('match_id') == "":
@@ -90,10 +76,7 @@ def GetMatchSummary(request):
 
     if request.method == 'GET':
 
-        cookie=request.COOKIES.get("user")
-        tkob=tokens.objects.get(cookie=cookie)
-        tkob.active=1
-        tkob.save()
+
 
         match_id=request.GET.get('match_id')
         querylist = Match_teamsummary.objects.filter(比赛id=match_id)
@@ -105,10 +88,7 @@ def GetPlayerSummary(request):
 
     if request.method == 'GET':
 
-        cookie=request.COOKIES.get("user")
-        tkob=tokens.objects.get(cookie=cookie)
-        tkob.active=1
-        tkob.save()
+
 
         match_id=request.GET.get('match_id')
         querylist = Match_player.objects.filter(比赛id=match_id)
@@ -146,10 +126,7 @@ def GetSchedule(request):
 
     if request.method=="GET":
 
-        cookie=request.COOKIES.get("user")
-        tkob=tokens.objects.get(cookie=cookie)
-        tkob.active=1
-        tkob.save()
+
 
         teamname=request.GET.get('teamname')
         querylist=Schedule.objects.filter(英文名=teamname)

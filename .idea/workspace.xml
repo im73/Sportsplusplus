@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b047bb0b-4241-4ad3-a197-7125741d666d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_spider.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_user/operation/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_user/operation/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_user/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_user/user/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player_data/persons/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/player_data/persons/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -95,11 +96,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="data_spider.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="data_spider.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data_spider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-184">
-              <caret line="465" column="39" selection-start-line="465" selection-start-column="39" selection-end-line="465" selection-end-column="39" />
+            <state relative-caret-position="2928">
+              <caret line="496" column="66" selection-start-line="496" selection-start-column="66" selection-end-line="496" selection-end-column="66" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -110,8 +111,11 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/player_data/persons/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1860">
-              <caret line="142" selection-start-line="142" selection-end-line="142" />
+            <state relative-caret-position="236">
+              <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
+              <folding>
+                <element signature="e#3#27#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -119,7 +123,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_user/operation/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="346">
+              <caret line="46" selection-start-line="46" selection-end-line="46" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -148,11 +153,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app_user/user/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="583">
-              <caret line="298" selection-start-line="298" selection-end-line="298" />
+            <state relative-caret-position="228">
+              <caret line="289" column="65" selection-start-line="289" selection-start-column="65" selection-end-line="289" selection-end-column="65" />
               <folding>
                 <element signature="e#53#68#0" expanded="true" />
               </folding>
@@ -214,6 +219,7 @@
       <find>hist</find>
       <find>career</find>
       <find>get_</find>
+      <find>get_hi</find>
     </findStrings>
     <replaceStrings>
       <replace>'</replace>
@@ -264,18 +270,18 @@
         <option value="$PROJECT_DIR$/datamodify.py" />
         <option value="$PROJECT_DIR$/auto_history_game.py" />
         <option value="$PROJECT_DIR$/app_user/user/serializers.py" />
-        <option value="$PROJECT_DIR$/app_user/operation/views.py" />
-        <option value="$PROJECT_DIR$/player_data/persons/views.py" />
         <option value="$PROJECT_DIR$/软工/urls.py" />
         <option value="$PROJECT_DIR$/app_user/user/models.py" />
         <option value="$PROJECT_DIR$/app_user/user/migrations/0004_auto_20190427_1709.py" />
         <option value="$PROJECT_DIR$/app_user/user/migrations/0003_auto_20190427_1011.py" />
         <option value="$PROJECT_DIR$/软工/settings.py" />
         <option value="$PROJECT_DIR$/storedata.py" />
-        <option value="$PROJECT_DIR$/app_user/user/views.py" />
         <option value="$PROJECT_DIR$/auto_schedule.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/data_spider.py" />
+        <option value="$PROJECT_DIR$/app_user/operation/views.py" />
+        <option value="$PROJECT_DIR$/player_data/persons/views.py" />
+        <option value="$PROJECT_DIR$/app_user/user/views.py" />
       </list>
     </option>
   </component>
@@ -307,6 +313,34 @@
             <path>
               <item name="软工" type="b2602c69:ProjectViewProjectNode" />
               <item name="软工" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="软工" type="b2602c69:ProjectViewProjectNode" />
+              <item name="软工" type="462c0819:PsiDirectoryNode" />
+              <item name="app_user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="软工" type="b2602c69:ProjectViewProjectNode" />
+              <item name="软工" type="462c0819:PsiDirectoryNode" />
+              <item name="app_user" type="462c0819:PsiDirectoryNode" />
+              <item name="operation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="软工" type="b2602c69:ProjectViewProjectNode" />
+              <item name="软工" type="462c0819:PsiDirectoryNode" />
+              <item name="app_user" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="软工" type="b2602c69:ProjectViewProjectNode" />
+              <item name="软工" type="462c0819:PsiDirectoryNode" />
+              <item name="player_data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="软工" type="b2602c69:ProjectViewProjectNode" />
+              <item name="软工" type="462c0819:PsiDirectoryNode" />
+              <item name="player_data" type="462c0819:PsiDirectoryNode" />
+              <item name="persons" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -346,7 +380,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test">
+  <component name="RunManager" selected="Django server.软工">
     <configuration name="auto_history_game" type="PythonConfigurationType" factoryName="Python">
       <module name="软工" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -489,13 +523,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1553575938261</updated>
-    </task>
-    <task id="LOCAL-00010" summary="球员信息添加完毕">
-      <created>1554468240464</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1554468240464</updated>
     </task>
     <task id="LOCAL-00011" summary="为model添加verbose_name">
       <created>1554476291367</created>
@@ -833,7 +860,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556390365235</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Merge branch 'master' of https://github.com/im73/Sportsplusplus&#10;                                                                       &#10;                                                                       # Conflicts:&#10;                                                                       #&#9;.idea/workspace.xml&#10;    赛程，正在比赛爬取bug-">
+      <created>1556449978611</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1556449978612</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TodoView">
@@ -911,7 +945,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/../DevCloud" />
     </ignored-roots>
-    <MESSAGE value="接口数据修改" />
     <MESSAGE value="球员头像修改" />
     <MESSAGE value="球员头像修改2" />
     <MESSAGE value="球队头像" />
@@ -936,7 +969,8 @@
     <MESSAGE value="Merge branch 'master' of https://github.com/im73/Sportsplusplus&#10;                               &#10;                               # Conflicts:&#10;                               #&#9;.idea/workspace.xml&#10;                               增加cookie判断" />
     <MESSAGE value="Merge branch 'master' of https://github.com/im73/Sportsplusplus&#10;                               &#10;                               # Conflicts:&#10;                               #&#9;.idea/workspace.xml&#10;                               增加用户统计api" />
     <MESSAGE value="Merge branch 'master' of https://github.com/im73/Sportsplusplus&#10;                                                                       &#10;                                                                       # Conflicts:&#10;                                                                       #&#9;.idea/workspace.xml&#10;                                                                       增加用户统计api" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/im73/Sportsplusplus&#10;                                                                       &#10;                                                                       # Conflicts:&#10;                                                                       #&#9;.idea/workspace.xml&#10;                                                                       增加用户统计api" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/im73/Sportsplusplus&#10;                                                                       &#10;                                                                       # Conflicts:&#10;                                                                       #&#9;.idea/workspace.xml&#10;    赛程，正在比赛爬取bug-" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/im73/Sportsplusplus&#10;                                                                       &#10;                                                                       # Conflicts:&#10;                                                                       #&#9;.idea/workspace.xml&#10;    赛程，正在比赛爬取bug-" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1211,32 +1245,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/player_data/persons/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1860">
-          <caret line="142" selection-start-line="142" selection-end-line="142" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_user/operation/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_user/user/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
-          <caret line="298" selection-start-line="298" selection-end-line="298" />
-          <folding>
-            <element signature="e#53#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/storedata.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8149">
@@ -1259,10 +1267,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data_spider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-184">
-          <caret line="465" column="39" selection-start-line="465" selection-start-column="39" selection-end-line="465" selection-end-column="39" />
+        <state relative-caret-position="2928">
+          <caret line="496" column="66" selection-start-line="496" selection-start-column="66" selection-end-line="496" selection-end-column="66" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/player_data/persons/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
+          <folding>
+            <element signature="e#3#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_user/operation/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_user/user/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="289" column="65" selection-start-line="289" selection-start-column="65" selection-end-line="289" selection-end-column="65" />
+          <folding>
+            <element signature="e#53#68#0" expanded="true" />
           </folding>
         </state>
       </provider>
