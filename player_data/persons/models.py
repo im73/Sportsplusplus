@@ -142,6 +142,9 @@ class Match(models.Model):
     客场第四节 = models.CharField(max_length=10)
     客场总分 = models.CharField(max_length=10)
 
+    状态 = models.IntegerField(default=1)
+    时间 = models.CharField(max_length=20,default="")
+
 
 class Schedule(models.Model):
 

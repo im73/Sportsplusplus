@@ -181,6 +181,8 @@ class MatchSerializer(serializers.ModelSerializer):
             '客场第三节',
             '客场第四节',
             '客场总分',
+            '状态',
+            '时间',
         )
 
 class ScheduleSerializer(serializers.ModelSerializer):
