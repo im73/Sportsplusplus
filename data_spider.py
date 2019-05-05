@@ -506,13 +506,15 @@ class DataSpider(object):
             over_games = set()
             for game in games:
                 state = game.find(attrs={'class': 'team_vs_b'})
-                if not state:
+
+                if not state :
                     state = game.find(attrs={'class': 'team_vs_c'})
                     if state:
                         state = "进行中"
                     else:
                         state = "未开始"
                 else:
+                    print(type(state.find(attrs={'class': 'b'})))
                     state = state.find(attrs={'class': 'b'}).string[1:]
                 if state == '已结束':
                     game = game.find(attrs={'class': 'table_choose clearfix'}).find(attrs={'class': 'd'}).get('href')

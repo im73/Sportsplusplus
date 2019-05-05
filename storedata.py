@@ -172,6 +172,9 @@ def store_history_game():
     i=0
     for i in range(len(dir_list)): # 遍历文件夹内所有子文件夹
         # 判断是否为已存文件
+        print(dir_list[i].split('-'))
+        if len(dir_list[i].split('-'))<3:
+            continue
         num=Match.objects.filter(id=dir_list[i].split('-')[3]).count()
         if  (num==0) | ((dir_list[i].split('-')[0]+'-'+dir_list[i].split('-')[1]+'-'+dir_list[i].split('-')[2])==time.strftime("%Y-%m-%d")):
             # print(dir_list[i])
