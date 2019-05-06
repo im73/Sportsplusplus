@@ -533,9 +533,6 @@ def store_playing():
     # except:
     #     print('no playing')
 
-
-
-
 def store_schedule():
     file_dir2 = "./team_schedule"  # 给定路径
 
@@ -612,6 +609,64 @@ def store_schedule():
                                 match = Match.objects.get(主场球队中文名=schedule.主队, 客场球队中文名=schedule.客队, 日期=schedule.日期)
                                 schedule.比赛id = Match(id=match.id)
                             schedule.save()
+
+def store_approaching_game():
+    file_dir2="./history_games(date)"
+    dir_list = os.listdir(file_dir2) # 列出文件夹下所有的目录和文件
+    i=0
+    for i in range(len(dir_list)): # 遍历文件夹内所有子文件夹
+        # 判断是否为已存文件
+        print(dir_list[i].split('-'))
+        if len(dir_list[i].split('-'))<3:
+            continue
+        num=Match.objects.filter(id=dir_list[i].split('-')[3]).count()
+        if  (num==0) | ((dir_list[i].split('-')[0]+'-'+dir_list[i].split('-')[1]+'-'+dir_list[i].split('-')[2])==time.strftime("%Y-%m-%d")):
+            # print(dir_list[i])
+        # 若未存，则开始存子文件夹内文件
+
+            print(dir_list[i], '---------dont exist, start to store')
+            new_path = os.path.join(file_dir2, dir_list[i])
+            file_list = os.listdir(new_path)
+            if file_list[0].split('.')[0]=='summary':
+                if len(file_list)==0:
+                    continue
+                if num==1:
+                    matchob=Match.objects.get(id=dir_list[i].split('-')[3])
+                    matchob.delete()
+                real_path1 = os.path.join(new_path, file_list[0])
+                workbook1 =  xlrd.open_workbook(real_path1)
+                sheet1 = workbook1.sheet_by_index(0)
+                print(sheet1.cell_value(2, 2))
+                match = Match(id=dir_list[i].split('-')[3],
+                              日期=dir_list[i].split('-')[0]+'-'+dir_list[i].split('-')[1]+'-'+dir_list[i].split('-')[2],
+                              主场球队中文名=sheet1.cell_value(3, 1),
+                              主场第一节='0',
+                              主场第二节='0',
+                              主场第三节='0',
+                              主场第四节='0',
+                              主场总分='0', # 没有加时的比赛总分
+                              主场加时一='0',
+                              主场加时二='0',
+                              主场加时三='0',
+                              主场加时四='0',
+                              客场加时一='0',
+                              客场加时二='0',
+                              客场加时三='0',
+                              客场加时四='0',
+                              客场球队中文名=sheet1.cell_value(2, 1),
+                              客场第一节='0',
+                              客场第二节='0',
+                              客场第三节='0',
+                              客场第四节='0',
+                              客场总分='0', # 没有加时的比赛总分
+                              状态=0,
+                              时间=sheet1.cell_value(2, 2)
+                              )
+
+                match.save()
+                with open("history.txt","a+") as f:
+                    f.write("存储："+dir_list[i].split('-')[3]+"\n")
+                f.close()
 
 # file_dir2 = "./team_schedule"  # 给定路径
 # dir_list = os.listdir(file_dir2)  # 列出文件夹下所有的目录和文件
