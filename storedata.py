@@ -193,11 +193,11 @@ def store_history_game():
             real_path3 = os.path.join(new_path, file_list[2])
 
             workbook1 =  xlrd.open_workbook(real_path1)
-            sheet1 = workbook1.sheet_by_index(0)
+            sheet3 = workbook1.sheet_by_index(0)
             workbook2 =  xlrd.open_workbook(real_path2)
             sheet2 = workbook2.sheet_by_index(0)
             workbook3 =  xlrd.open_workbook(real_path3)
-            sheet3 = workbook3.sheet_by_index(0)
+            sheet1 = workbook3.sheet_by_index(0)
 
             if sheet1.nrows > 10: # 判断是否为空表
 
@@ -358,11 +358,11 @@ def store_playing():
             real_path3 = os.path.join(new_path, file_list[2])
 
             workbook1 = xlrd.open_workbook(real_path1)
-            sheet1 = workbook1.sheet_by_index(0)
+            sheet3 = workbook1.sheet_by_index(0)
             workbook2 = xlrd.open_workbook(real_path2)
             sheet2 = workbook2.sheet_by_index(0)
             workbook3 = xlrd.open_workbook(real_path3)
-            sheet3 = workbook3.sheet_by_index(0)
+            sheet1 = workbook3.sheet_by_index(0)
 
             if sheet1.nrows > 10:  # 判断是否为空表
 
@@ -391,6 +391,7 @@ def store_playing():
                               客场第三节=sheet3.cell_value(2, 4),
                               客场第四节=sheet3.cell_value(2, 5),
                               客场总分=sheet3.cell_value(2, 6),  # 没有加时的比赛总分
+                              状态=2,
                               )
                 if sheet3.cell_value(1, 6) == '加时一':
                     match.主场加时一 = sheet3.cell_value(3, 6)
