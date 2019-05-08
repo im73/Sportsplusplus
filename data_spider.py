@@ -323,7 +323,7 @@ class DataSpider(object):
         time=datetime.datetime.now()
 
         date_set = self.get_date_set((time-datetime.timedelta(days=1)).strftime("%Y-%m-%d"), time.strftime("%Y-%m-%d"))
-        print(date_set)
+
         for date in date_set:
             text = requests.get(self.games_info_hupu.format(date)).text
             soup = BeautifulSoup(text, "lxml")

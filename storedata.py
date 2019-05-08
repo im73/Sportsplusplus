@@ -193,11 +193,11 @@ def store_history_game():
             real_path3 = os.path.join(new_path, file_list[2])
 
             workbook1 =  xlrd.open_workbook(real_path1)
-            sheet3 = workbook1.sheet_by_index(0)
+            sheet1 = workbook1.sheet_by_index(0)
             workbook2 =  xlrd.open_workbook(real_path2)
             sheet2 = workbook2.sheet_by_index(0)
             workbook3 =  xlrd.open_workbook(real_path3)
-            sheet1 = workbook3.sheet_by_index(0)
+            sheet3 = workbook3.sheet_by_index(0)
 
             if sheet1.nrows > 10: # 判断是否为空表
 
@@ -358,11 +358,11 @@ def store_playing():
             real_path3 = os.path.join(new_path, file_list[2])
 
             workbook1 = xlrd.open_workbook(real_path1)
-            sheet3 = workbook1.sheet_by_index(0)
+            sheet1 = workbook1.sheet_by_index(0)
             workbook2 = xlrd.open_workbook(real_path2)
             sheet2 = workbook2.sheet_by_index(0)
             workbook3 = xlrd.open_workbook(real_path3)
-            sheet1 = workbook3.sheet_by_index(0)
+            sheet3 = workbook3.sheet_by_index(0)
 
             if sheet1.nrows > 10:  # 判断是否为空表
 

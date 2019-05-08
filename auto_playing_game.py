@@ -3,7 +3,9 @@ from storedata import store_history_game,store_playing,delete_files
 
 
 ds = DataSpider()
-
-ds.get_playing_game_info_hupu()
+try:
+    ds.get_playing_game_info_hupu()
+except:
+    pass
 store_playing()
 delete_files()

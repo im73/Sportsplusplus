@@ -60,12 +60,9 @@ def GetMatchInfo(request):
 
     if request.method == 'GET':
 
-
-
-
         if request.GET.get('match_id') == "":
 
-            querylist = Match.objects.filter(日期__istartswith=time.strftime("%Y-%m-%d"))
+            querylist = Match.objects.filter(日期__istartswith=time.strftime("%Y-%m"))
         else :
             querylist = Match.objects.filter(id=request.GET.get('match_id'))
         serializer=MatchSerializer(querylist,many=True)
@@ -75,8 +72,6 @@ def GetMatchInfo(request):
 def GetMatchSummary(request):
 
     if request.method == 'GET':
-
-
 
         match_id=request.GET.get('match_id')
         querylist = Match_teamsummary.objects.filter(比赛id=match_id)
@@ -125,8 +120,6 @@ def GetTeamImage(request,Teamname):
 def GetSchedule(request):
 
     if request.method=="GET":
-
-
 
         teamname=request.GET.get('teamname')
         querylist=Schedule.objects.filter(英文名=teamname)

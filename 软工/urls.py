@@ -18,6 +18,7 @@ from django.urls import path,include
 from app_user.user import views as user_view
 from player_data.persons import views as info_view
 from app_user.operation import  views as op_view
+from app_user.mymatch import views as mth_view
 
 urlpatterns = [
 
@@ -28,7 +29,6 @@ urlpatterns = [
     path('api/user',                            user_view.users),
     path('api/BackUser',                        user_view.BackUser),
     path('api/back_login',                      user_view.back_login),
-    path('api/Subscribe',                       op_view.Sbscribe),
     path('api/Changepassword',                  user_view.Changepassword),
     path('api/BackHome',                        user_view.BackHome),
 
@@ -43,6 +43,14 @@ urlpatterns = [
     path(r'api/GetTeamSummary',                                                     info_view.GetMatchSummary),
     path(r'api/GetMatch',                                                           info_view.GetMatchInfo),
     path(r'api/GetSchedule',                                                        info_view.GetSchedule),
+
+    path('api/Subscribe',                       op_view.Sbscribe),
+
+    path('api/MyShedule',                       mth_view.myschedule),
+    path('api/MyMatch',                         mth_view.mymatch),
+    path('api/PlayerInfo',                      mth_view.player),
+    path('api/AllShedule',                      mth_view.AllSchedule),
+    path('api/SubForGame',                      mth_view.Subforgame),
 
 
 ]

@@ -27,6 +27,7 @@ def Sbscribe(request):
 
         sbob=sb(user=user,team=team)
         sbob.save()
+
         return JsonResponse({'message':'添加关注'}, status=201)
 
     elif request.method=="GET":
@@ -55,4 +56,6 @@ def Sbscribe(request):
         sbob.delete()
 
         return JsonResponse({'message':'取消关注'}, status=204)
+
+
 

@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'app_user.user',
     'app_user.operation',
+    'app_user.mymatch',
     'player_data.persons',
     'forum',
 
@@ -52,7 +53,7 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
-
+    # 'app_user.mymatch.middleware.HttpPost2HttpOtherMiddleware',
     # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',

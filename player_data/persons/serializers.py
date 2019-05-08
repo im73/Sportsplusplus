@@ -120,6 +120,7 @@ class Match_playerSerializer(serializers.ModelSerializer):
             '比赛id',
         )
 
+
 class Match_teamsummarySerializer(serializers.ModelSerializer):
     class Meta:
         model = Match_teamsummary
