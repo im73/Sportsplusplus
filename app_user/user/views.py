@@ -41,7 +41,7 @@ def register(request):
         emailob = email_very.objects.filter(email=email)
         if emailob.count()!=0:
             emailob.first().delete()
-        
+
         emailob=email_very(email=email,very_code=str(verification_code),op_type=1) #1是注册
         emailob.save()
 
@@ -154,6 +154,7 @@ def users(request):
         #     return JsonResponse({'message':'用户不存在'}, status=400)
     if request.method == 'PUT':
         try:
+            print(request.body)
             id = request.GET.get('id')
             email = request.GET.get('email')
             nick_name = request.GET.get('nick_name')
@@ -248,6 +249,7 @@ def GetMatchInfo(request):
 def Changepassword(request):
 
     if request.method=='PUT':
+
 
         username=request.GET.get('username')
         oldpassword=request.GET.get('old')

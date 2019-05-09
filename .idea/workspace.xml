@@ -4,29 +4,13 @@
     <bookmark url="file://$PROJECT_DIR$/auto_schedule.py" description="ds = DataSpider()&#10;# ds.get_team_schedule_hupu()&#10;# ..." line="4" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b047bb0b-4241-4ad3-a197-7125741d666d" name="Default" comment="Merge branch 'master' of https://github.com/im73/Sportsplusplus&#10;         &#10;         # Conflicts:&#10;         #&#9;.idea/workspace.xml&#10;         &#10;       未来比赛存储">
-      <change afterPath="$PROJECT_DIR$/app_user/mymatch/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_user/mymatch/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_user/mymatch/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_user/mymatch/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_user/mymatch/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_user/mymatch/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_user/mymatch/serializer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_user/mymatch/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_user/mymatch/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app_user/user/migrations/0005_auto_20190507_2101.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/player_data/persons/migrations/0007_auto_20190507_2232.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="b047bb0b-4241-4ad3-a197-7125741d666d" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/api/PUTapi.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_user/mymatch/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_user/mymatch/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app_user/operation/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_user/operation/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_history_game.py" beforeDir="false" afterPath="$PROJECT_DIR$/auto_history_game.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_playing_game.py" beforeDir="false" afterPath="$PROJECT_DIR$/auto_playing_game.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_spider.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/player_data/persons/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/player_data/persons/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/player_data/persons/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/player_data/persons/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/player_data/persons/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/player_data/persons/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storedata.py" beforeDir="false" afterPath="$PROJECT_DIR$/storedata.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/软工/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/软工/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app_user/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app_user/user/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/软工/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/软工/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,7 +32,7 @@
     <SUITE FILE_PATH="coverage/$auto_match_schedule.coverage" NAME="auto_match_schedule Coverage Results" MODIFIED="1555825828624" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/$auto_futruegame.coverage" NAME="auto_futruegame Coverage Results" MODIFIED="1557141678167" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/$tests.coverage" NAME="tests Coverage Results" MODIFIED="1553776648480" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app_user/user" />
-    <SUITE FILE_PATH="coverage/$test.coverage" NAME="test Coverage Results" MODIFIED="1556449925575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/$test.coverage" NAME="test Coverage Results" MODIFIED="1557382935325" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/$store.coverage" NAME="data_api Coverage Results" MODIFIED="1554551326346" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
@@ -110,7 +94,7 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_user/mymatch/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="577">
+            <state relative-caret-position="491">
               <caret line="71" selection-start-line="71" selection-end-line="71" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
@@ -122,8 +106,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_user/operation/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="885">
-              <caret line="59" selection-start-line="59" selection-end-line="59" />
+            <state relative-caret-position="425">
+              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -131,13 +115,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_user/mymatch/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="36" column="23" lean-forward="true" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+            <state relative-caret-position="1860">
+              <caret line="124" column="27" selection-start-line="124" selection-start-column="27" selection-end-line="124" selection-end-column="27" />
               <folding>
-                <element signature="e#0#50#0" expanded="true" />
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PUTapi.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/api/PUTapi.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -146,7 +154,7 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/player_data/persons/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
+            <state relative-caret-position="1560">
               <caret line="122" selection-start-line="122" selection-end-line="122" />
               <folding>
                 <element signature="e#3#27#0" expanded="true" />
@@ -155,19 +163,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="serializers.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/player_data/persons/serializers.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="121" selection-start-line="121" selection-end-line="121" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="serializer.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app_user/mymatch/serializer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
+            <state relative-caret-position="255">
               <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
@@ -176,23 +175,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="storedata.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/storedata.py">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app_user/user/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5460">
-              <caret line="364" column="18" selection-start-line="364" selection-start-column="18" selection-end-line="364" selection-end-column="18" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="218">
+              <caret line="150" column="28" lean-forward="true" selection-start-line="150" selection-start-column="28" selection-end-line="150" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app_user/user/views.py">
+      <file leaf-file-name="request.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/venv/软工/lib/python3.6/site-packages/django/http/request.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3795">
-              <caret line="268" selection-start-line="268" selection-end-line="268" />
+            <state relative-caret-position="329">
+              <caret line="305" column="16" selection-start-line="305" selection-start-column="16" selection-end-line="305" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -200,20 +196,11 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/软工/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
-              <caret line="52" column="23" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
+            <state relative-caret-position="421">
+              <caret line="48" column="18" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
               <folding>
                 <element signature="e#626#658#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/软工/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-819">
-              <caret line="55" column="65" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -247,12 +234,14 @@
       <find>主场</find>
       <find>hist</find>
       <find>get_h</find>
+      <find>_load_post_and_files</find>
     </findStrings>
     <replaceStrings>
       <replace>'</replace>
       <replace>sb</replace>
       <replace>away</replace>
       <replace>客场</replace>
+      <replace>data</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -261,8 +250,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/media/team/CHA_logo.svg" />
-        <option value="$PROJECT_DIR$/1629061_profile.json" />
         <option value="$PROJECT_DIR$/api/send_email.py" />
         <option value="$PROJECT_DIR$/templates/active.html" />
         <option value="$PROJECT_DIR$/forum/models.py" />
@@ -291,10 +278,8 @@
         <option value="$PROJECT_DIR$/app_user/user/migrations/0004_auto_20190427_1709.py" />
         <option value="$PROJECT_DIR$/app_user/user/migrations/0003_auto_20190427_1011.py" />
         <option value="$PROJECT_DIR$/auto_schedule.py" />
-        <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/player_data/persons/migrations/0006_auto_20190505_1328.py" />
         <option value="$PROJECT_DIR$/auto_futrue_game.py" />
-        <option value="$PROJECT_DIR$/app_user/operation/views.py" />
         <option value="$PROJECT_DIR$/app_user/mymatch/models.py" />
         <option value="$PROJECT_DIR$/app_user/user/migrations/0005_auto_20190507_2101.py" />
         <option value="$PROJECT_DIR$/auto_history_game.py" />
@@ -307,11 +292,15 @@
         <option value="$PROJECT_DIR$/data_spider.py" />
         <option value="$PROJECT_DIR$/auto_playing_game.py" />
         <option value="$PROJECT_DIR$/storedata.py" />
-        <option value="$PROJECT_DIR$/app_user/user/views.py" />
         <option value="$PROJECT_DIR$/player_data/persons/views.py" />
         <option value="$PROJECT_DIR$/软工/settings.py" />
+        <option value="$PROJECT_DIR$/app_user/user/views.py" />
+        <option value="$USER_HOME$/venv/软工/lib/python3.6/site-packages/django/http/request.py" />
+        <option value="$PROJECT_DIR$/app_user/operation/views.py" />
         <option value="$PROJECT_DIR$/软工/urls.py" />
+        <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/app_user/mymatch/views.py" />
+        <option value="$PROJECT_DIR$/api/PUTapi.py" />
       </list>
     </option>
   </component>
@@ -325,9 +314,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="805" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -342,6 +330,11 @@
             <path>
               <item name="软工" type="b2602c69:ProjectViewProjectNode" />
               <item name="软工" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="软工" type="b2602c69:ProjectViewProjectNode" />
+              <item name="软工" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="软工" type="b2602c69:ProjectViewProjectNode" />
@@ -621,13 +614,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1553575938261</updated>
-    </task>
-    <task id="LOCAL-00017" summary="后台管理">
-      <created>1554987603686</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1554987603687</updated>
     </task>
     <task id="LOCAL-00018" summary="修复了一些bug">
       <created>1554990552101</created>
@@ -965,7 +951,14 @@
       <option name="project" value="LOCAL" />
       <updated>1557142561972</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="Merge branch 'master' of https://github.com/im73/Sportsplusplus&#10;         &#10;         # Conflicts:&#10;         #&#9;.idea/workspace.xml&#10;         &#10;       基本完成我的比赛数据接口，比赛按照日期返回，正在进行比赛try-catch">
+      <created>1557297079626</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1557297079627</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TodoView">
@@ -984,17 +977,18 @@
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49713877" weight="0.325419" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.54005724" side_tool="true" weight="0.3907563" />
       <window_info anchor="bottom" id="Database Changes" order="9" sideWeight="0.4985694" weight="0.3282123" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4599428" visible="true" weight="0.32363635" />
       <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.48426324" weight="0.2752809" />
       <window_info anchor="bottom" id="Python Console" order="13" sideWeight="0.4914163" weight="0.3260606" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4599428" weight="0.32363635" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.46709585" weight="0.2339394" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49774775" visible="true" weight="0.19384836" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49774775" visible="true" weight="0.19957082" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" weight="0.3297568" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49642345" weight="0.28848484" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" sideWeight="0.5022523" side_tool="true" weight="0.16738197" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39944133" />
       <window_info id="Favorites" order="2" sideWeight="0.5022523" side_tool="true" weight="0.16738197" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39944133" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -1003,7 +997,6 @@
       <window_info anchor="bottom" id="Messages" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49642345" weight="0.28848484" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="14" sideWeight="0.49928468" weight="0.32969698" />
     </layout>
   </component>
@@ -1043,7 +1036,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/../DevCloud" />
     </ignored-roots>
-    <MESSAGE value="修改url" />
     <MESSAGE value="增加订阅" />
     <MESSAGE value="接口debug" />
     <MESSAGE value="自动存取data测试" />
@@ -1068,7 +1060,8 @@
     <MESSAGE value="Merge branch 'master' of https://github.com/im73/Sportsplusplus&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;&#10;正在进行的比赛测试" />
     <MESSAGE value="Merge branch 'master' of https://github.com/im73/Sportsplusplus&#10;         &#10;         # Conflicts:&#10;         #&#9;.idea/workspace.xml&#10;         &#10;        正在进行比赛，未来比赛，历史比赛" />
     <MESSAGE value="Merge branch 'master' of https://github.com/im73/Sportsplusplus&#10;         &#10;         # Conflicts:&#10;         #&#9;.idea/workspace.xml&#10;         &#10;       未来比赛存储" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/im73/Sportsplusplus&#10;         &#10;         # Conflicts:&#10;         #&#9;.idea/workspace.xml&#10;         &#10;       未来比赛存储" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/im73/Sportsplusplus&#10;         &#10;         # Conflicts:&#10;         #&#9;.idea/workspace.xml&#10;         &#10;       基本完成我的比赛数据接口，比赛按照日期返回，正在进行比赛try-catch" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/im73/Sportsplusplus&#10;         &#10;         # Conflicts:&#10;         #&#9;.idea/workspace.xml&#10;         &#10;       基本完成我的比赛数据接口，比赛按照日期返回，正在进行比赛try-catch" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1076,14 +1069,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/venv/软工/lib/python3.6/site-packages/django/middleware/clickjacking.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_user/serializer.py" />
     <entry file="file://$PROJECT_DIR$/app_user/operation/tests.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1153,13 +1138,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$USER_HOME$/Downloads/package/readme.md" />
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/id2name.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -1219,13 +1197,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app_user/operation/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$USER_HOME$/venv/软工/lib/python3.6/site-packages/django/conf/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1321,15 +1293,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/storedata.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5460">
+        <state relative-caret-position="5310">
           <caret line="364" column="18" selection-start-line="364" selection-start-column="18" selection-end-line="364" selection-end-column="18" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
@@ -1338,50 +1307,23 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app_user/mymatch/middleware.py" />
-    <entry file="file://$PROJECT_DIR$/app_user/user/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3795">
-          <caret line="268" selection-start-line="268" selection-end-line="268" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_user/operation/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/软工/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-819">
+        <state relative-caret-position="825">
           <caret line="55" column="65" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="65" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/player_data/persons/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
+        <state relative-caret-position="1770">
           <caret line="121" selection-start-line="121" selection-end-line="121" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app_user/mymatch/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="71" selection-start-line="71" selection-end-line="71" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app_user/mymatch/serializer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
+        <state relative-caret-position="255">
           <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
@@ -1391,7 +1333,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/player_data/persons/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
+        <state relative-caret-position="1560">
           <caret line="122" selection-start-line="122" selection-end-line="122" />
           <folding>
             <element signature="e#3#27#0" expanded="true" />
@@ -1399,10 +1341,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app_user/user/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="150" column="28" lean-forward="true" selection-start-line="150" selection-start-column="28" selection-end-line="150" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/venv/软工/lib/python3.6/site-packages/django/http/request.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="329">
+          <caret line="305" column="16" selection-start-line="305" selection-start-column="16" selection-end-line="305" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_user/mymatch/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app_user/operation/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/软工/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="52" column="23" selection-start-line="52" selection-start-column="23" selection-end-line="52" selection-end-column="23" />
+        <state relative-caret-position="421">
+          <caret line="48" column="18" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
           <folding>
             <element signature="e#626#658#0" expanded="true" />
           </folding>
@@ -1411,10 +1397,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app_user/mymatch/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="36" column="23" lean-forward="true" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+        <state relative-caret-position="1860">
+          <caret line="124" column="27" selection-start-line="124" selection-start-column="27" selection-end-line="124" selection-end-column="27" />
           <folding>
-            <element signature="e#0#50#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/PUTapi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>

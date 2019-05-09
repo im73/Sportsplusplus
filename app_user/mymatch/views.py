@@ -1,5 +1,9 @@
+import io
+from io import BytesIO
+
 from django.http import JsonResponse, HttpResponse
 from django.shortcuts import render
+from rest_framework.parsers import JSONParser
 from rest_framework.utils import json
 from django.http import QueryDict
 # Create your views here.
@@ -8,7 +12,8 @@ from app_user.mymatch.models import MyGame,GameManager,MyMatch,GamePlayer,Subscr
 from app_user.user.models import User
 from app_user.mymatch.serializer import GameManagerSerializer,MyMatchSerializer,MyGameSerializer,SubscribeSerializer,GamePLayerSerializer
 # from api.Querytodict import request_body_serialze
-
+from json import loads, dumps
+from api.PUTapi import PUThandle
 
 @csrf_exempt
 def myschedule(request):
@@ -76,35 +81,35 @@ def mymatch(request):
     if request.method == "PUT":
 
 
-        data =QueryDict(request.body)
-        print(data)
+        data = PUThandle(request.body)
 
         matchid = data.get('matchid')
 
+
         match=MyMatch.objects.get(id=matchid)
 
-        home1 = request.POST.get('home1')
-        home2 = request.POST.get('home2')
-        home3 = request.POST.get('home3')
-        home4 = request.POST.get('home4')
-        home5 = request.POST.get('home5')
-        home6 = request.POST.get('home6')
-        home7 = request.POST.get('home7')
-        home8 = request.POST.get('home8')
+        home1 = data.get('home1')
+        home2 = data.get('home2')
+        home3 = data.get('home3')
+        home4 = data.get('home4')
+        home5 = data.get('home5')
+        home6 = data.get('home6')
+        home7 = data.get('home7')
+        home8 = data.get('home8')
 
-        away1 = request.POST.get('away1')
-        away2 = request.POST.get('away2')
-        away3 = request.POST.get('away3')
-        away4 = request.POST.get('away4')
-        away5 = request.POST.get('away5')
-        away6 = request.POST.get('away6')
-        away7 = request.POST.get('away7')
-        away8 = request.POST.get('away8')
+        away1 = data.get('away1')
+        away2 = data.get('away2')
+        away3 = data.get('away3')
+        away4 = data.get('away4')
+        away5 = data.get('away5')
+        away6 = data.get('away6')
+        away7 = data.get('away7')
+        away8 = data.get('away8')
 
-        OT = request.POST.get('OT')
+        OT = data.get('OT')
 
-        total_home = request.POST.get('home_total')
-        total_away = request.POST.get('away_total')
+        total_home = data.get('home_total')
+        total_away = data.get('away_total')
 
         match.主场第一节 = home1
         match.主场第二节 = home2
@@ -186,6 +191,7 @@ def AllSchedule(request):
 
     if request.method=="POST":
 
+        print(request.body)
         scheduleid = request.POST.get('scheduleid')
         username = request.POST.get('username')
 

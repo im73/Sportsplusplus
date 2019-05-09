@@ -33,7 +33,6 @@ def Sbscribe(request):
     elif request.method=="GET":
 
 
-
         username=request.GET.get("username")
         user=User.objects.get(nick_name=username)
         sblist=sb.objects.filter(user=user)
