@@ -145,6 +145,8 @@ class Match(models.Model):
     状态 = models.IntegerField(default=1)
     时间 = models.CharField(max_length=20,default="")
 
+    胜率 = models.IntegerField(default=0)
+
     class Meta:
         ordering = ['日期']
 
