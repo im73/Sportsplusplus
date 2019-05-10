@@ -184,6 +184,7 @@ class MatchSerializer(serializers.ModelSerializer):
             '客场总分',
             '状态',
             '时间',
+            '胜率',
         )
 
 class ScheduleSerializer(serializers.ModelSerializer):

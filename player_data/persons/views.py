@@ -63,6 +63,7 @@ def GetMatchInfo(request):
         if request.GET.get('match_id') == "":
 
             querylist = Match.objects.filter(日期__istartswith=time.strftime("%Y-%m"))
+            
         else :
             querylist = Match.objects.filter(id=request.GET.get('match_id'))
         serializer=MatchSerializer(querylist,many=True)
