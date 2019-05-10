@@ -81,7 +81,7 @@ def mymatch(request):
     if request.method == "PUT":
 
 
-        data = PUThandle(request.body)
+        data = json.loads(request.body)
 
         matchid = data.get('matchid')
 
@@ -115,19 +115,19 @@ def mymatch(request):
         match.主场第二节 = home2
         match.主场第三节 = home3
         match.主场第四节 = home4
-        match.主场第五节 = home5
-        match.主场第六节 = home6
-        match.主场第七节 = home7
-        match.主场第八节 = home8
+        match.主场加时1 = home5
+        match.主场加时2 = home6
+        match.主场加时3 = home7
+        match.主场加时4 = home8
 
         match.客场第一节 = away1
         match.客场第二节 = away2
         match.客场第三节 = away3
         match.客场第四节 = away4
-        match.客场第五节 = away5
-        match.客场第六节 = away6
-        match.客场第七节 = away7
-        match.客场第八节 = away8
+        match.客场加时1 = away5
+        match.客场加时2 = away6
+        match.客场加时3 = away7
+        match.客场加时4 = away8
 
         match.主场总分 = total_home
         match.客场总分 = total_away
@@ -157,13 +157,24 @@ def player(request):
 
     if request.method=="PUT":
 
+        playerlist=json.loads(request.body)
 
-        playerdatalist = request.POST.get('playerdata')
+        for item in playerlist:
 
-        for playerdata in playerdatalist:
-            print(playerdata)
+            ply = GamePlayer.objects.get(id=item.get("id"))
+            ply.得分 = item.get("得分")
+            ply.篮板 = item.get("篮板")
+            ply.助攻 = item.get("助攻")
+            ply.三分 = item.get("三分")
+            ply.罚球 = item.get("罚球")
+            ply.抢断 = item.get("抢断")
+            ply.助攻 = item.get("助攻")
+            ply.失误 = item.get("失误")
+            ply.号码 = item.get("号码")
 
-        return JsonResponse({'message':'接口访问成功'}, status=200)
+            ply.save()
+
+        return JsonResponse({'message':'球员数据修改成功'}, status=200)
 
 
     if request.method=="GET":

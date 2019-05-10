@@ -3,10 +3,11 @@ import re
 
 
 def PUThandle(data):
+
     keyarr=[]
     valarr=[]
     stream = io.BytesIO(data)
-    
+
     for item in stream:
         strpre=item.decode()
         if strpre[0]=='-':
@@ -19,6 +20,8 @@ def PUThandle(data):
             valarr.append(strpre.replace("\r\n",""))
 
     datadic={}
+
     for i in range(len(keyarr)):
         datadic[keyarr[i][0]]=valarr[i]
+
     return datadic

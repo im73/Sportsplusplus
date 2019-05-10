@@ -463,18 +463,22 @@ class DataSpider(object):
                     f.close()
 
     def get_future_game_info_hupu(self):
+
         today_date = str(datetime.date.today())
         time=datetime.datetime.now()
 
-        date_set = self.get_date_set(time.strftime("%Y-%m-%d"),(time+datetime.timedelta(days=7)).strftime("%Y-%m-%d") )
+        date_set = self.get_date_set((time+datetime.timedelta(days=1)).strftime("%Y-%m-%d"),(time+datetime.timedelta(days=7)).strftime("%Y-%m-%d") )
 
         for date in date_set:
             text = requests.get(self.games_info_hupu.format(date)).text
             soup = BeautifulSoup(text, "lxml")
             games = soup.find_all(attrs={'class': 'border_a'})
+
             for game in games:
                 state = game.find(attrs={'class': 'team_vs_b'})
+
                 state = state.find(attrs={'class': 'b'})
+
                 if state:
                     if state.string:
                         continue
