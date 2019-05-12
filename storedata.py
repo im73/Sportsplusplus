@@ -22,6 +22,8 @@ from rest_framework.renderers import JSONRenderer
 
 
 import django
+import random
+import math
 django.setup()
 import data_spider
 from player_data.persons.models import Player, Team, Record ,Match_teamsummary, Match, Match_player, Score, Schedule
@@ -829,4 +831,9 @@ def updatetoken():
 
 
 
+def predrate():
 
+    matchlist = Match.objects.filter(状态=0)
+    for mth in matchlist:
+        mth.胜率=math.floor(random.random()*25+45)
+        mth.save()

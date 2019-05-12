@@ -42,6 +42,9 @@ from django.core.files import File
 #     elif ob.主客场=='2':
 #         ob.主客场=ob.比赛id.主场球队中文名
 #     ob.save()
-queryset=Match.objects.filter(日期='2019-04-20')
+import random
+import math
+queryset=Match.objects.filter()
 for ob in queryset:
-    ob.delete()
+    ob.胜率=math.floor(random.random()*25)+45
+    ob.save()
