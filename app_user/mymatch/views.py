@@ -37,7 +37,7 @@ def myschedule(request):
             user = User.objects.get(nick_name=username)
             GameManager(赛程=game,管理员=user).save()
 
-        return JsonResponse({'message':'添加成功'}, status=201)
+        return JsonResponse({'message':'添加成功','schedule_id':'{}'.format(game.id)}, status=201)
 
     if request.method=="GET":
 
@@ -49,6 +49,22 @@ def myschedule(request):
         serializer=GameManagerSerializer(gamelist,many=True)
 
         return HttpResponse(json.dumps(serializer.data,ensure_ascii=False),content_type="application/json,charset=utf-8",status=200)
+
+    if request.method == "DELETE":
+
+
+        data = json.loads(request.body)
+
+        try:
+            scheduleob = MyGame.objects.get(id=data.get("scheduleid"))
+        except:
+            return JsonResponse({'message':'赛程不存在'}, status=400)
+        scheduleob.delete()
+
+        return JsonResponse({'message':'删除成功'}, status=204)
+
+
+
 
 @csrf_exempt
 def mymatch(request):
@@ -76,7 +92,7 @@ def mymatch(request):
         away = request.POST.get('away')
 
         MyMatch(赛程=game,时间=time,日期=date,地点=location,主场=home,客场=away).save()
-        return JsonResponse({'message':'创建比赛成功'}, status=201)
+        return JsonResponse({'message':'创建比赛成功','match_id':'{}'.format()}, status=201)
 
     if request.method == "PUT":
 

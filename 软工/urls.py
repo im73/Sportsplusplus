@@ -46,7 +46,7 @@ urlpatterns = [
 
     path('api/Subscribe',                       op_view.Sbscribe),
 
-    path('api/MySchedule',                       mth_view.myschedule),
+    path('api/MySchedule',                      mth_view.myschedule),
     path('api/MyMatch',                         mth_view.mymatch),
     path('api/PlayerInfo',                      mth_view.player),
     path('api/AllShedule',                      mth_view.AllSchedule),
