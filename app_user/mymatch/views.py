@@ -154,6 +154,25 @@ def mymatch(request):
 
         return JsonResponse({'message':'比赛数据修改成功'}, status=200)
 
+    if request.method == "DELETE":
+
+        data = json.loads(request.body)
+
+        matchid = data.get('matchid')
+
+        try:
+            matchob=MyMatch.objects.get(id=matchid)
+        except:
+            return JsonResponse({'message':'比赛不存在'}, status=400)
+
+        matchob.delete()
+
+        return JsonResponse({'message':'删除成功'}, status=204)
+
+
+
+
+
 
 @csrf_exempt
 def player(request):

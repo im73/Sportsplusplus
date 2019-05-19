@@ -8,4 +8,4 @@ try:
 except:
     pass
 store_playing()
-delete_files()
+
