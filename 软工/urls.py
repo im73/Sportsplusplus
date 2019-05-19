@@ -45,6 +45,7 @@ urlpatterns = [
     path(r'api/GetSchedule',                                                        info_view.GetSchedule),
 
     path('api/Subscribe',                       op_view.Sbscribe),
+    path('api/Validate',                        op_view.Validate),
 
     path('api/MySchedule',                      mth_view.myschedule),
     path('api/MyMatch',                         mth_view.mymatch),
