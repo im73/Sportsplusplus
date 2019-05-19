@@ -28,6 +28,8 @@ def register(request):
     if request.method == 'GET':
 
         email=request.GET.get('email')
+        if User.objects.filter(email=email).count() !=0:
+            return JsonResponse({'message':'already_exists'}, status=400)
         verification_code=random.randrange(100000,999999)
         # verification_code=666666
         email_from = settings.DEFAULT_FROM_EMAIL
@@ -44,8 +46,10 @@ def register(request):
 
         emailob=email_very(email=email,very_code=str(verification_code),op_type=1) #1是注册
         emailob.save()
-
-        send_mail(title, msg, email_from, reciever, html_message=htm_email)
+        try:
+            send_mail(title, msg, email_from, reciever, html_message=htm_email)
+        except:
+            return JsonResponse({'message':'email_error'}, status=400)
 
         return JsonResponse({'message':'success'}, status=200)
 
