@@ -103,6 +103,19 @@ def Validate(request):
             else:
                 return JsonResponse({'message':'已关注赛程'}, status=200)
 
+@csrf_exempt
+def TeamSubscribe(request):
+
+    if request.method=='GET':
+        Teamlist = Team.objects.all()
+        dicts = {}
+        for team in Teamlist:
+
+            dicts[team.球队中文名] = sb.objects.filter(team = team.球队名).count()
+
+        return JsonResponse(dicts, status=200)
+
+
 
 
 

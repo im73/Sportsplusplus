@@ -1,3 +1,4 @@
+import datetime
 import io
 import re
 
@@ -25,3 +26,14 @@ def PUThandle(data):
         datadic[keyarr[i][0]]=valarr[i]
 
     return datadic
+
+def get_date_set(begin_date, end_date):
+
+    dates = []
+    dt = datetime.datetime.strptime(begin_date, '%Y-%m-%d')
+    date = begin_date
+    while date <= end_date:
+        dates.append(date)
+        dt = dt + datetime.timedelta(1)
+        date = dt.strftime('%Y-%m-%d')
+    return dates

@@ -29,7 +29,7 @@ def register(request):
 
         email=request.GET.get('email')
         if User.objects.filter(email=email).count() !=0:
-            return JsonResponse({'message':'already_exists'}, status=400)
+            return JsonResponse({'message':'already_exists'}, status=200)
         verification_code=random.randrange(100000,999999)
         # verification_code=666666
         email_from = settings.DEFAULT_FROM_EMAIL
@@ -46,12 +46,10 @@ def register(request):
 
         emailob=email_very(email=email,very_code=str(verification_code),op_type=1) #1是注册
         emailob.save()
-        try:
-            send_mail(title, msg, email_from, reciever, html_message=htm_email)
-        except:
-            return JsonResponse({'message':'email_error'}, status=400)
 
-        return JsonResponse({'message':'success'}, status=200)
+        send_mail(title, msg, email_from, reciever, html_message=htm_email)
+
+        return JsonResponse({'message':'发送成功'}, status=200)
 
     elif request.method == 'POST':
 
@@ -198,8 +196,9 @@ def BackUser(request):
 
     if request.method == 'DELETE':
 
-        id=request.GET.get('userid')
+
         try:
+            id=request.GET.get('userid')
             bkob=back_user.objects.get(id=id)
             bkob.delete()
             return JsonResponse({'message':'用户删除'}, status=204)

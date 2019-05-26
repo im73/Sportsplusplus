@@ -1,15 +1,11 @@
-
-
-
+import datetime
 from urllib import parse
 
 
 from django.http import HttpResponse, JsonResponse
 from django.template import loader
 from django.views.decorators.csrf import csrf_exempt
-from requests import Response
-from rest_framework.renderers import JSONRenderer
-from rest_framework.parsers import JSONParser
+from api.PUTapi import get_date_set
 from rest_framework.utils import json
 import time
 
@@ -84,8 +80,6 @@ def GetPlayerSummary(request):
 
     if request.method == 'GET':
 
-
-
         match_id=request.GET.get('match_id')
         querylist = Match_player.objects.filter(比赛id=match_id)
         serializer=Match_playerSerializer(querylist,many=True)
@@ -129,3 +123,15 @@ def GetSchedule(request):
         return HttpResponse(json.dumps(serializer.data,ensure_ascii=False),content_type="application/json,charset=utf-8",status=200)
 
 
+@csrf_exempt
+def GetBackMatch(request):
+
+    if request.method=="GET":
+
+        time=datetime.datetime.now()
+        date_set = get_date_set((time).strftime("%Y-%m-%d"), (time+datetime.timedelta(days=20)).strftime("%Y-%m-%d"))
+        matchlist = Match.objects.filter(日期__in=date_set)
+
+        serializer=MatchSerializer(matchlist,many=True)
+
+        return HttpResponse(json.dumps(serializer.data,ensure_ascii=False),content_type="application/json,charset=utf-8",status=200)
