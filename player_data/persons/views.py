@@ -57,8 +57,9 @@ def GetMatchInfo(request):
     if request.method == 'GET':
 
         if request.GET.get('match_id') == "":
-
-            querylist = Match.objects.filter(日期__istartswith=time.strftime("%Y-%m"))
+            time=datetime.datetime.now()
+            date_set = get_date_set((time-datetime.timedelta(days=14)).strftime("%Y-%m-%d"), (time+datetime.timedelta(days=21)).strftime("%Y-%m-%d"))
+            querylist = Match.objects.filter(日期__in=date_set)
 
         else :
             querylist = Match.objects.filter(id=request.GET.get('match_id'))

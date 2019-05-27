@@ -31,6 +31,7 @@ from player_data.persons.serializers import PlayerSerializer, TeamSerializer, Re
 from django.core.files import File
 #接下来就可以使用model了
 from app_user.user.models import tokens,Active
+from predict.predict import pre_train,predict_winner
 def history_in_database(macth_id):
 
     if Match.objects.filter(id=macth_id).count()==0:
@@ -834,6 +835,13 @@ def updatetoken():
 def predrate():
 
     matchlist = Match.objects.filter(状态=0)
+    model = pre_train()
+
     for mth in matchlist:
-        mth.胜率=math.floor(random.random()*25+45)
+
+        pred = predict_winner(mth.客场球队中文名, mth.主场球队中文名, model)#后者主场
+
+        mth.胜率=math.floor(pred[0][0]*100)
+
         mth.save()
+

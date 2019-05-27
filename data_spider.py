@@ -467,7 +467,7 @@ class DataSpider(object):
         today_date = str(datetime.date.today())
         time=datetime.datetime.now()
 
-        date_set = self.get_date_set((time+datetime.timedelta(days=1)).strftime("%Y-%m-%d"),(time+datetime.timedelta(days=7)).strftime("%Y-%m-%d") )
+        date_set = self.get_date_set((time+datetime.timedelta(days=1)).strftime("%Y-%m-%d"),(time+datetime.timedelta(days=14)).strftime("%Y-%m-%d") )
 
         for date in date_set:
             text = requests.get(self.games_info_hupu.format(date)).text
