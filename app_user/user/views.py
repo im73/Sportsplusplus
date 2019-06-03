@@ -97,7 +97,7 @@ def login(request):
 
         nick_name=request.GET.get('nick_name')
         password=request.GET.get('password')
-        user=User.objects.filter(nick_name__regx=nick_name,password=password)
+        user=User.objects.filter(nick_name__regex=nick_name,password__regex=password)
 
         response =  JsonResponse({'message':'登录成功'}, status=200)
         response.set_cookie("user",token)

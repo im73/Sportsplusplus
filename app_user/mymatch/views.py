@@ -33,7 +33,7 @@ def myschedule(request):
         game = MyGame(创建者=user, 名称=name, 简介=intro, 时间=time)
         game.save()
 
-        
+
         for username in managerlist:
             user = User.objects.get(nick_name=username)
             GameManager(赛程=game, 管理员=user).save()
