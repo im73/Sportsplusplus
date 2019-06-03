@@ -33,7 +33,7 @@ def myschedule(request):
         game = MyGame(创建者=user, 名称=name, 简介=intro, 时间=time)
         game.save()
 
-        GameManager(赛程=game, 管理员=user).save()
+        
         for username in managerlist:
             user = User.objects.get(nick_name=username)
             GameManager(赛程=game, 管理员=user).save()
@@ -265,3 +265,71 @@ def Subforgame(request):
 
         return HttpResponse(json.dumps(serializer.data, ensure_ascii=False),
                             content_type="application/json,charset=utf-8", status=200)
+
+@csrf_exempt
+def back_schedule(request):
+
+    if request.method == "GET":
+
+        datadicts=[]
+        gamelist = MyGame.objects.all()
+        for game in gamelist:
+
+            dict={}
+
+            dict["name"]=game.名称
+            dict["creator"] = game.创建者.nick_name
+            dict["star"] = Subscribe.objects.filter(赛程=game).count()
+            dict["time"] = str(game.时间)
+            dict["bfintro"] = game.简介
+            dict["id"] = game.id
+            dict["create"] = str(game.创建时间).split(' ')[0]
+
+            datadicts.append(dict)
+
+        return HttpResponse(json.dumps(datadicts, ensure_ascii=False),
+                            content_type="application/json,charset=utf-8", status=200)
+
+    if request.method == "POST":
+
+        id = request.GET.get('id')
+        gmob = MyGame.objects.get(id=id)
+        gmob.delete()
+
+        return HttpResponse({'message': '删除成功'}, status=204)
+
+@csrf_exempt
+def GetInfo(request):
+
+    if request.method=="GET":
+
+        matchid = request.GET.get('id')
+        game = MyGame.objects.get(id=matchid)
+
+        dicts={}
+
+        dicts["name"]=game.名称
+        dicts["creator"] = game.创建者.nick_name
+        dicts["star"] = Subscribe.objects.filter(赛程=game).count()
+        dicts["time"] = str(game.时间)
+        dicts["bfintro"] = game.简介
+        dicts["id"] = game.id
+        dicts["create"] = str(game.创建时间).split(' ')[0]
+
+        mg = GameManager.objects.filter(赛程=game)
+        mglist=[]
+
+        for us in mg:
+            mglist.append(us.管理员.nick_name)
+
+        dicts['manager'] = mglist
+
+        match = MyMatch.objects.filter(赛程=game)
+
+        serializer = MyMatchSerializer(match, many=True)
+
+        dicts['matchlist'] = json.dumps(serializer.data, ensure_ascii=False)
+
+        return HttpResponse(json.dumps(dicts, ensure_ascii=False),
+                            content_type="application/json,charset=utf-8", status=200)
+

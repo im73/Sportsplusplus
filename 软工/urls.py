@@ -54,6 +54,8 @@ urlpatterns = [
     path('api/PlayerInfo',                      mth_view.player),
     path('api/AllShedule',                      mth_view.AllSchedule),
     path('api/SubForGame',                      mth_view.Subforgame),
+    path('api/BackGame',                        mth_view.back_schedule),
+    path('api/GameInfo',                        mth_view.GetInfo),
 
 
 ]
