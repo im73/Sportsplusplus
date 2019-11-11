@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b047bb0b-4241-4ad3-a197-7125741d666d" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/presentation/迭代一展示.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/presentation/迭代二展示.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_futrue_game.py" beforeDir="false" afterPath="$PROJECT_DIR$/Crawler/auto_futrue_game.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_history_game.py" beforeDir="false" afterPath="$PROJECT_DIR$/Crawler/auto_history_game.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_playing_game.py" beforeDir="false" afterPath="$PROJECT_DIR$/Crawler/auto_playing_game.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auto_schedule.py" beforeDir="false" afterPath="$PROJECT_DIR$/Crawler/auto_schedule.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_spider.py" beforeDir="false" afterPath="$PROJECT_DIR$/Crawler/data_spider.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datamodify.py" beforeDir="false" afterPath="$PROJECT_DIR$/Crawler/datamodify.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/id2name.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Crawler/id2name.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storedata.py" beforeDir="false" afterPath="$PROJECT_DIR$/Crawler/storedata.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Crawler/test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -125,8 +118,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app_user/user/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="33" column="10" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
+            <state relative-caret-position="314">
+              <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
             </state>
           </provider>
         </entry>
@@ -165,7 +158,7 @@
         <entry file="file://$PROJECT_DIR$/软工/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="53">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
               <folding>
                 <element signature="e#626#658#0" expanded="true" />
               </folding>
@@ -296,9 +289,11 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="98" />
+    <option name="y" value="215" />
     <option name="width" value="1440" />
-    <option name="height" value="900" />
+    <option name="height" value="801" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -316,7 +311,7 @@
             <path>
               <item name="软工" type="b2602c69:ProjectViewProjectNode" />
               <item name="软工" type="462c0819:PsiDirectoryNode" />
-              <item name="app_user" type="462c0819:PsiDirectoryNode" />
+              <item name="presentation" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -339,11 +334,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/presentation" />
       <recent name="$PROJECT_DIR$/Crawler" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/app_user/mymatch" />
       <recent name="$PROJECT_DIR$/history_games(date)" />
-      <recent name="$PROJECT_DIR$/app_user" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -981,7 +976,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="1" y="23" width="1440" height="801" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49713877" weight="0.325419" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.54005724" side_tool="true" weight="0.3907563" />
@@ -989,7 +984,7 @@
       <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.48426324" weight="0.27448276" />
       <window_info anchor="bottom" id="Python Console" order="13" sideWeight="0.4914163" weight="0.32551724" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4599428" weight="0.3660606" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.46709585" weight="0.30769232" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.46709585" visible="true" weight="0.359375" />
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49774775" visible="true" weight="0.26824033" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Compute Code Lines" order="14" weight="0.32823366" />
@@ -1316,7 +1311,7 @@
     <entry file="file://$PROJECT_DIR$/软工/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="53">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="e#626#658#0" expanded="true" />
           </folding>
@@ -1372,8 +1367,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app_user/user/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="33" column="10" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="10" />
+        <state relative-caret-position="314">
+          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
         </state>
       </provider>
     </entry>
