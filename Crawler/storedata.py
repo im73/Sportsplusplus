@@ -1,34 +1,22 @@
 import datetime
 import shutil
-from io import StringIO
-import json
 import sys
 import os
 
 import time
 
-import pymysql
-from django.utils.six import BytesIO
 pwd = os.path.dirname(os.path.realpath(__file__))
 # 获取项目名的目录(因为我的当前文件是在项目名下的文件夹下的文件.所以是../)
-from openpyxl import load_workbook
 
 sys.path.append(pwd+"../")
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "软工.settings")
-import requests
 # 获取当前文件的目录
-from rest_framework.parsers import JSONParser
-from rest_framework.renderers import JSONRenderer
 
 
 import django
-import random
 import math
 django.setup()
-import data_spider
-from player_data.persons.models import Player, Team, Record ,Match_teamsummary, Match, Match_player, Score, Schedule
-from player_data.persons.serializers import PlayerSerializer, TeamSerializer, RecordSerializer, CareerSerializer,MatchSerializer,Match_playerSerializer,Match_teamsummarySerializer,ScoreSerializer,ScheduleSerializer
-from django.core.files import File
+from player_data.persons.models import Match_teamsummary, Match, Match_player, Schedule
 #接下来就可以使用model了
 from app_user.user.models import tokens,Active
 from predict.predict import pre_train,predict_winner
@@ -166,7 +154,7 @@ import os
 
 # db = pymysql.connect("114.116.156.240", "root", "Buaa2019!", "app", charset='utf8')
 # cursor = db.cursor()
-import xlrd, xlwt
+import xlrd
 
 
 def store_history_game():

@@ -4,12 +4,9 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import time
 import os
-import datetime
 
 from pandas import DataFrame
 
-from storedata import history_in_database
-from openpyxl import load_workbook
 import datetime
 class DataSpider(object):
 
